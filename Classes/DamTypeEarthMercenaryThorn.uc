@@ -1,0 +1,8 @@
+class DamTypeEarthMercenaryThorn extends WeaponDamageType
+	abstract;
+
+defaultproperties
+{
+     WeaponClass=Class'DEKMonsters208AA.WeaponEarthMercenary'
+     DeathString="%o was punctured by an Earth Mercenary's thorns."
+}
