@@ -2,5 +2,5 @@ class EarthSkaarjAmmo extends DCSkaarjAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AA.EarthSkaarjProjectile'
+     ProjectileClass=Class'DEKMonsters208AB.EarthSkaarjProjectile'
 }

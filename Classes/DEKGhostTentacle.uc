@@ -31,10 +31,10 @@ function Shoot()
 defaultproperties
 {
      GhostChance=60
-     AmmunitionClass=Class'DEKMonsters208AA.DEKGhostTentacleAmmo'
+     AmmunitionClass=Class'DEKMonsters208AB.DEKGhostTentacleAmmo'
      ScoringValue=2
      InvisMaterial=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.InvshadeFB'
-     GibGroupClass=Class'DEKMonsters208AA.DEKGhostGibGroup'
+     GibGroupClass=Class'DEKMonsters208AB.DEKGhostGibGroup'
      Health=300
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.shadeFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.shadeFB'

@@ -101,5 +101,5 @@ defaultproperties
 {
      HeatLifespan=4.000000
      BaseChance=25.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeFireMercenary'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeFireMercenary'
 }

@@ -2,5 +2,5 @@ class MercenaryRocket extends SMPMercRocket;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AA.DamTypeMercenaryRocket'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeMercenaryRocket'
 }

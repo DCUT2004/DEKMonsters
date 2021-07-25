@@ -158,13 +158,13 @@ function PlayTakeHit(vector HitLocation, int Damage, class<DamageType> DamageTyp
 defaultproperties
 {
      ProtectionMultiplier=0.500000
-     AmmunitionClass=Class'DEKMonsters208AA.TechPupaeAmmo'
+     AmmunitionClass=Class'DEKMonsters208AB.TechPupaeAmmo'
      ScoringValue=3
-     GibGroupClass=Class'DEKMonsters208AA.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AB.DEKTechGibGroup'
      MeleeRange=90.000000
      GroundSpeed=500.000000
      Health=120
-     ControllerClass=Class'DEKMonsters208AA.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AB.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Buoyancy=80.000000

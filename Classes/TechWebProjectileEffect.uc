@@ -30,7 +30,7 @@ defaultproperties
          StartVelocityRadialRange=(Min=1.000000,Max=1.000000)
          GetVelocityDirectionFrom=PTVD_AddRadial
      End Object
-     Emitters(0)=BeamEmitter'DEKMonsters208AA.TechWebProjectileEffect.BeamEmitter8'
+     Emitters(0)=BeamEmitter'DEKMonsters208AB.TechWebProjectileEffect.BeamEmitter8'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter11
          SpinParticles=True
@@ -48,7 +48,7 @@ defaultproperties
          TextureVSubdivisions=2
          LifetimeRange=(Min=0.100000,Max=0.100000)
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters208AA.TechWebProjectileEffect.SpriteEmitter11'
+     Emitters(1)=SpriteEmitter'DEKMonsters208AB.TechWebProjectileEffect.SpriteEmitter11'
 
      Begin Object Class=BeamEmitter Name=BeamEmitter12
          BeamEndPoints(0)=(ActorTag="Second",Weight=1.000000)
@@ -64,7 +64,7 @@ defaultproperties
          Texture=Texture'EpicParticles.Beams.HotBolt03aw'
          LifetimeRange=(Min=0.010000,Max=0.010000)
      End Object
-     Emitters(2)=BeamEmitter'DEKMonsters208AA.TechWebProjectileEffect.BeamEmitter12'
+     Emitters(2)=BeamEmitter'DEKMonsters208AB.TechWebProjectileEffect.BeamEmitter12'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter12
          SpinParticles=True
@@ -80,7 +80,7 @@ defaultproperties
          Texture=Texture'AW-2004Particles.Weapons.HardSpot'
          LifetimeRange=(Min=0.100000,Max=0.100000)
      End Object
-     Emitters(3)=SpriteEmitter'DEKMonsters208AA.TechWebProjectileEffect.SpriteEmitter12'
+     Emitters(3)=SpriteEmitter'DEKMonsters208AB.TechWebProjectileEffect.SpriteEmitter12'
 
      bNoDelete=False
      bHardAttach=True

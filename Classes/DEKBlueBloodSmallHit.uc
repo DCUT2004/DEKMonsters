@@ -2,7 +2,7 @@ class DEKBlueBloodSmallHit extends BloodSmallHit;
 
 defaultproperties
 {
-     BloodDecalClass=Class'DEKMonsters208AA.DEKBlueBloodDecal'
+     BloodDecalClass=Class'DEKMonsters208AB.DEKBlueBloodDecal'
      Splats(0)=Texture'DEKMonstersTexturesMaster208.GhostMonsters.BloodSplat1B'
      Splats(1)=Texture'DEKMonstersTexturesMaster208.GhostMonsters.BloodSplat2B'
      Splats(2)=Texture'DEKMonstersTexturesMaster208.GhostMonsters.BloodSplat3B'

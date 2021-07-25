@@ -3,6 +3,6 @@ class DamTypeEarthMercenaryRocket extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AA.WeaponEarthMercenary'
+     WeaponClass=Class'DEKMonsters208AB.WeaponEarthMercenary'
      DeathString="%o was quaked by an Earth Mercenary."
 }

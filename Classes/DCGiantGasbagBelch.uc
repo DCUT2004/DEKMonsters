@@ -2,5 +2,5 @@ class DCGiantGasbagBelch extends SMPGiantGasBagBelch;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AA.DamTypeGiantGasbag'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeGiantGasbag'
 }

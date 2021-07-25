@@ -5,6 +5,6 @@ defaultproperties
      Speed=2100.000000
      MaxSpeed=2100.000000
      Damage=30.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeIceQueen'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeIceQueen'
      LifeSpan=5.000000
 }

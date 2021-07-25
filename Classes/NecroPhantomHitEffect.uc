@@ -41,7 +41,7 @@ defaultproperties
          SecondsBeforeInactive=0.000000
          LifetimeRange=(Min=0.400000,Max=0.600000)
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters208AA.NecroPhantomHitEffect.SpriteEmitter1'
+     Emitters(0)=SpriteEmitter'DEKMonsters208AB.NecroPhantomHitEffect.SpriteEmitter1'
 
      AutoDestroy=True
      LightType=LT_FadeOut

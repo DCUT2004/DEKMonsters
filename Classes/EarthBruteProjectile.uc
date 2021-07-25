@@ -7,7 +7,7 @@ defaultproperties
      Damage=55.000000
      DamageRadius=180.000000
      MomentumTransfer=50000.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeEarthBrute'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeEarthBrute'
      LifeSpan=8.000000
      bFixedRotationDir=True
      RotationRate=(Roll=50000)

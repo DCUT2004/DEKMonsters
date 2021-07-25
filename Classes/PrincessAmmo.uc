@@ -2,5 +2,5 @@ class PrincessAmmo extends SMPQueenAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AA.PrincessProjectile'
+     ProjectileClass=Class'DEKMonsters208AB.PrincessProjectile'
 }

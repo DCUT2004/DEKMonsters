@@ -83,11 +83,11 @@ function FireProjectile()
 defaultproperties
 {
      ProtectionMultiplier=0.500000
-     AmmunitionClass=Class'DEKMonsters208AA.TechWarlordAmmo'
+     AmmunitionClass=Class'DEKMonsters208AB.TechWarlordAmmo'
      ScoringValue=13
-     GibGroupClass=Class'DEKMonsters208AA.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AB.DEKTechGibGroup'
      Health=550
-     ControllerClass=Class'DEKMonsters208AA.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AB.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

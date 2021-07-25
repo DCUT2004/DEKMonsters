@@ -2,5 +2,5 @@ class TechSlugAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AA.TechSlugMine'
+     ProjectileClass=Class'DEKMonsters208AB.TechSlugMine'
 }

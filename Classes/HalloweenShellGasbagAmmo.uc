@@ -3,5 +3,5 @@ class HalloweenShellGasbagAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AA.HalloweenShellGasbagPumpkin'
+     ProjectileClass=Class'DEKMonsters208AB.HalloweenShellGasbagPumpkin'
 }

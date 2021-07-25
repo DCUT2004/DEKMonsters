@@ -2,5 +2,5 @@ class DCBruteRocket extends BruteRocket;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AA.DamTypeDCBruteRocket'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeDCBruteRocket'
 }

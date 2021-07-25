@@ -45,18 +45,18 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 
 defaultproperties
 {
-     SplashDamageType=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     HeadHitDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     DirectHitDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     PunchThroughDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     ThroughHeadDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     AirHeadHitDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     AirHitDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     AirPunchThroughDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
-     AirThroughHeadDamage=Class'DEKMonsters208AA.DamTypeCosmicQueen'
+     SplashDamageType=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     HeadHitDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     DirectHitDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     PunchThroughDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     ThroughHeadDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     AirHeadHitDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     AirHitDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     AirPunchThroughDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
+     AirThroughHeadDamage=Class'DEKMonsters208AB.DamTypeCosmicQueen'
      Damage=33.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeCosmicQueen'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeCosmicQueen'
      StaticMesh=StaticMesh'VMWeaponsSM.PlayerWeaponsGroup.VMGrenade'
      Skins(0)=Texture'VMWeaponsTX.PlayerWeaponsGroup.GrenadeTex'
 }

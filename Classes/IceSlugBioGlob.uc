@@ -152,7 +152,7 @@ defaultproperties
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
      TossZ=1.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeIceSlug'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeIceSlug'
      LightHue=120
      LightSaturation=135
      DrawScale=5.000000

@@ -63,5 +63,5 @@ defaultproperties
      Speed=6000.000000
      MaxSpeed=6000.000000
      Damage=100.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeCosmicTitan'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeCosmicTitan'
 }

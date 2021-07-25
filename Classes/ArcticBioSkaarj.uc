@@ -273,14 +273,14 @@ defaultproperties
      ChallengeSound(1)=Sound'OutdoorAmbience.BThunder.creature2'
      ChallengeSound(2)=Sound'SkaarjPack_rc.Skaarj.roam11s'
      ChallengeSound(3)=Sound'SkaarjPack_rc.Skaarj.roam11s'
-     AmmunitionClass=Class'DEKMonsters208AA.ArcticBioSkaarjAmmo'
+     AmmunitionClass=Class'DEKMonsters208AB.ArcticBioSkaarjAmmo'
      ScoringValue=13
      IdleHeavyAnim="Idle_Biggun"
      IdleRifleAnim="Idle_Rifle"
      GroundSpeed=640.000000
      JumpZ=850.000000
      Health=150
-     ControllerClass=Class'DEKMonsters208AA.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AB.DCMonsterController'
      MovementAnims(1)="RunR"
      MovementAnims(2)="RunR"
      MovementAnims(3)="RunL"

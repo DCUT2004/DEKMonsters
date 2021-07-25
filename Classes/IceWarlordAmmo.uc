@@ -2,5 +2,5 @@ class IceWarlordAmmo extends WarlordAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AA.IceWarlordRocket'
+     ProjectileClass=Class'DEKMonsters208AB.IceWarlordRocket'
 }

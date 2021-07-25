@@ -3,5 +3,5 @@ class DamTypeGiantGasbag extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AA.WeaponGiantGasbag'
+     WeaponClass=Class'DEKMonsters208AB.WeaponGiantGasbag'
 }

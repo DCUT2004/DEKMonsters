@@ -127,7 +127,7 @@ defaultproperties
      HeatLifespan=4.000000
      BaseChance=25.000000
      TossZ=1.000000
-     MyDamageType=Class'DEKMonsters208AA.DamTypeFireSlug'
+     MyDamageType=Class'DEKMonsters208AB.DamTypeFireSlug'
      LightHue=30
      LightSaturation=15
      DrawScale=5.000000

@@ -90,15 +90,15 @@ defaultproperties
 {
      ProtectionMultiplier=0.500000
      MonsterName="Tech Slith"
-     AmmunitionClass=Class'DEKMonsters208AA.TechSlithAmmo'
+     AmmunitionClass=Class'DEKMonsters208AB.TechSlithAmmo'
      ScoringValue=8
-     GibGroupClass=Class'DEKMonsters208AA.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AB.DEKTechGibGroup'
      GroundSpeed=400.000000
      WaterSpeed=100.000000
      AirSpeed=400.000000
      AccelRate=700.000000
      Health=225
-     ControllerClass=Class'DEKMonsters208AA.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AB.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

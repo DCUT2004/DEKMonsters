@@ -3,7 +3,7 @@ class DamTypeNecroGhostIllusion extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AA.WeaponNecroGhostIllusion'
+     WeaponClass=Class'DEKMonsters208AB.WeaponNecroGhostIllusion'
      DeathString="%o couldn't fight off the Illusion ghosts."
      bArmorStops=False
 }
