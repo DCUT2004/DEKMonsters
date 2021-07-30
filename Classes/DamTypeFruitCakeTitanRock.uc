@@ -3,7 +3,7 @@ class DamTypeFruitCakeTitanRock extends SMPDamTypeTitanRock
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponTitan'
+     WeaponClass=Class'DEKMonsters208AC.WeaponTitan'
      DeathString="%o ate a fruitcake. Yummy!"
      FemaleSuicide="%o ate a fruitcake. Yummy!"
      MaleSuicide="%o ate a fruitcake. Yummy!"

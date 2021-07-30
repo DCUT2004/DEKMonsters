@@ -2,5 +2,5 @@ class SlithAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AB.SlithProj'
+     ProjectileClass=Class'DEKMonsters208AC.SlithProj'
 }

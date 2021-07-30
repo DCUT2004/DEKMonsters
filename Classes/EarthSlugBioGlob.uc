@@ -64,7 +64,7 @@ simulated function Destroyed()
 defaultproperties
 {
      TossZ=1.000000
-     MyDamageType=Class'DEKMonsters208AB.DamTypeEarthSlug'
+     MyDamageType=Class'DEKMonsters208AC.DamTypeEarthSlug'
      LightHue=90
      bDynamicLight=False
      DrawScale=5.000000

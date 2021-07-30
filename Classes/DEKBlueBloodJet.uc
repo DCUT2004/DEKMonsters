@@ -2,7 +2,7 @@ class DEKBlueBloodJet extends BloodJet;
 
 defaultproperties
 {
-     SplatterClass=Class'DEKMonsters208AB.DEKBlueBloodDecal'
+     SplatterClass=Class'DEKMonsters208AC.DEKBlueBloodDecal'
      mMaxParticles=6
      Skins(0)=Texture'DEKMonstersTexturesMaster208.GhostMonsters.BlueBloodJet'
 }

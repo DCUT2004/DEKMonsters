@@ -4,7 +4,7 @@ class DamTypeGiantShockBunny extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponGiantShockBunny'
+     WeaponClass=Class'DEKMonsters208AC.WeaponGiantShockBunny'
      DeathString="%o was fried by a Giant Shock Bunny."
      bDetonatesGoop=True
      bDelayedDamage=True

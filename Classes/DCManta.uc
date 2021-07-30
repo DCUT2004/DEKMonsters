@@ -33,5 +33,5 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-     ControllerClass=Class'DEKMonsters208AB.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AC.DCMonsterController'
 }

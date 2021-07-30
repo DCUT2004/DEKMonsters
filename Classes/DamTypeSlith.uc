@@ -3,5 +3,5 @@ class DamTypeSlith extends SMPDamTypeSlith
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponSlith'
+     WeaponClass=Class'DEKMonsters208AC.WeaponSlith'
 }

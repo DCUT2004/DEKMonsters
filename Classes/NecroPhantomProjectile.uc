@@ -74,7 +74,7 @@ defaultproperties
      TossZ=0.000000
      bSwitchToZeroCollision=True
      Damage=30.000000
-     MyDamageType=Class'DEKMonsters208AB.DamTypePhantomProjectile'
+     MyDamageType=Class'DEKMonsters208AC.DamTypePhantomProjectile'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'AW-2004Particles.Weapons.PlasmaSphere'
      Physics=PHYS_Flying

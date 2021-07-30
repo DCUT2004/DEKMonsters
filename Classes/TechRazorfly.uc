@@ -135,14 +135,14 @@ defaultproperties
 {
      ProtectionMultiplier=0.500000
      GoopIntervalTime=1.000000
-     AmmunitionClass=Class'DEKMonsters208AB.TechPupaeAmmo'
+     AmmunitionClass=Class'DEKMonsters208AC.TechPupaeAmmo'
      ScoringValue=4
-     GibGroupClass=Class'DEKMonsters208AB.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AC.DEKTechGibGroup'
      MeleeRange=90.000000
      AirSpeed=700.000000
      AccelRate=1500.000000
      Health=70
-     ControllerClass=Class'DEKMonsters208AB.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AC.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

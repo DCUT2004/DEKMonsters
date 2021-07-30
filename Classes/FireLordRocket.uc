@@ -196,14 +196,14 @@ defaultproperties
      ShakeOffsetMag=(Z=10.000000)
      ShakeOffsetRate=(Z=200.000000)
      ShakeOffsetTime=10.000000
-     ExplosionEffectClass=Class'DEKMonsters208AB.FireLordRocketExplosion'
+     ExplosionEffectClass=Class'DEKMonsters208AC.FireLordRocketExplosion'
      Team=255
      Speed=1000.000000
      MaxSpeed=1000.000000
      Damage=60.000000
      DamageRadius=800.000000
      MomentumTransfer=15000.000000
-     MyDamageType=Class'DEKMonsters208AB.DamTypeFireLord'
+     MyDamageType=Class'DEKMonsters208AC.DamTypeFireLord'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=28

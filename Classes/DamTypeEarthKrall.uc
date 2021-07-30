@@ -3,6 +3,6 @@ class DamTypeEarthKrall extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponEarthKrall'
+     WeaponClass=Class'DEKMonsters208AC.WeaponEarthKrall'
      DeathString="%o was quaked by an Earth Krall."
 }

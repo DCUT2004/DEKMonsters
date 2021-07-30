@@ -2,7 +2,7 @@ class DamTypeDCEliteKrallBolt extends WeaponDamageType;
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponEliteKrallBolt'
+     WeaponClass=Class'DEKMonsters208AC.WeaponEliteKrallBolt'
      DeathString="%o was zapped by a krall."
      bDetonatesGoop=True
      KDamageImpulse=10000.000000

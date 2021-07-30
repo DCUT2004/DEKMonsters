@@ -3,5 +3,5 @@ class DamTypePupae extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponPupae'
+     WeaponClass=Class'DEKMonsters208AC.WeaponPupae'
 }

@@ -5,5 +5,5 @@ defaultproperties
      bTossed=True
      bLeadTarget=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters208AB.TechSlithMine'
+     ProjectileClass=Class'DEKMonsters208AC.TechSlithMine'
 }

@@ -274,10 +274,10 @@ defaultproperties
      DeathAnim(1)="Dead2"
      DeathAnim(2)="Dead3"
      DeathAnim(3)="Dead4"
-     BeamEffectClass=Class'DEKRPG208AB.DefenseBoltEmitter'
+     BeamEffectClass=Class'DEKRPG208AC.DefenseBoltEmitter'
      BeamDamage=80
      aimerror=600
-     BeamDamageType=Class'DEKMonsters208AB.DamTypeSorcererLightning'
+     BeamDamageType=Class'DEKMonsters208AC.DamTypeSorcererLightning'
      bMeleeFighter=False
      HitSound(0)=Sound'NewDeath.MaleNightmare.mn_hit02'
      HitSound(1)=Sound'NewDeath.MaleNightmare.mn_hit03'
@@ -299,7 +299,7 @@ defaultproperties
      FireRifleBurstAnim="spell"
      MeleeRange=60.000000
      Health=350
-     ControllerClass=Class'DEKMonsters208AB.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AC.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

@@ -3,6 +3,6 @@ class DamTypeEarthBehemoth extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponEarthBehemoth'
+     WeaponClass=Class'DEKMonsters208AC.WeaponEarthBehemoth'
      DeathString="%o was quaked by an Earth Behemoth."
 }

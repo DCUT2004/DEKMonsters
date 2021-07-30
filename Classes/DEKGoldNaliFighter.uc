@@ -50,12 +50,12 @@ defaultproperties
      WeaponClassName(1)="XWeapons.ShockRifle"
      WeaponClassName(2)="Onslaught.ONSMineLayer"
      WeaponClassName(3)="Onslaught.ONSGrenadeLauncher"
-     WeaponClassName(4)="DEKMonsters208AB.DEKINIREdeemer"
+     WeaponClassName(4)="DEKMonsters208AC.DEKINIREdeemer"
      WeaponClassName(5)="XWeapons.MiniGun"
      WeaponClassName(6)="XWeapons.BioRifle"
      WeaponClassName(7)="XWeapons.ShieldGun"
      ScoringValue=5
-     GibGroupClass=Class'DEKMonsters208AB.DEKGoldGibGroup'
+     GibGroupClass=Class'DEKMonsters208AC.DEKGoldGibGroup'
      Health=210
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'

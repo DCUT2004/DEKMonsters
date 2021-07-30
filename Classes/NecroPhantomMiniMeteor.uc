@@ -77,7 +77,7 @@ defaultproperties
      MaxSpeed=600.000000
      TossZ=0.000000
      Damage=40.000000
-     MyDamageType=Class'DEKMonsters208AB.DamTypePhantomProjectile'
+     MyDamageType=Class'DEKMonsters208AC.DamTypePhantomProjectile'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'WeaponStaticMesh.RocketProj'
      Physics=PHYS_Falling

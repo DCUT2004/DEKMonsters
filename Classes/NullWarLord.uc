@@ -50,7 +50,7 @@ function bool SameSpeciesAs(Pawn P)
 defaultproperties
 {
      MaxNullTime=3.000000
-     AmmunitionClass=Class'DEKMonsters208AB.NullWarlordAmmo'
+     AmmunitionClass=Class'DEKMonsters208AC.NullWarlordAmmo'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.GenericMonsters.DarkWarlordShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.GenericMonsters.DarkWarlordShader'
 }

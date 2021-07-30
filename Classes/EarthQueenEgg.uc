@@ -168,14 +168,14 @@ defaultproperties
 {
      HatchInterval=7.000000
      ExplodeSound=SoundGroup'WeaponSounds.RocketLauncher.RocketLauncherFire'
-     Children(0)=Class'DEKMonsters208AB.EarthSkaarjPupaeChild'
-     Children(1)=Class'DEKMonsters208AB.EarthRazorflyChild'
-     Children(2)=Class'DEKMonsters208AB.EarthMantaChild'
+     Children(0)=Class'DEKMonsters208AC.EarthSkaarjPupaeChild'
+     Children(1)=Class'DEKMonsters208AC.EarthRazorflyChild'
+     Children(2)=Class'DEKMonsters208AC.EarthMantaChild'
      Speed=1200.000000
      TossZ=225.000000
      bSwitchToZeroCollision=True
      MomentumTransfer=100.000000
-     MyDamageType=Class'DEKMonsters208AB.DamTypeTechQueen'
+     MyDamageType=Class'DEKMonsters208AC.DamTypeTechQueen'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'AW-2004Particles.Weapons.AcidBlob'
      CullDistance=4000.000000

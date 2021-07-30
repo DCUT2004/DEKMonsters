@@ -2,5 +2,5 @@ class DEKGoldSlugAmmo extends PoisonSlugAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AB.DEKGoldSlugBioGlob'
+     ProjectileClass=Class'DEKMonsters208AC.DEKGoldSlugBioGlob'
 }

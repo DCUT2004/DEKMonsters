@@ -3,6 +3,6 @@ class DamTypeEarthTitan extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponEarthTitan'
+     WeaponClass=Class'DEKMonsters208AC.WeaponEarthTitan'
      DeathString="%o was quaked by an Earth Titan."
 }

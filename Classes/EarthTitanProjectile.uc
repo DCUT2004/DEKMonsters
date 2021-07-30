@@ -101,7 +101,7 @@ simulated function SpawnEffects(vector HitLocation, vector HitNormal)
 		spawn(class'FlashExplosion',,,HitLocation + HitNormal*16 );
         if (ExplosionDecal != None && Level.NetMode != NM_DedicatedServer)
             Spawn(ExplosionDecal, self,, HitLocation, rotator(-HitNormal));
-		Spawn(class'DEKMonsters208AB.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+		Spawn(class'DEKMonsters208AC.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
     }
 }
 
@@ -139,14 +139,14 @@ simulated function destroyed()
 
 defaultproperties
 {
-     ChildProjectileClass=Class'DEKMonsters208AB.EarthTitanProjectileChild'
+     ChildProjectileClass=Class'DEKMonsters208AC.EarthTitanProjectileChild'
      DetonateRadius=500.000000
      SpreadFactor=400.000000
      Speed=1140.000000
      Damage=200.000000
      DamageRadius=400.000000
      MomentumTransfer=75000.000000
-     MyDamageType=Class'DEKRPG208AB.DamTypeHellfireSentinel'
+     MyDamageType=Class'DEKRPG208AC.DamTypeHellfireSentinel'
      ExplosionDecal=Class'XEffects.RocketMark'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'WeaponStaticMesh.FlakChunk'

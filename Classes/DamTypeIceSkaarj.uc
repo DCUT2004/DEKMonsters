@@ -3,5 +3,5 @@ class DamTypeIceSkaarj extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AB.WeaponIceSkaarj'
+     WeaponClass=Class'DEKMonsters208AC.WeaponIceSkaarj'
 }

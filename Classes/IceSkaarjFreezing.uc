@@ -112,7 +112,7 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=2
-     GibGroupClass=Class'DEKMonsters208AB.IceGibGroup'
+     GibGroupClass=Class'DEKMonsters208AC.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjFreezingShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjFreezingShader'
 }

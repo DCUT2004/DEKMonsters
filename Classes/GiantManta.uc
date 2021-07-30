@@ -158,13 +158,13 @@ function GiantMantaKnockBack(Actor Victim, vector Momentum)
 defaultproperties
 {
      KnockbackSound=Sound'WeaponSounds.Misc.ballgun_launch'
-     GibGroupClass=Class'DEKMonsters208AB.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AC.DEKTechGibGroup'
      MeleeRange=350.000000
      WaterSpeed=400.000000
      AirSpeed=800.000000
      AccelRate=500.000000
      Health=250
-     ControllerClass=Class'DEKMonsters208AB.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AC.TechMonsterController'
      DrawScale=2.500000
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
