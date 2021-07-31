@@ -2,5 +2,5 @@ class	TechTitanAmmo extends SMPTitanAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AC.TechTitanProjectile'
+     ProjectileClass=Class'DEKMonsters208AD.TechTitanProjectile'
 }

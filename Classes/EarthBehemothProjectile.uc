@@ -2,5 +2,5 @@ class EarthBehemothProjectile extends EarthBruteProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AC.DamTypeEarthBehemoth'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeEarthBehemoth'
 }

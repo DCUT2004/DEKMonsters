@@ -65,6 +65,6 @@ defaultproperties
      FreezeLifespan=4.000000
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     MyDamageType=Class'DEKMonsters208AC.DamTypeIceTentacle'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeIceTentacle'
      Skins(0)=Texture'DEKMonstersTexturesMaster208.IceMonsters.IceGib'
 }

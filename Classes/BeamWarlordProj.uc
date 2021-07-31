@@ -76,7 +76,7 @@ defaultproperties
      MaxSpeed=2400.000000
      Damage=60.000000
      MomentumTransfer=28000.000000
-     MyDamageType=Class'DEKMonsters208AC.DamTypeBeamWarlord'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeBeamWarlord'
      ExplosionDecal=Class'XEffects.LinkBoltScorch'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence

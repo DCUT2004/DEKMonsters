@@ -4,7 +4,7 @@ defaultproperties
 {
      MiniboltDamage=25
      MiniboltRadius=500
-     MiniboltDamageType=Class'DEKMonsters208AC.DamTypeGiantShockBunny'
-     MyDamageType=Class'DEKMonsters208AC.DamTypeGiantShockBunny'
+     MiniboltDamageType=Class'DEKMonsters208AD.DamTypeGiantShockBunny'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeGiantShockBunny'
      LifeSpan=4.000000
 }

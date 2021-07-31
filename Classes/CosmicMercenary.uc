@@ -57,7 +57,7 @@ simulated function SprayTarget()
 		}
 
 		Spawn(MyAmmo.ProjectileClass,,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
-		PlaySound(Sound'DEKMonsters208AC.MonsterSounds.PlasmaTurretFire');
+		PlaySound(Sound'DEKMonsters208AD.MonsterSounds.PlasmaTurretFire');
 	}
 }
 
@@ -83,16 +83,16 @@ function SpawnRocket()
 		}
 
 		Spawn(MyAmmo.ProjectileClass,,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
-		PlaySound(Sound'DEKMonsters208AC.MonsterSounds.PlasmaTurretFire');
+		PlaySound(Sound'DEKMonsters208AD.MonsterSounds.PlasmaTurretFire');
 	}
 }
 
 defaultproperties
 {
-     RocketAmmoClass=Class'DEKMonsters208AC.CosmicMercenaryAmmo'
-     AmmunitionClass=Class'DEKMonsters208AC.CosmicMercenaryAmmo'
+     RocketAmmoClass=Class'DEKMonsters208AD.CosmicMercenaryAmmo'
+     AmmunitionClass=Class'DEKMonsters208AD.CosmicMercenaryAmmo'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters208AC.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AD.CosmicGibGroup'
      GroundSpeed=685.000000
      AirSpeed=600.000000
      AccelRate=1100.000000

@@ -3,5 +3,5 @@ class DamTypePrincess extends SMPDamTypeQueenProj
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AC.WeaponQueen'
+     WeaponClass=Class'DEKMonsters208AD.WeaponQueen'
 }

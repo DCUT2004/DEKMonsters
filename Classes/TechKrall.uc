@@ -175,9 +175,9 @@ defaultproperties
      MaxProjectiles=7
      MaxHoldTime=4.000000
      ScoringValue=5
-     GibGroupClass=Class'DEKMonsters208AC.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AD.DEKTechGibGroup'
      Health=200
-     ControllerClass=Class'DEKMonsters208AC.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AD.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

@@ -2,5 +2,5 @@ class MercenaryRocketAmmo extends SMPMerceRocketAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AC.MercenaryRocket'
+     ProjectileClass=Class'DEKMonsters208AD.MercenaryRocket'
 }

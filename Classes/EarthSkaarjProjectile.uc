@@ -105,7 +105,7 @@ simulated function Explode(vector HitLocation,vector HitNormal)
     {
     	PC = Level.GetLocalPlayerController();
 		if ( (PC.ViewTarget != None) && VSize(PC.ViewTarget.Location - Location) < 5000 )
-	        Spawn(class'DEKMonsters208AC.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+	        Spawn(class'DEKMonsters208AD.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
 	}
     if ( Role == ROLE_Authority )
     {
@@ -123,7 +123,7 @@ defaultproperties
      Damage=45.000000
      DamageRadius=200.000000
      MomentumTransfer=70000.000000
-     MyDamageType=Class'DEKMonsters208AC.DamTypeEarthSkaarj'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeEarthSkaarj'
      ImpactSound=Sound'WeaponSounds.ShockRifle.ShockRifleExplosion'
      MaxEffectDistance=7000.000000
      LightType=LT_Steady

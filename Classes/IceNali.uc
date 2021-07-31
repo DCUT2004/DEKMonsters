@@ -7,7 +7,7 @@ class IceNali extends DCNali;
 defaultproperties
 {
      ScoringValue=2
-     GibGroupClass=Class'DEKMonsters208AC.IceGibGroup'
+     GibGroupClass=Class'DEKMonsters208AD.IceGibGroup'
      Health=87
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceNaliShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceNaliShader'

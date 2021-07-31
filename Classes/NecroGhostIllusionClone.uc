@@ -101,11 +101,11 @@ simulated function Tick(float DeltaTime)
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)
 {
 	if (rand(99) >= 33)
-		Self.PlaySound(sound'DEKMonsters208AC.MonsterSounds.NecroGhostIllusionLaugh',,500.00);
+		Self.PlaySound(sound'DEKMonsters208AD.MonsterSounds.NecroGhostIllusionLaugh',,500.00);
 	else if (rand(99) >= 66)
-		Self.PlaySound(sound'DEKMonsters208AC.MonsterSounds.NecroGhostIllusionLaugh',,500.00);
+		Self.PlaySound(sound'DEKMonsters208AD.MonsterSounds.NecroGhostIllusionLaugh',,500.00);
 	else
-		Self.PlaySound(sound'DEKMonsters208AC.MonsterSounds.NecroGhostIllusionLaugh',,500.00);
+		Self.PlaySound(sound'DEKMonsters208AD.MonsterSounds.NecroGhostIllusionLaugh',,500.00);
 	if (Killer != None && Killer.Pawn != None && Killer.Pawn.Health > 0)
 	{
 		Killer.Pawn.TakeDamage(HPDamage, ParentGhost, Killer.Pawn.Location, vect(0,0,0), class'DamTypeNecroGhostIllusion');
@@ -119,7 +119,7 @@ defaultproperties
      HPDamage=10
      AdrenDamage=20
      MaxChildren=0
-     DeathSound(0)=Sound'DEKMonsters208AC.MonsterSounds.NecroGhostIllusionLaugh'
-     DeathSound(1)=Sound'DEKMonsters208AC.MonsterSounds.NecroGhostIllusionLaugh'
+     DeathSound(0)=Sound'DEKMonsters208AD.MonsterSounds.NecroGhostIllusionLaugh'
+     DeathSound(1)=Sound'DEKMonsters208AD.MonsterSounds.NecroGhostIllusionLaugh'
      ScoringValue=0
 }

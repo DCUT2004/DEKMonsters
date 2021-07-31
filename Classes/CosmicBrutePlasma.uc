@@ -18,7 +18,7 @@ defaultproperties
      MaxSpeed=2000.000000
      Damage=40.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters208AC.DamTypeCosmicBrute'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeCosmicBrute'
      LifeSpan=3.000000
      DrawScale=1.500000
      Mass=2.000000

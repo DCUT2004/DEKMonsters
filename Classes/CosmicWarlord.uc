@@ -63,10 +63,10 @@ function FireProjectile()
 
 defaultproperties
 {
-     FireSound=Sound'DEKMonsters208AC.MonsterSounds.CosmicWarlordFire'
-     AmmunitionClass=Class'DEKMonsters208AC.CosmicWarlordAmmo'
+     FireSound=Sound'DEKMonsters208AD.MonsterSounds.CosmicWarlordFire'
+     AmmunitionClass=Class'DEKMonsters208AD.CosmicWarlordAmmo'
      ScoringValue=12
-     GibGroupClass=Class'DEKMonsters208AC.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AD.CosmicGibGroup'
      GroundSpeed=700.000000
      AirSpeed=800.000000
      AccelRate=600.000000

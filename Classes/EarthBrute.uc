@@ -67,8 +67,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AC.EarthBruteAmmo'
-     GibGroupClass=Class'DEKMonsters208AC.EarthGibGroup'
+     AmmunitionClass=Class'DEKMonsters208AD.EarthBruteAmmo'
+     GibGroupClass=Class'DEKMonsters208AD.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Brute_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Brute_Earth-Shader'
 }

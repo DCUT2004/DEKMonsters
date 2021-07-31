@@ -2,5 +2,5 @@ class TechWarlordAmmo extends WarlordAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AC.TechWarlordShell'
+     ProjectileClass=Class'DEKMonsters208AD.TechWarlordShell'
 }

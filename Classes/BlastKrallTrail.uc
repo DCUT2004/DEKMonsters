@@ -33,7 +33,7 @@ defaultproperties
          WarmupTicksPerSecond=1.000000
          RelativeWarmupTime=1.000000
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters208AC.BlastKrallTrail.SpriteEmitter21'
+     Emitters(0)=SpriteEmitter'DEKMonsters208AD.BlastKrallTrail.SpriteEmitter21'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter18
          UseColorScale=True
@@ -62,7 +62,7 @@ defaultproperties
          WarmupTicksPerSecond=1.000000
          RelativeWarmupTime=3.000000
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters208AC.BlastKrallTrail.SpriteEmitter18'
+     Emitters(1)=SpriteEmitter'DEKMonsters208AD.BlastKrallTrail.SpriteEmitter18'
 
      bNoDelete=False
      Physics=PHYS_Trailer

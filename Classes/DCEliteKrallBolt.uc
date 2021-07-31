@@ -2,5 +2,5 @@ class DCEliteKrallBolt extends EliteKrallBolt;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AC.DamTypeDCEliteKrallBolt'
+     MyDamageType=Class'DEKMonsters208AD.DamTypeDCEliteKrallBolt'
 }
