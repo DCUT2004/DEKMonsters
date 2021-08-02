@@ -3,7 +3,7 @@ class DamTypeIceMercenary extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AD.WeaponIceMercenary'
+     WeaponClass=Class'DEKMonsters208AE.WeaponIceMercenary'
      DeathString="An ice mercenary froze %o."
      bDetonatesGoop=True
 }

@@ -7,7 +7,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AD.WeaponCosmicWarlord'
+     WeaponClass=Class'DEKMonsters208AE.WeaponCosmicWarlord'
      DeathString="%o was demolished by a Cosmic Warlord's plasma blast."
      DamageOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'
      DeathOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'

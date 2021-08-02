@@ -15,5 +15,5 @@ defaultproperties
 {
      Damage=33.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters208AD.DamTypeCosmicQueen'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeCosmicQueen'
 }

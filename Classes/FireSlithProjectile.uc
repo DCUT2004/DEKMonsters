@@ -147,7 +147,7 @@ defaultproperties
 {
      HeatLifespan=4.000000
      BaseChance=25.000000
-     MyDamageType=Class'DEKMonsters208AD.DamTypeFireSlith'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeFireSlith'
      LightHue=30
      LightSaturation=15
      Skins(0)=Texture'DEKMonstersTexturesMaster208.FireMonsters.FireGib'

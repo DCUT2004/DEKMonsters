@@ -2,5 +2,5 @@ class EarthEliteMercenaryAmmo extends Ammunition;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AD.EarthEliteMercenaryProjectile'
+     ProjectileClass=Class'DEKMonsters208AE.EarthEliteMercenaryProjectile'
 }

@@ -2,5 +2,5 @@ class IceSlugAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AD.IceSlugBioGlob'
+     ProjectileClass=Class'DEKMonsters208AE.IceSlugBioGlob'
 }

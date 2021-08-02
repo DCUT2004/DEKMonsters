@@ -45,11 +45,11 @@ defaultproperties
      WeaponClassName(1)="XWeapons.ShockRifle"
      WeaponClassName(2)="Onslaught.ONSMineLayer"
      WeaponClassName(3)="Onslaught.ONSGrenadeLauncher"
-     WeaponClassName(4)="DEKMonsters208AD.DEKINIREdeemer"
+     WeaponClassName(4)="DEKMonsters208AE.DEKINIREdeemer"
      WeaponClassName(5)="XWeapons.MiniGun"
      WeaponClassName(6)="XWeapons.BioRifle"
      WeaponClassName(7)="XWeapons.ShieldGun"
-     GibGroupClass=Class'DEKMonsters208AD.FireGibGroup'
+     GibGroupClass=Class'DEKMonsters208AE.FireGibGroup'
      Skins(0)=Texture'DEKMonstersTexturesMaster208.FireMonsters.FireNali'
      Skins(1)=Texture'DEKMonstersTexturesMaster208.FireMonsters.FireNali'
 }

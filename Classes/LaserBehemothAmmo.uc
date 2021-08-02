@@ -3,5 +3,5 @@ class LaserBehemothAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AD.LaserBehemothProj'
+     ProjectileClass=Class'DEKMonsters208AE.LaserBehemothProj'
 }

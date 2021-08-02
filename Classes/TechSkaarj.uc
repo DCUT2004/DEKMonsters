@@ -98,15 +98,15 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 defaultproperties
 {
      ProtectionMultiplier=0.500000
-     AmmunitionClass=Class'DEKMonsters208AD.TechSkaarjAmmo'
+     AmmunitionClass=Class'DEKMonsters208AE.TechSkaarjAmmo'
      ScoringValue=8
-     GibGroupClass=Class'DEKMonsters208AD.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AE.DEKTechGibGroup'
      GroundSpeed=600.000000
      WaterSpeed=100.000000
      AirSpeed=600.000000
      AccelRate=900.000000
      Health=200
-     ControllerClass=Class'DEKMonsters208AD.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AE.TechMonsterController'
      MovementAnims(0)="WalkF"
      MovementAnims(1)="WalkF"
      MovementAnims(2)="WalkF"

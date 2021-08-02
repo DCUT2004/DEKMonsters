@@ -360,7 +360,7 @@ defaultproperties
      FireRifleBurstAnim="spell"
      MeleeRange=60.000000
      Health=350
-     ControllerClass=Class'DEKMonsters208AD.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

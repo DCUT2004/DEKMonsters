@@ -3,7 +3,7 @@ class DamTypeFireQueen extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AD.WeaponFireQueen'
+     WeaponClass=Class'DEKMonsters208AE.WeaponFireQueen'
      DeathString="A fire queen burned %o."
      bDetonatesGoop=True
 }

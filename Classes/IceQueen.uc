@@ -183,9 +183,9 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=3
-     AmmunitionClass=Class'DEKMonsters208AD.IceQueenAmmo'
-     GibGroupClass=Class'DEKMonsters208AD.IceGibGroup'
-     ControllerClass=Class'DEKMonsters208AD.DCMonsterController'
+     AmmunitionClass=Class'DEKMonsters208AE.IceQueenAmmo'
+     GibGroupClass=Class'DEKMonsters208AE.IceGibGroup'
+     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceQueenFinalBlend'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceQueenFinalBlend'
 }

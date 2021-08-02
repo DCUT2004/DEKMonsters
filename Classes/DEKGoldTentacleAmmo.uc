@@ -3,5 +3,5 @@ class DEKGoldTentacleAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AD.DEKGoldTentacleProjectile'
+     ProjectileClass=Class'DEKMonsters208AE.DEKGoldTentacleProjectile'
 }

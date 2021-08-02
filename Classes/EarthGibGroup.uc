@@ -2,12 +2,12 @@ class EarthGibGroup extends xPawnGibGroup;
 
 defaultproperties
 {
-     Gibs(0)=Class'DEKMonsters208AD.EarthGibCalf'
-     Gibs(1)=Class'DEKMonsters208AD.EarthGibForearm'
-     Gibs(2)=Class'DEKMonsters208AD.EarthGibForearm'
-     Gibs(3)=Class'DEKMonsters208AD.EarthGibHead'
-     Gibs(4)=Class'DEKMonsters208AD.EarthGibTorso'
-     Gibs(5)=Class'DEKMonsters208AD.EarthGibUpperArm'
+     Gibs(0)=Class'DEKMonsters208AE.EarthGibCalf'
+     Gibs(1)=Class'DEKMonsters208AE.EarthGibForearm'
+     Gibs(2)=Class'DEKMonsters208AE.EarthGibForearm'
+     Gibs(3)=Class'DEKMonsters208AE.EarthGibHead'
+     Gibs(4)=Class'DEKMonsters208AE.EarthGibTorso'
+     Gibs(5)=Class'DEKMonsters208AE.EarthGibUpperArm'
      BloodHitClass=None
      LowGoreBloodHitClass=None
      BloodGibClass=None

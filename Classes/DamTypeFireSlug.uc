@@ -3,7 +3,7 @@ class DamTypeFireSlug extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AD.WeaponFireSlug'
+     WeaponClass=Class'DEKMonsters208AE.WeaponFireSlug'
      DeathString="A fire slug burned %o."
      bDetonatesGoop=True
 }

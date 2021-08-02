@@ -23,6 +23,7 @@ function GiveTo(Pawn Other, optional Pickup Pickup)
 {
 	local RW_MagicalWard W;
 	local MagicalWardProtectionInv MWInv;
+	local ComboWardInv WardInv;
 	
 	if(Other == None)
 	{
@@ -33,26 +34,40 @@ function GiveTo(Pawn Other, optional Pickup Pickup)
 	stopped = false;
 	PawnOwner = Other;
 	
-	if (PawnOwner != None && PawnOwner.Weapon != None && PawnOwner.Weapon.IsA('RW_MagicalWard'))
+	if (PawnOwner != None)
 	{
-		W = RW_MagicalWard(PawnOwner.Weapon);
-		if (Rand(100) <= W.Modifier*W.ChanceToWardPerModifier)
+		WardInv = ComboWardInv(PawnOwner.FindInventoryType(Class'ComboWardInv'));
+		if (WardInv != None && Rand(100) <= WardInv.EffectMultiplier)
 		{
-			MWInv = MagicalWardProtectionInv(Other.FindInventoryType(class'MagicalWardProtectionInv'));
-			if (MWInv == None)
-			{
-				MWInv = Other.Spawn(Class'MagicalWardProtectionInv');
-				MWInv.GiveTo(Other);
-			}
-			else
-			{
-				MWInv.Lifespan = MWInv.default.Lifespan;
-				MWInv.ProtectionMultiplier -= MWInv.ProtectionPerWardMultiplier;
-				if (MWInv.ProtectionMultiplier < MWInv.MaxProtectionMultiplier)
-					MWInv.ProtectionMultiplier = MWInv.MaxProtectionMultiplier;
-			}
+			if (PawnOwner.Controller != None && PlayerController(PawnOwner.Controller) != None)
+				PlayerController(PawnOwner.Controller).ClientPlaySound(Sound'DEKRPG208AE.ComboSounds.Ward');
 			Destroy();
 			return;
+		}
+		
+		if (PawnOwner.Weapon != None && PawnOwner.Weapon.IsA('RW_MagicalWard'))
+		{
+			W = RW_MagicalWard(PawnOwner.Weapon);
+			if (Rand(100) <= W.Modifier*W.ChanceToWardPerModifier)
+			{
+				MWInv = MagicalWardProtectionInv(PawnOwner.FindInventoryType(class'MagicalWardProtectionInv'));
+				if (MWInv == None)
+				{
+					MWInv = PawnOwner.Spawn(Class'MagicalWardProtectionInv');
+					MWInv.GiveTo(PawnOwner);
+				}
+				else
+				{
+					MWInv.Lifespan = MWInv.default.Lifespan;
+					MWInv.ProtectionMultiplier -= MWInv.ProtectionPerWardMultiplier;
+					if (MWInv.ProtectionMultiplier < MWInv.MaxProtectionMultiplier)
+						MWInv.ProtectionMultiplier = MWInv.MaxProtectionMultiplier;
+				}
+				if (PawnOwner.Controller != None && PlayerController(PawnOwner.Controller) != None)
+					PlayerController(PawnOwner.Controller).ClientPlaySound(Sound'DEKRPG208AE.ComboSounds.Ward');
+				Destroy();
+				return;
+			}
 		}
 	}
 	Super.GiveTo(Other);

@@ -61,11 +61,11 @@ defaultproperties
 {
      HeatLifespan=3.000000
      BaseChance=25.000000
-     HitEffectClass=Class'DEKMonsters208AD.FireMercenaryPlasmaHitEffect'
-     PlasmaEffectClass=Class'DEKMonsters208AD.FireMercenaryPlasmaEffect'
+     HitEffectClass=Class'DEKMonsters208AE.FireMercenaryPlasmaHitEffect'
+     PlasmaEffectClass=Class'DEKMonsters208AE.FireMercenaryPlasmaEffect'
      Speed=2000.000000
      MaxSpeed=2000.000000
 	 Damage=18
      DamageRadius=100.000000
-     MyDamageType=Class'DEKMonsters208AD.DamTypeFireMercenary'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeFireMercenary'
 }

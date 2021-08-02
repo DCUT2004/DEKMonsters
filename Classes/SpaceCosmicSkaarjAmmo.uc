@@ -2,5 +2,5 @@ class SpaceCosmicSkaarjAmmo extends CosmicSkaarjAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AD.SpaceCosmicSkaarjPlasma'
+     ProjectileClass=Class'DEKMonsters208AE.SpaceCosmicSkaarjPlasma'
 }

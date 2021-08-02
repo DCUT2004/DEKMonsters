@@ -2,8 +2,8 @@ class CosmicGibHand extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AD.CosmicGibGroup'
-     TrailClass=Class'DEKMonsters208AD.CosmicTrail'
+     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
+     TrailClass=Class'DEKMonsters208AE.CosmicTrail'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'XEffects.GibBotHand'
      DrawScale=0.500000

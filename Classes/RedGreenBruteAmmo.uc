@@ -2,5 +2,5 @@ class RedGreenBruteAmmo extends BruteAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AD.RedGreenBruteRocket'
+     ProjectileClass=Class'DEKMonsters208AE.RedGreenBruteRocket'
 }

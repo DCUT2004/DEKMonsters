@@ -2,5 +2,5 @@ class PoisonSlugAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AD.PoisonSlugBioGlob'
+     ProjectileClass=Class'DEKMonsters208AE.PoisonSlugBioGlob'
 }

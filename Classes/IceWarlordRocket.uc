@@ -196,14 +196,14 @@ defaultproperties
      ShakeOffsetMag=(Z=10.000000)
      ShakeOffsetRate=(Z=200.000000)
      ShakeOffsetTime=10.000000
-     ExplosionEffectClass=Class'DEKMonsters208AD.IceWarlordRocketExplosion'
+     ExplosionEffectClass=Class'DEKMonsters208AE.IceWarlordRocketExplosion'
      Team=255
      Speed=1000.000000
      MaxSpeed=1000.000000
      Damage=60.000000
      DamageRadius=800.000000
      MomentumTransfer=15000.000000
-     MyDamageType=Class'DEKMonsters208AD.DamTypeIceWarlord'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeIceWarlord'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=120

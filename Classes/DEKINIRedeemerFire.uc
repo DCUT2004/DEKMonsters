@@ -17,5 +17,5 @@ function Projectile SpawnProjectile(Vector Start, Rotator Dir)
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AD.DEKINIRedeemerProj'
+     ProjectileClass=Class'DEKMonsters208AE.DEKINIRedeemerProj'
 }

@@ -52,5 +52,5 @@ defaultproperties
      WaterSpeed=169.000000
      AirSpeed=338.000000
      JumpZ=261.000000
-     ControllerClass=Class'DEKMonsters208AD.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
 }

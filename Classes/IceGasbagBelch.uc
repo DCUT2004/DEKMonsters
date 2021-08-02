@@ -115,6 +115,6 @@ defaultproperties
      IceLifespan=3.000000
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     MyDamageType=Class'DEKMonsters208AD.DamTypeIceGasbag'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeIceGasbag'
      Texture=Texture'XEffectMat.Link.link_muz_blue'
 }

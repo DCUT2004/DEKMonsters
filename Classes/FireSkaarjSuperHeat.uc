@@ -137,7 +137,7 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AD.FireSkaarjSuperHeatAmmo'
+     AmmunitionClass=Class'DEKMonsters208AE.FireSkaarjSuperHeatAmmo'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjSuperHeatShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjSuperHeatShader'
 }

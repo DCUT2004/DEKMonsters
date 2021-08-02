@@ -85,7 +85,7 @@ function SpawnChunks(int num)
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AD.DamTypeTitaniumTitanRock'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeTitaniumTitanRock'
      Skins(0)=FinalBlend'satoreMonsterPackv120.SMPMetalSkaarj.MetalSkinFinal'
      Skins(1)=FinalBlend'satoreMonsterPackv120.SMPMetalSkaarj.MetalSkinFinal'
 }

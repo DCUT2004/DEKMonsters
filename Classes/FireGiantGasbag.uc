@@ -194,7 +194,7 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     GibGroupClass=Class'DEKMonsters208AD.FireGibGroup'
+     GibGroupClass=Class'DEKMonsters208AE.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireGasbagShader1'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireGasbagShader2'
 }

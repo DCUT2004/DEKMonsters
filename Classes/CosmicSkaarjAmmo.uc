@@ -4,5 +4,5 @@ defaultproperties
 {
      bRecommendSplashDamage=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters208AD.CosmicSkaarjPlasma'
+     ProjectileClass=Class'DEKMonsters208AE.CosmicSkaarjPlasma'
 }

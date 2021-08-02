@@ -3,5 +3,5 @@ class DamTypeTentacle extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AD.WeaponTentacle'
+     WeaponClass=Class'DEKMonsters208AE.WeaponTentacle'
 }

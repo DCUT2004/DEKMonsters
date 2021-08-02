@@ -3,7 +3,7 @@ class DamTypeGoldTentacle extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AD.WeaponGoldTentacle'
+     WeaponClass=Class'DEKMonsters208AE.WeaponGoldTentacle'
      DeathString="%o was shot down by a Gold Tentacle."
      bDetonatesGoop=True
 }

@@ -5,5 +5,5 @@ defaultproperties
      Speed=2200.000000
      MaxSpeed=2200.000000
      Damage=25.000000
-     MyDamageType=Class'DEKMonsters208AD.DamTypeEarthMercenaryThorn'
+     MyDamageType=Class'DEKMonsters208AE.DamTypeEarthMercenaryThorn'
 }

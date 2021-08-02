@@ -113,7 +113,7 @@ defaultproperties
      IceLifespan=3
      IceModifier=1
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     GibGroupClass=Class'DEKMonsters208AD.IceGibGroup'
+     GibGroupClass=Class'DEKMonsters208AE.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjPupaeShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjPupaeShader'
 }
