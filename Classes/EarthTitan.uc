@@ -7,19 +7,19 @@ function PostBeginPlay()
 {
 	local EarthInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.EarthHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.EarthHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	
 	if (Instigator != None)
 	{
+		Health *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.EarthMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		
 		Inv = EarthInv(Instigator.FindInventoryType(class'EarthInv'));
 		if (Inv == None)
 		{
@@ -27,6 +27,7 @@ function PostBeginPlay()
 			Inv.GiveTo(Instigator);
 		}
 	}
+	
 	Super.PostBeginPlay();
 }
 
@@ -131,8 +132,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AE.EarthTitanAmmo'
-     GibGroupClass=Class'DEKMonsters208AE.EarthGibGroup'
+     AmmunitionClass=Class'DEKMonsters208AF.EarthTitanAmmo'
+     GibGroupClass=Class'DEKMonsters208AF.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Titan_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Titan_Earth-Shader'
 }

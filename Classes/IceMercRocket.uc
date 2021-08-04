@@ -137,7 +137,7 @@ defaultproperties
      IceLifespan=3.000000
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     MyDamageType=Class'DEKMonsters208AE.DamTypeIceMercenary'
+     MyDamageType=Class'DEKMonsters208AF.DamTypeIceMercenary'
      ExplosionDecal=None
      LightHue=120
      StaticMesh=StaticMesh'DEKStaticsMaster208K.Meshes.IceRocketProj'

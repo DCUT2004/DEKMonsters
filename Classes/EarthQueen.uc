@@ -5,23 +5,23 @@ var config int EggChance, MaxEggs;
 var int EggCount;
 var EarthQueenShield eShield;
 
-function PostBeginPlay()
+simulated function PostBeginPlay()
 {
 	local EarthInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.EarthHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.EarthHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	
 	if (Instigator != None)
 	{
+		Health *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		
 		Inv = EarthInv(Instigator.FindInventoryType(class'EarthInv'));
 		if (Inv == None)
 		{
@@ -190,7 +190,7 @@ function SpawnShot()
 		}
 	}
 	else
-		spawn(class'DEKMonsters208AE.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
+		spawn(class'DEKMonsters208AF.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
 
 	projStart = Location + 1 * CollisionRadius * X + ( 0.7 - 0.2 * row) * CollisionHeight * Z - 0.2 * CollisionRadius * Y;
 	if (Rand(99) <= EggChance && EggCount < MaxEggs)
@@ -203,7 +203,7 @@ function SpawnShot()
 		}
 	}
 	else
-		spawn(class'DEKMonsters208AE.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
+		spawn(class'DEKMonsters208AF.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
 	row++;
 }
 
@@ -297,8 +297,8 @@ defaultproperties
 {
      EggChance=10
      MaxEggs=5
-     GibGroupClass=Class'DEKMonsters208AE.EarthGibGroup'
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     GibGroupClass=Class'DEKMonsters208AF.EarthGibGroup'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Queen_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Queen_Earth-Shader'
 }

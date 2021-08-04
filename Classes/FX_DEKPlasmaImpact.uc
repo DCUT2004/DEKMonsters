@@ -94,7 +94,7 @@ defaultproperties
          LifetimeRange=(Min=0.400000,Max=0.600000)
          StartVelocityRange=(X=(Min=75.000000,Max=300.000000),Y=(Min=-300.000000,Max=300.000000),Z=(Min=-300.000000,Max=300.000000))
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters208AE.FX_DEKPlasmaImpact.SpriteEmitter34'
+     Emitters(0)=SpriteEmitter'DEKMonsters208AF.FX_DEKPlasmaImpact.SpriteEmitter34'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter35
          UseColorScale=True
@@ -115,7 +115,7 @@ defaultproperties
          Texture=Texture'AS_FX_TX.Flares.Laser_Flare'
          LifetimeRange=(Min=0.670000,Max=0.670000)
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters208AE.FX_DEKPlasmaImpact.SpriteEmitter35'
+     Emitters(1)=SpriteEmitter'DEKMonsters208AF.FX_DEKPlasmaImpact.SpriteEmitter35'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter36
          UseColorScale=True
@@ -138,7 +138,7 @@ defaultproperties
          LifetimeRange=(Min=0.400000,Max=0.600000)
          StartVelocityRange=(X=(Min=75.000000,Max=300.000000),Y=(Min=-300.000000,Max=300.000000),Z=(Min=-300.000000,Max=300.000000))
      End Object
-     Emitters(2)=SpriteEmitter'DEKMonsters208AE.FX_DEKPlasmaImpact.SpriteEmitter36'
+     Emitters(2)=SpriteEmitter'DEKMonsters208AF.FX_DEKPlasmaImpact.SpriteEmitter36'
 
      AutoDestroy=True
      bNoDelete=False

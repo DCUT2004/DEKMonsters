@@ -12,19 +12,20 @@ function PostBeginPlay()
 {
 	local FireInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.FireHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.FireHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.FireScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.FireGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.FireAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.FireWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.FireDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
-	
 	if (Instigator != None)
 	{
+		Health *= class'ElementalConfigure'.default.FireBossHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.FireBossHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.FireScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.FireGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.FireAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.FireWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.FireDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
+		
+
 		Inv = FireInv(Instigator.FindInventoryType(class'FireInv'));
 		if (Inv == None)
 		{
@@ -365,9 +366,9 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AE.FireQueenAmmo'
-     GibGroupClass=Class'DEKMonsters208AE.FireGibGroup'
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     AmmunitionClass=Class'DEKMonsters208AF.FireQueenAmmo'
+     GibGroupClass=Class'DEKMonsters208AF.FireGibGroup'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireQueenFinalBlend'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireQueenFinalBlend'
 }

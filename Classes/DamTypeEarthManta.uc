@@ -3,6 +3,6 @@ class DamTypeEarthManta extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AE.WeaponEarthManta'
+     WeaponClass=Class'DEKMonsters208AF.WeaponEarthManta'
      DeathString="%o was eaten alive by an Earth Manta."
 }

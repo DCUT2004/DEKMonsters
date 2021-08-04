@@ -21,22 +21,25 @@ function PostBeginPlay()
 {
 	local EarthInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.EarthMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	
-	Inv = EarthInv(Instigator.FindInventoryType(class'EarthInv'));
-	if (Inv == None)
+	if (Instigator != None)
 	{
-		Inv = Instigator.Spawn(class'EarthInv');
-		Inv.GiveTo(Instigator);
+		Health *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.EarthBossHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.EarthMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		
+		Inv = EarthInv(Instigator.FindInventoryType(class'EarthInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(class'EarthInv');
+			Inv.GiveTo(Instigator);
+		}
 	}
 	
 	Super.PostBeginPlay();
@@ -207,9 +210,9 @@ defaultproperties
      DamageMin=20.000000
      DamageMax=30.000000
      DamageMomentum=10000.000000
-     BeamDamageType=Class'DEKMonsters208AE.DamTypeEarthWarlordBeam'
-     FireSound=Sound'DEKMonsters208AE.MonsterSounds.EarthWarlordFire'
-     GibGroupClass=Class'DEKMonsters208AE.EarthGibGroup'
+     BeamDamageType=Class'DEKMonsters208AF.DamTypeEarthWarlordBeam'
+     FireSound=Sound'DEKMonsters208AF.MonsterSounds.EarthWarlordFire'
+     GibGroupClass=Class'DEKMonsters208AF.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Warlord_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Warlord_Earth-Shader'
 }

@@ -2,5 +2,5 @@ class EarthSkaarjTrooperProjectile extends EarthSkaarjProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AE.DamTypeEarthSkaarjTrooper'
+     MyDamageType=Class'DEKMonsters208AF.DamTypeEarthSkaarjTrooper'
 }

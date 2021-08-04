@@ -4,7 +4,8 @@ class CosmicWarlord extends DCWarlord;
 
 simulated function PostBeginPlay()
 {
-	GiveCosmicInv();
+	if (Instigator != None)
+		GiveCosmicInv();
 	Super.PostBeginPlay();
 }
 
@@ -63,10 +64,10 @@ function FireProjectile()
 
 defaultproperties
 {
-     FireSound=Sound'DEKMonsters208AE.MonsterSounds.CosmicWarlordFire'
-     AmmunitionClass=Class'DEKMonsters208AE.CosmicWarlordAmmo'
+     FireSound=Sound'DEKMonsters208AF.MonsterSounds.CosmicWarlordFire'
+     AmmunitionClass=Class'DEKMonsters208AF.CosmicWarlordAmmo'
      ScoringValue=12
-     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.CosmicGibGroup'
      GroundSpeed=700.000000
      AirSpeed=800.000000
      AccelRate=600.000000

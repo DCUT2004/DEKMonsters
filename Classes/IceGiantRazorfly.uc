@@ -16,28 +16,28 @@ simulated function PostBeginPlay()
 {
 	local IceInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.IceHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.IceHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.IceScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.IceGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.IceAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.IceWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.IceMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-	
-	Instigator = self;
-	
-	Inv = IceInv(Instigator.FindInventoryType(class'IceInv'));
-	if (Inv == None)
+	if (Instigator != None)
 	{
-		Inv = Instigator.Spawn(class'IceInv');
-		Inv.GiveTo(Instigator);
+		Health *= class'ElementalConfigure'.default.IceHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.IceHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.IceScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.IceGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.IceAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.IceWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.IceMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
+		
+		Inv = IceInv(Instigator.FindInventoryType(class'IceInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(class'IceInv');
+			Inv.GiveTo(Instigator);
+		}
 	}
 	
 	Super.PostBeginPlay();
-
 }
 
 function PoisonTarget(Actor Victim, class<DamageType> DamageType)
@@ -113,7 +113,7 @@ defaultproperties
      IceLifespan=3
      IceModifier=1
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     GibGroupClass=Class'DEKMonsters208AE.IceGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceRazorFlyShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceRazorFlyShader'
 }

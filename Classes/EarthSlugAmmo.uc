@@ -2,5 +2,5 @@ class EarthSlugAmmo extends EarthSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AE.EarthSlugBioGlob'
+     ProjectileClass=Class'DEKMonsters208AF.EarthSlugBioGlob'
 }

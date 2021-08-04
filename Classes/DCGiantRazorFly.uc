@@ -6,7 +6,17 @@ var bool SummonedMonster;
 
 simulated function PostNetBeginPlay()
 {
-	Instigator = self;
+	local ComboInv ComboInv;
+	
+	if (Instigator != None)
+	{
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
+	}
 	AmbientSound.BaseRadius=5000.00;
 	Super.PostNetBeginPlay();
 }
@@ -49,6 +59,6 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 defaultproperties
 {
      ScoringValue=7
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
-     AmbientSound=Sound'DEKMonsters208AE.MonsterSounds.BuzzingWings'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
+     AmbientSound=Sound'DEKMonsters208AF.MonsterSounds.BuzzingWings'
 }

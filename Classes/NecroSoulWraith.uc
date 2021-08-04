@@ -23,14 +23,17 @@ function PostBeginPlay()
 	local ComboInv ComboInv;
 	Super.PostBeginPlay();
 	
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
+		
+		CheckController();
 	}
-	
-	CheckController();
 	
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
@@ -321,7 +324,7 @@ defaultproperties
 {
      SuckDamage=15.000000
      SuckDamageMax=20.000000
-     SuckDamageType=Class'DEKMonsters208AE.DamTypeSoulWraith'
+     SuckDamageType=Class'DEKMonsters208AF.DamTypeSoulWraith'
      AChannel=255
      DeathAnim(0)="Dead"
      DeathAnim(1)="Dead2"
@@ -349,7 +352,7 @@ defaultproperties
      MeleeRange=60.000000
      HealthMax=400.000000
      Health=200
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

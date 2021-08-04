@@ -2,5 +2,5 @@ class EarthTitanAmmo extends TitanAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AE.EarthTitanProjectile'
+     ProjectileClass=Class'DEKMonsters208AF.EarthTitanProjectile'
 }

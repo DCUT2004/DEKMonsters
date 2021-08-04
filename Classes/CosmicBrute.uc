@@ -2,7 +2,8 @@ class CosmicBrute extends DCBrute;
 
 simulated function PostBeginPlay()
 {
-	GiveCosmicInv();
+	if (Instigator != None)
+		GiveCosmicInv();
 	Super.PostBeginPlay();
 }
 
@@ -36,9 +37,9 @@ function bool SameSpeciesAs(Pawn P)
 defaultproperties
 {
      FireSound=Sound'ONSBPSounds.Artillery.ShellIncoming1'
-     AmmunitionClass=Class'DEKMonsters208AE.CosmicBruteAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.CosmicBruteAmmo'
      ScoringValue=7
-     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.CosmicGibGroup'
      bCanFly=True
      GroundSpeed=500.000000
      AirSpeed=600.000000

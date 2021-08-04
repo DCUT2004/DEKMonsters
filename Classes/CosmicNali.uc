@@ -21,7 +21,8 @@ simulated function PostBeginPlay()
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;
-	GiveCosmicInv();
+	if (Instigator != None)
+		GiveCosmicInv();
 }
 
 function GiveCosmicInv()
@@ -350,9 +351,9 @@ defaultproperties
      HitSound(3)=Sound'satoreMonsterPackv120.Nali.injur2n'
      DeathSound(0)=Sound'satoreMonsterPackv120.Nali.death1n'
      DeathSound(1)=Sound'satoreMonsterPackv120.Nali.death2n'
-     AmmunitionClass=Class'DEKMonsters208AE.CosmicNaliAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.CosmicNaliAmmo'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.CosmicGibGroup'
      SoundFootsteps(0)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(1)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(2)=Sound'satoreMonsterPackv120.Nali.walkC'
@@ -375,7 +376,7 @@ defaultproperties
      AirSpeed=1000.000000
      AccelRate=1700.000000
      Health=15
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

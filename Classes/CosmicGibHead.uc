@@ -2,8 +2,8 @@ class CosmicGibHead extends GibHead;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
-     TrailClass=Class'DEKMonsters208AE.CosmicTrail'
+     GibGroupClass=Class'DEKMonsters208AF.CosmicGibGroup'
+     TrailClass=Class'DEKMonsters208AF.CosmicTrail'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'XEffects.GibOrganicTorso'
      DrawScale=0.500000

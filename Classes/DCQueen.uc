@@ -7,11 +7,14 @@ simulated function PostBeginPlay()
 	local ComboInv ComboInv;
 	Super(SMPMonster).PostBeginPlay();
 	
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
 	}
 	
 	if (Controller != None)

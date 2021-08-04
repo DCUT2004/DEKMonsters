@@ -2,6 +2,26 @@ class TechWarlord extends DCWarlord;
 
 var config float ProtectionMultiplier;
 
+simulated function PostBeginPlay()
+{
+	GiveTechInv();
+	Super.PostBeginPlay();
+}
+
+function GiveTechInv()
+{
+	local TechInv Inv;
+	if (Instigator != None)
+	{
+		Inv = TechInv(Instigator.FindInventoryType(class'TechInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(Class'TechInv');
+			Inv.GiveTo(Instigator);
+		}
+	}
+}
+
 function bool SameSpeciesAs(Pawn P)
 {
 	if (SummonedMonster)
@@ -83,11 +103,11 @@ function FireProjectile()
 defaultproperties
 {
      ProtectionMultiplier=0.500000
-     AmmunitionClass=Class'DEKMonsters208AE.TechWarlordAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.TechWarlordAmmo'
      ScoringValue=13
-     GibGroupClass=Class'DEKMonsters208AE.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.DEKTechGibGroup'
      Health=550
-     ControllerClass=Class'DEKMonsters208AE.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

@@ -174,11 +174,11 @@ defaultproperties
      MinProjectiles=3
      MaxProjectiles=7
      MaxHoldTime=4.000000
-     AmmunitionClass=Class'DEKMonsters208AE.TechBehemothAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.TechBehemothAmmo'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters208AE.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.DEKTechGibGroup'
      Health=360
-     ControllerClass=Class'DEKMonsters208AE.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

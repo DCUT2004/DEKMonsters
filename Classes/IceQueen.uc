@@ -9,19 +9,19 @@ function PostBeginPlay()
 {
 	local IceInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.IceHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.IceHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.IceScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.IceGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.IceAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.IceWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-	
 	if (Instigator != None)
 	{
+		Health *= class'ElementalConfigure'.default.IceBossHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.IceBossHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.IceScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.IceGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.IceAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.IceWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.BossMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
+		
 		Inv = IceInv(Instigator.FindInventoryType(class'IceInv'));
 		if (Inv == None)
 		{
@@ -29,7 +29,6 @@ function PostBeginPlay()
 			Inv.GiveTo(Instigator);
 		}
 	}
-	
 	Super(SMPQueen).PostBeginPlay();
 }
 
@@ -183,9 +182,9 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=3
-     AmmunitionClass=Class'DEKMonsters208AE.IceQueenAmmo'
-     GibGroupClass=Class'DEKMonsters208AE.IceGibGroup'
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     AmmunitionClass=Class'DEKMonsters208AF.IceQueenAmmo'
+     GibGroupClass=Class'DEKMonsters208AF.IceGibGroup'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceQueenFinalBlend'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceQueenFinalBlend'
 }

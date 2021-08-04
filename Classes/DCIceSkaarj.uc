@@ -7,11 +7,14 @@ simulated function PostBeginPlay()
 	local ComboInv ComboInv;
 	Super.PostBeginPlay();
 	
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
 	}
 	MyAmmo.ProjectileClass = class'DCIceSkaarjProjectile';
 }
@@ -34,8 +37,8 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AE.DCIceSkaarjAmmo'
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     AmmunitionClass=Class'DEKMonsters208AF.DCIceSkaarjAmmo'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      DodgeAnims(2)="DodgeR"
      DodgeAnims(3)="DodgeL"
 }

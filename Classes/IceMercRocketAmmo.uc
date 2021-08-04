@@ -2,5 +2,5 @@ class IceMercRocketAmmo extends SMPMerceRocketAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AE.IceMercRocket'
+     ProjectileClass=Class'DEKMonsters208AF.IceMercRocket'
 }

@@ -9,14 +9,17 @@ function PostBeginPlay()
 	local ComboInv ComboInv;
 	Super.PostBeginPlay();
 	
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
+		
+		CheckController();
 	}
-	
-	CheckController();
 }
 
 function CheckController()
@@ -122,7 +125,7 @@ defaultproperties
      DeathSound(1)=Sound'NewDeath.MaleNightmare.mn_death07'
      DeathSound(2)=Sound'NewDeath.MaleNightmare.mn_death04'
      DeathSound(3)=Sound'NewDeath.MaleNightmare.mn_death03'
-     GibGroupClass=Class'DEKMonsters208AE.BoneGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.BoneGibGroup'
      SoundFootsteps(0)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(1)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(2)=Sound'satoreMonsterPackv120.Nali.walkC'
@@ -137,7 +140,7 @@ defaultproperties
      WaterSpeed=120.000000
      AirSpeed=340.000000
      JumpZ=140.000000
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      TurnLeftAnim="TurnL"
      TurnRightAnim="TurnR"
      CrouchAnims(0)="CrouchF"

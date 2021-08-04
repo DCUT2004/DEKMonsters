@@ -15,24 +15,27 @@ function PostBeginPlay()
 {
 	local IceInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.IceHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.IceHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.IceScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.IceGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.IceAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.IceWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.IceMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-	
-	Instigator = self;
-	
-	Inv = IceInv(Instigator.FindInventoryType(class'IceInv'));
-	if (Inv == None)
+	if (Instigator != None)
 	{
-		Inv = Instigator.Spawn(class'IceInv');
-		Inv.GiveTo(Instigator);
+		Health *= class'ElementalConfigure'.default.IceHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.IceHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.IceScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.IceGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.IceAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.IceWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.IceMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
+		
+		Instigator = self;
+		
+		Inv = IceInv(Instigator.FindInventoryType(class'IceInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(class'IceInv');
+			Inv.GiveTo(Instigator);
+		}
 	}
 	
 	Super.PostBeginPlay();
@@ -112,8 +115,8 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=2
-     ProjectileClass=Class'DEKMonsters208AE.IceSkaarjTrooperProjectile'
-     GibGroupClass=Class'DEKMonsters208AE.IceGibGroup'
+     ProjectileClass=Class'DEKMonsters208AF.IceSkaarjTrooperProjectile'
+     GibGroupClass=Class'DEKMonsters208AF.IceGibGroup'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjTrooperFinalBlend1'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjTrooperFinalBlend2'
 }

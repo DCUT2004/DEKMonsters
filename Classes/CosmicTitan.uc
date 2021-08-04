@@ -2,7 +2,8 @@ class CosmicTitan extends DCTitan;
 
 simulated function PostBeginPlay()
 {
-	GiveCosmicInv();
+	if (Instigator != None)
+		GiveCosmicInv();
 	Super.PostBeginPlay();
 }
 
@@ -104,9 +105,9 @@ function SpawnRock()
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AE.CosmicTitanAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.CosmicTitanAmmo'
      ScoringValue=15
-     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.CosmicGibGroup'
      bCanFly=True
      GroundSpeed=900.000000
      AirSpeed=600.000000

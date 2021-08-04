@@ -164,7 +164,7 @@ defaultproperties
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
      Speed=1000.000000
-     MyDamageType=Class'DEKMonsters208AE.DamTypeIceSlug'
+     MyDamageType=Class'DEKMonsters208AF.DamTypeIceSlug'
      LightHue=120
      LightSaturation=135
      Skins(0)=Texture'DEKMonstersTexturesMaster208.IceMonsters.IceGib'

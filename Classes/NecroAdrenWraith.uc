@@ -24,14 +24,16 @@ function PostBeginPlay()
 	
 	Super.PostBeginPlay();
 	
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
+		CheckController();
 	}
-	
-	CheckController();
 	
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
@@ -360,7 +362,7 @@ defaultproperties
      FireRifleBurstAnim="spell"
      MeleeRange=60.000000
      Health=350
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

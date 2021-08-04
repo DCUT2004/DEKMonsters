@@ -17,17 +17,26 @@ function PostBeginPlay()
 	Local GameRules G;
 	local FireInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.FireHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.FireHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.FireScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.FireGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.FireAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.FireWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.FireMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.FireDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
-	
+	if (Instigator != None)
+	{
+		Health *= class'ElementalConfigure'.default.FireHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.FireHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.FireScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.FireGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.FireAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.FireWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.FireMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.FireDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.FireDrawscaleMultiplier);
+		
+		Inv = FireInv(Instigator.FindInventoryType(class'FireInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(class'FireInv');
+			Inv.GiveTo(Instigator);
+		}
+	}
 	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
 	{
 		if(G.isA('RPGRules'))
@@ -36,15 +45,7 @@ function PostBeginPlay()
 			break;
 		}
 	}
-	
-	Instigator = self;
-	
-	Inv = FireInv(Instigator.FindInventoryType(class'FireInv'));
-	if (Inv == None)
-	{
-		Inv = Instigator.Spawn(class'FireInv');
-		Inv.GiveTo(Instigator);
-	}
+		
 	if (MyAmmo != None)
 		MyAmmo.ProjectileClass = class'FireSkaarjSuperHeatProjectile';
 	
@@ -137,7 +138,7 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AE.FireSkaarjSuperHeatAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.FireSkaarjSuperHeatAmmo'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjSuperHeatShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjSuperHeatShader'
 }

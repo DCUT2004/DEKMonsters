@@ -3,7 +3,7 @@ class DamTypeEarthSlith extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AE.WeaponEarthSlith'
+     WeaponClass=Class'DEKMonsters208AF.WeaponEarthSlith'
      DeathString="%o was gooped by an Earth Slith."
      bDetonatesGoop=True
 }

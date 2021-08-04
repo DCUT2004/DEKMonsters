@@ -19,11 +19,14 @@ function PostBeginPlay()
 	
 	super.PostBeginPlay();
 	
-	Inv = FireInv(Instigator.FindInventoryType(class'FireInv'));
-	if (Inv == None)
+	if (Instigator != None)
 	{
-		Inv = Instigator.Spawn(class'FireInv');
-		Inv.GiveTo(Instigator);
+		Inv = FireInv(Instigator.FindInventoryType(class'FireInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(class'FireInv');
+			Inv.GiveTo(Instigator);
+		}
 	}
 	
 	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
@@ -92,7 +95,7 @@ defaultproperties
 {
      HeatLifespan=3
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AE.LavaBioSkaarjAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.LavaBioSkaarjAmmo'
      ScoringValue=12
      Health=250
      Skins(0)=Shader'DEKMonstersTexturesMaster208.GenericMonsters.BioSkaarjShader'

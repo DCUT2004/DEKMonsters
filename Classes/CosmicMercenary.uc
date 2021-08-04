@@ -4,7 +4,8 @@ class CosmicMercenary extends DCMercenary;
 
 simulated function PostBeginPlay()
 {
-	GiveCosmicInv();
+	if (Instigator != None)
+		GiveCosmicInv();
 	Super.PostBeginPlay();
 }
 
@@ -57,7 +58,7 @@ simulated function SprayTarget()
 		}
 
 		Spawn(MyAmmo.ProjectileClass,,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
-		PlaySound(Sound'DEKMonsters208AE.MonsterSounds.PlasmaTurretFire');
+		PlaySound(Sound'DEKMonsters208AF.MonsterSounds.PlasmaTurretFire');
 	}
 }
 
@@ -83,16 +84,16 @@ function SpawnRocket()
 		}
 
 		Spawn(MyAmmo.ProjectileClass,,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
-		PlaySound(Sound'DEKMonsters208AE.MonsterSounds.PlasmaTurretFire');
+		PlaySound(Sound'DEKMonsters208AF.MonsterSounds.PlasmaTurretFire');
 	}
 }
 
 defaultproperties
 {
-     RocketAmmoClass=Class'DEKMonsters208AE.CosmicMercenaryAmmo'
-     AmmunitionClass=Class'DEKMonsters208AE.CosmicMercenaryAmmo'
+     RocketAmmoClass=Class'DEKMonsters208AF.CosmicMercenaryAmmo'
+     AmmunitionClass=Class'DEKMonsters208AF.CosmicMercenaryAmmo'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters208AE.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AF.CosmicGibGroup'
      GroundSpeed=685.000000
      AirSpeed=600.000000
      AccelRate=1100.000000

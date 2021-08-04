@@ -30,12 +30,15 @@ simulated function PostBeginPlay()
 			break;
 		}
 	}
-		
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
 	}
 	
 	QueenFadeOutSkin= new class'ColorModifier';
@@ -381,7 +384,7 @@ defaultproperties
      AmmunitionClass=None
      ScoringValue=15
      GroundSpeed=700.000000
-     ControllerClass=Class'DEKMonsters208AE.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
      Skins(0)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.PoisonQueen'
      Skins(1)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.PoisonQueen'
 }

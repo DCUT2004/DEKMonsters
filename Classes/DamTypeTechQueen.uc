@@ -3,7 +3,7 @@ class DamTypeTechQueen extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AE.WeaponTechQueen'
+     WeaponClass=Class'DEKMonsters208AF.WeaponTechQueen'
      DeathString="%o was zapped full of nanites by the Tech Queen."
      bArmorStops=False
      bDetonatesGoop=True

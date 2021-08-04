@@ -3,7 +3,7 @@ class DamTypeIceTentacle extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AE.WeaponIceTentacle'
+     WeaponClass=Class'DEKMonsters208AF.WeaponIceTentacle'
      DeathString="%o was encased in ice by an Ice Tentacle."
      bDetonatesGoop=True
 }

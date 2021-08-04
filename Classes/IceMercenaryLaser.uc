@@ -65,12 +65,12 @@ defaultproperties
      FreezeLifespan=4.000000
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     HitEffectClass=Class'DEKMonsters208AE.IceMercenaryPlasmaHitEffect'
-     PlasmaEffectClass=Class'DEKMonsters208AE.IceMercenaryPlasmaEffect'
+     HitEffectClass=Class'DEKMonsters208AF.IceMercenaryPlasmaHitEffect'
+     PlasmaEffectClass=Class'DEKMonsters208AF.IceMercenaryPlasmaEffect'
      Speed=2000.000000
      MaxSpeed=2000.000000
 	 Damage=18
      DamageRadius=100.000000
-     MyDamageType=Class'DEKMonsters208AE.DamTypeIceMercenary'
+     MyDamageType=Class'DEKMonsters208AF.DamTypeIceMercenary'
      ExplosionDecal=None
 }

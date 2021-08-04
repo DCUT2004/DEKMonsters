@@ -2,5 +2,5 @@ class	TitanAmmo extends SMPTitanAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AE.TitanBigRock'
+     ProjectileClass=Class'DEKMonsters208AF.TitanBigRock'
 }

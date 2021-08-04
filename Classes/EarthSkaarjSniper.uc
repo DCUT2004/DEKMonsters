@@ -12,26 +12,28 @@ function PostBeginPlay()
 {
 	local EarthInv Inv;
 	
-	Health *= class'ElementalConfigure'.default.EarthHealthMultiplier;
-	HealthMax *= class'ElementalConfigure'.default.EarthHealthMultiplier;
-	ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
-	GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
-	AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
-	WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
-	Mass *= class'ElementalConfigure'.default.EarthMassMultiplier;
-	SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
-	SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
-	
-	Inv = EarthInv(Instigator.FindInventoryType(class'EarthInv'));
-	if (Inv == None)
+	if (Instigator != None)
 	{
-		Inv = Instigator.Spawn(class'EarthInv');
-		Inv.GiveTo(Instigator);
+		Health *= class'ElementalConfigure'.default.EarthHealthMultiplier;
+		HealthMax *= class'ElementalConfigure'.default.EarthHealthMultiplier;
+		ScoringValue *= class'ElementalConfigure'.default.EarthScoreMultiplier;
+		GroundSpeed *= class'ElementalConfigure'.default.EarthGroundSpeedMultiplier;
+		AirSpeed *= class'ElementalConfigure'.default.EarthAirSpeedMultiplier;
+		WaterSpeed *= class'ElementalConfigure'.default.EarthWaterSpeedMultiplier;
+		Mass *= class'ElementalConfigure'.default.EarthMassMultiplier;
+		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier/2));
+		SetDrawScale(Drawscale*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.EarthDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.EarthDrawscaleMultiplier);
+		
+		Inv = EarthInv(Instigator.FindInventoryType(class'EarthInv'));
+		if (Inv == None)
+		{
+			Inv = Instigator.Spawn(class'EarthInv');
+			Inv.GiveTo(Instigator);
+		}
 	}
 	
 	Super.PostBeginPlay();
-
 }
 
 function RangedAttack(Actor A)
@@ -67,10 +69,10 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
-     DamageType=Class'DEKMonsters208AE.DamTypeEarthSkaarjSniper'
-     HitEmitterClass=Class'DEKRPG208AE.DefenseBoltEmitter'
-     SecHitEmitterClass=Class'DEKRPG208AE.DefenseBoltEmitterChild'
-     GibGroupClass=Class'DEKMonsters208AE.EarthGibGroup'
+     DamageType=Class'DEKMonsters208AF.DamTypeEarthSkaarjSniper'
+     HitEmitterClass=Class'DEKRPG208AF.DefenseBoltEmitter'
+     SecHitEmitterClass=Class'DEKRPG208AF.DefenseBoltEmitterChild'
+     GibGroupClass=Class'DEKMonsters208AF.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.SkaarjSniper_Earth-Shader'
      Skins(1)=FinalBlend'XEffectMat.Shield.RedShell'
 }

@@ -3,7 +3,7 @@ class DamTypeShellGasbag extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AE.WeaponShellGasbag'
+     WeaponClass=Class'DEKMonsters208AF.WeaponShellGasbag'
      DeathString="%o was served some flak by a Shell Gasbag."
      bDetonatesGoop=True
 }

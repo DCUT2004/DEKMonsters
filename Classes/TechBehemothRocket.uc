@@ -144,7 +144,7 @@ defaultproperties
      BaseChance=33.000000
      Damage=42.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters208AE.DamTypeTechBehemothRocket'
+     MyDamageType=Class'DEKMonsters208AF.DamTypeTechBehemothRocket'
      LightHue=10
      LightSaturation=250
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'

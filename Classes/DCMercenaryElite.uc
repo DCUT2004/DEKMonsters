@@ -5,13 +5,17 @@ var bool SummonedMonster;
 simulated function PostBeginPlay()
 {
 	local ComboInv ComboInv;
+	
 	Super.PostBeginPlay();
 	
-	ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-	if (ComboInv == None)
+	if (Instigator != None)
 	{
-		ComboInv = Instigator.Spawn(class'ComboInv');
-		ComboInv.GiveTo(Instigator);
+		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
+		if (ComboInv == None)
+		{
+			ComboInv = Instigator.Spawn(class'ComboInv');
+			ComboInv.GiveTo(Instigator);
+		}
 	}
 }
 
@@ -33,6 +37,6 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AE.DamTypeEliteMercenaryAmmo'
-     RocketAmmoClass=Class'DEKMonsters208AE.EliteMercenaryRocketAmmo'
+     MyDamageType=Class'DEKMonsters208AF.DamTypeEliteMercenaryAmmo'
+     RocketAmmoClass=Class'DEKMonsters208AF.EliteMercenaryRocketAmmo'
 }
