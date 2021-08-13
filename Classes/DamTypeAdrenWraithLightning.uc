@@ -4,7 +4,7 @@ class DamTypeAdrenWraithLightning extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AF.WeaponNecroAdrenWraith'
+     WeaponClass=Class'DEKMonsters208AG.WeaponNecroAdrenWraith'
      DeathString="%o was zapped by a Wraith's black magic."
      bDetonatesGoop=True
      bDelayedDamage=True

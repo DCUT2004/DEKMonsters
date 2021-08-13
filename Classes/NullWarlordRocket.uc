@@ -65,6 +65,6 @@ defaultproperties
 {
      MaxNullTime=3.000000
      Damage=50.000000
-     MyDamageType=Class'DEKMonsters208AF.DamTypeNullWarlord'
+     MyDamageType=Class'DEKMonsters208AG.DamTypeNullWarlord'
      StaticMesh=StaticMesh'DEKStaticsMaster208K.Meshes.NullRocketProj'
 }

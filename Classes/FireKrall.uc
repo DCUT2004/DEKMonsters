@@ -136,8 +136,8 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AF.FireKrallAmmo'
-     GibGroupClass=Class'DEKMonsters208AF.FireGibGroup'
+     AmmunitionClass=Class'DEKMonsters208AG.FireKrallAmmo'
+     GibGroupClass=Class'DEKMonsters208AG.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireKrallShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireKrallShader'
 }

@@ -3,7 +3,7 @@ class GiantPoisonBunny extends GiantWarBunny
 
 defaultproperties
 {
-     ChargerClass=Class'DEKMonsters208AF.GiantPoisonBunnyCharger'
+     ChargerClass=Class'DEKMonsters208AG.GiantPoisonBunnyCharger'
      Skins(0)=FinalBlend'XEffectMat.goop.GoopFB'
      Skins(1)=FinalBlend'XEffectMat.goop.GoopFB'
 }

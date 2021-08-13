@@ -18,7 +18,7 @@ function SpawnBelch()
 		SavedFireProperties.bInstantHit = MyAmmo.bInstantHit;
 		SavedFireProperties.bInitialized = true;
 	}
-	Spawn(class'DEKMonsters208AF.EarthGiantGasbagBelch',,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
+	Spawn(class'DEKMonsters208AG.EarthGiantGasbagBelch',,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
 	PlaySound(FireSound,SLOT_Interact);
 
 }

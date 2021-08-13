@@ -3,7 +3,7 @@ class DamTypePoisonSlug extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AF.WeaponPoisonSlug'
+     WeaponClass=Class'DEKMonsters208AG.WeaponPoisonSlug'
      DeathString="%o was killed by a slug's goop."
      bDetonatesGoop=True
 }

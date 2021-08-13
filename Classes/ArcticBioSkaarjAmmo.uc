@@ -3,5 +3,5 @@ class ArcticBioSkaarjAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AF.ArcticBioSkaarjGlob'
+     ProjectileClass=Class'DEKMonsters208AG.ArcticBioSkaarjGlob'
 }

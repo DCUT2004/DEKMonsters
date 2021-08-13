@@ -123,9 +123,9 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
-     RocketAmmoClass=Class'DEKMonsters208AF.EarthEliteMercenaryRocketAmmo'
-     AmmunitionClass=Class'DEKMonsters208AF.EarthEliteMercenaryAmmo'
-     GibGroupClass=Class'DEKMonsters208AF.EarthGibGroup'
+     RocketAmmoClass=Class'DEKMonsters208AG.EarthEliteMercenaryRocketAmmo'
+     AmmunitionClass=Class'DEKMonsters208AG.EarthEliteMercenaryAmmo'
+     GibGroupClass=Class'DEKMonsters208AG.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.EliteMercenary_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.EliteMercenary_Earth-Shader'
 }

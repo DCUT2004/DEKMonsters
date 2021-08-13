@@ -115,7 +115,7 @@ defaultproperties
      Speed=1500.000000
      MaxSpeed=4000.000000
      Damage=60.000000
-     MyDamageType=Class'DEKMonsters208AF.DamTypeIceKrall'
+     MyDamageType=Class'DEKMonsters208AG.DamTypeIceKrall'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=140

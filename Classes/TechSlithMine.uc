@@ -2,5 +2,5 @@ class TechSlithMine extends TechTitanMine;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AF.DamTypeTechSlithMine'
+     MyDamageType=Class'DEKMonsters208AG.DamTypeTechSlithMine'
 }

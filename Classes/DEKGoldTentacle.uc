@@ -37,9 +37,9 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 defaultproperties
 {
      HeatDamageMultiplier=1.150000
-     AmmunitionClass=Class'DEKMonsters208AF.DEKGoldTentacleAmmo'
+     AmmunitionClass=Class'DEKMonsters208AG.DEKGoldTentacleAmmo'
      ScoringValue=3
-     GibGroupClass=Class'DEKMonsters208AF.DEKGoldGibGroup'
+     GibGroupClass=Class'DEKMonsters208AG.DEKGoldGibGroup'
      Health=450
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'

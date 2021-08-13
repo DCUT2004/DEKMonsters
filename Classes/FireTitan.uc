@@ -6,7 +6,6 @@ var int HeatModifier;
 
 function PostBeginPlay()
 {
-	Local GameRules G;
 	local FireInv Inv;
 	
 	if (Instigator != None)
@@ -179,8 +178,8 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=4
-     AmmunitionClass=Class'DEKMonsters208AF.FireTitanAmmo'
-     GibGroupClass=Class'DEKMonsters208AF.FireGibGroup'
+     AmmunitionClass=Class'DEKMonsters208AG.FireTitanAmmo'
+     GibGroupClass=Class'DEKMonsters208AG.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireTitanShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireTitanShader'
 }

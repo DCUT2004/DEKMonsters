@@ -316,8 +316,8 @@ defaultproperties
      AChannel=255
      FireBurnIntervalTime=1.000000
      MeteorIntervalTime=10.000000
-     ProjectileClass(0)=Class'DEKMonsters208AF.NecroPhantomProjectile'
-     ProjectileClass(1)=Class'DEKMonsters208AF.NecroPhantomMeteor'
+     ProjectileClass(0)=Class'DEKMonsters208AG.NecroPhantomProjectile'
+     ProjectileClass(1)=Class'DEKMonsters208AG.NecroPhantomMeteor'
      DeathAnim(0)="Dead"
      DeathAnim(1)="Dead2"
      DeathAnim(2)="Dead3"
@@ -345,7 +345,7 @@ defaultproperties
      FireRifleBurstAnim="spell"
      MeleeRange=60.000000
      Health=250
-     ControllerClass=Class'DEKMonsters208AF.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AG.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

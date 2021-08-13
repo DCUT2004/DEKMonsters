@@ -45,19 +45,19 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 
 defaultproperties
 {
-     SplashDamageType=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     HeadHitDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     DirectHitDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     PunchThroughDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     ThroughHeadDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     AirHeadHitDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     AirHitDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     AirPunchThroughDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
-     AirThroughHeadDamage=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
+     SplashDamageType=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     HeadHitDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     DirectHitDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     PunchThroughDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     ThroughHeadDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     AirHeadHitDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     AirHitDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     AirPunchThroughDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
+     AirThroughHeadDamage=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
      Speed=2000.000000
      MaxSpeed=2500.000000
      Damage=60.000000
      DamageRadius=120.000000
-     MyDamageType=Class'DEKMonsters208AF.DamTypeCosmicMercenary'
+     MyDamageType=Class'DEKMonsters208AG.DamTypeCosmicMercenary'
      StaticMesh=StaticMesh'AW-2k4XP.Weapons.ShockTankMuzzleFlash'
 }

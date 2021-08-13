@@ -2,5 +2,5 @@ class EarthTentacleAmmo extends DCTentacleAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AF.EarthTentacleProjectile'
+     ProjectileClass=Class'DEKMonsters208AG.EarthTentacleProjectile'
 }

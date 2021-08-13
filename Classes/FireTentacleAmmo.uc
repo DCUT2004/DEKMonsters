@@ -4,6 +4,6 @@ defaultproperties
 {
      bLeadTarget=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters208AF.FireTentacleProj'
+     ProjectileClass=Class'DEKMonsters208AG.FireTentacleProj'
      WarnTargetPct=0.700000
 }

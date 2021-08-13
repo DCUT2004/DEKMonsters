@@ -3,7 +3,7 @@ class DamTypeTechWarlord extends DamTypeRocket
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AF.WeaponTechWarlord'
+     WeaponClass=Class'DEKMonsters208AG.WeaponTechWarlord'
      DeathString="%o succumbed to the Tech Warlord's nanites."
      bArmorStops=False
      DamageOverlayMaterial=Shader'DEKMonstersTexturesMaster208.TechMonsters.TechShader'

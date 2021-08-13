@@ -3,5 +3,5 @@ class DamTypeFireRazorfly extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AF.WeaponFireRazorfly'
+     WeaponClass=Class'DEKMonsters208AG.WeaponFireRazorfly'
 }

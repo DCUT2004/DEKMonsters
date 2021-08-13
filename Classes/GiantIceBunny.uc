@@ -3,7 +3,7 @@ class GiantIceBunny extends GiantWarBunny
 
 defaultproperties
 {
-     ChargerClass=Class'DEKMonsters208AF.GiantIceBunnyCharger'
+     ChargerClass=Class'DEKMonsters208AG.GiantIceBunnyCharger'
      Skins(0)=Shader'AW-2004Shaders.Shaders.AmethystLargeShader'
      Skins(1)=Shader'AW-2004Shaders.Shaders.AmethystLargeShader'
 }

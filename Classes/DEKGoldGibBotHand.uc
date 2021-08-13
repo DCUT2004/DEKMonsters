@@ -2,7 +2,7 @@ class DEKGoldGibBotHand extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AF.DEKGoldGibGroup'
+     GibGroupClass=Class'DEKMonsters208AG.DEKGoldGibGroup'
      TrailClass=Class'XEffects.BotSparks'
      HitSounds(0)=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      HitSounds(1)=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'

@@ -18,7 +18,7 @@ simulated function TakeDamage( int Damage, Pawn InstigatedBy, Vector Hitlocation
 defaultproperties
 {
      InvisMaterial=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.InvshadeFB'
-     GibGroupClass=Class'DEKMonsters208AF.DEKGhostGibGroup'
+     GibGroupClass=Class'DEKMonsters208AG.DEKGhostGibGroup'
      AirSpeed=330.000000
      Health=70
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.shadeFB'

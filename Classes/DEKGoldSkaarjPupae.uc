@@ -39,7 +39,7 @@ defaultproperties
 {
      HeatDamageMultiplier=1.150000
      ScoringValue=3
-     GibGroupClass=Class'DEKMonsters208AF.DEKGoldGibGroup'
+     GibGroupClass=Class'DEKMonsters208AG.DEKGoldGibGroup'
      GroundSpeed=210.000000
      WaterSpeed=210.000000
      Health=300

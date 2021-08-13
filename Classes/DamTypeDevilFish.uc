@@ -3,5 +3,5 @@ class DamTypeDevilFish extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AF.WeaponDevilFish'
+     WeaponClass=Class'DEKMonsters208AG.WeaponDevilFish'
 }
