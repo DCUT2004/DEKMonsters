@@ -32,6 +32,6 @@ simulated function Died(Controller Killer, class<DamageType> damageType, vector 
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AG.DCGasbagAmmo'
-     ControllerClass=Class'DEKMonsters208AG.DCMonsterController'
+     AmmunitionClass=Class'DEKMonsters208AH.DCGasbagAmmo'
+     ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
 }

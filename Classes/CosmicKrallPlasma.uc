@@ -18,7 +18,7 @@ defaultproperties
      MaxSpeed=2500.000000
      Damage=18.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters208AG.DamTypeCosmicKrall'
+     MyDamageType=Class'DEKMonsters208AH.DamTypeCosmicKrall'
      LightHue=200
      LifeSpan=3.000000
      DrawScale=2.000000

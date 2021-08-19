@@ -2,5 +2,5 @@ class RedGreenMercenaryRocketAmmo extends SMPMerceRocketAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AG.RedGreenMercenaryRocket'
+     ProjectileClass=Class'DEKMonsters208AH.RedGreenMercenaryRocket'
 }

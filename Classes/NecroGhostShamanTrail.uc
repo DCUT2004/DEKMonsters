@@ -52,7 +52,7 @@ defaultproperties
          TextureVSubdivisions=4
          LifetimeRange=(Min=1.300000,Max=1.400000)
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters208AG.NecroGhostShamanTrail.SpriteEmitter0'
+     Emitters(0)=SpriteEmitter'DEKMonsters208AH.NecroGhostShamanTrail.SpriteEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

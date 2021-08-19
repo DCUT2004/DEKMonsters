@@ -2,5 +2,5 @@ class DEKGoldTentacleProjectile extends DCTentacleProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AG.DamTypeGoldTentacle'
+     MyDamageType=Class'DEKMonsters208AH.DamTypeGoldTentacle'
 }

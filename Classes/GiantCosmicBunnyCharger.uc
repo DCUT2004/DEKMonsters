@@ -3,8 +3,8 @@ class GiantCosmicBunnyCharger extends NecroAdrenwraithBlackHole;
 defaultproperties
 {
      AttractionStrength=200000.000000
-     LightningDamageType=Class'DEKMonsters208AG.DamTypeGiantCosmicBunnyLightning'
+     LightningDamageType=Class'DEKMonsters208AH.DamTypeGiantCosmicBunnyLightning'
      DetonationTime=6.000000
      Damage=500.000000
-     MyDamageType=Class'DEKMonsters208AG.DamTypeGiantCosmicBunny'
+     MyDamageType=Class'DEKMonsters208AH.DamTypeGiantCosmicBunny'
 }

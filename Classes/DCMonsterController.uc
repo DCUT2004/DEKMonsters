@@ -68,7 +68,8 @@ function bool FindNewEnemy()
 	local int BestLevel, NewLevel;
 	local Controller C;
 	local int LoopCount;
-	local PhantomDeathGhostInv Inv;
+	local PhantomDeathGhostInv PInv;
+	local InvisibilityInv IInv;
 
 	if ( Level.Game.bGameEnded )
 		return false;
@@ -173,8 +174,9 @@ function bool FindNewEnemy()
 		return false;
 	if ( BestEnemy != None )
 	{
-		Inv = PhantomDeathGhostInv(BestEnemy.FindInventoryType(class'PhantomDeathGhostInv'));
-		if (Inv != None)
+		PInv = PhantomDeathGhostInv(BestEnemy.FindInventoryType(class'PhantomDeathGhostInv'));
+		IInv = InvisibilityInv(BestEnemy.FindInventoryType(Class'InvisibilityInv'));
+		if (PInv != None || IInv != None)
 			return false;
 		else
 		{
@@ -191,7 +193,8 @@ function bool SetEnemy( Pawn NewEnemy, optional bool bHateMonster )
 	local float EnemyDist, NewDist;
 	local bool bNewMonsterEnemy;
 	local int EnemyLevel, NewLevel;
-	local PhantomDeathGhostInv Inv;
+	local PhantomDeathGhostInv PInv;
+	local InvisibilityInv IInv;
 
 	if ( (NewEnemy == None) || (NewEnemy.Health <= 0) || (NewEnemy.Controller == None) || (NewEnemy == Enemy) )
 		return false;
@@ -200,8 +203,9 @@ function bool SetEnemy( Pawn NewEnemy, optional bool bHateMonster )
 	if ( !NewEnemy.Controller.bIsPlayer && !bNewMonsterEnemy )	//
 			return false;
 	
-	Inv = PhantomDeathGhostInv(NewEnemy.FindInventoryType(class'PhantomDeathGhostInv'));
-	if (Inv != None)
+	PInv = PhantomDeathGhostInv(NewEnemy.FindInventoryType(class'PhantomDeathGhostInv'));
+	IInv = InvisibilityInv(NewEnemy.FindInventoryType(class'InvisibilityInv'));
+	if (PInv != None || IInv != None)
 		return false;
 
 	// so, NewEnemy is a valid target

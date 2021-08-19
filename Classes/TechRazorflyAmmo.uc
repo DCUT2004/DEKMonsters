@@ -5,5 +5,5 @@ defaultproperties
      bTossed=True
      bLeadTarget=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters208AG.TechRazorflyGlob'
+     ProjectileClass=Class'DEKMonsters208AH.TechRazorflyGlob'
 }

@@ -111,8 +111,8 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=2
-     AmmunitionClass=Class'DEKMonsters208AG.IceTentacleAmmo'
-     GibGroupClass=Class'DEKMonsters208AG.IceGibGroup'
+     AmmunitionClass=Class'DEKMonsters208AH.IceTentacleAmmo'
+     GibGroupClass=Class'DEKMonsters208AH.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.JtentacleIceShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.JtentacleIceShader'
 }

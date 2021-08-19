@@ -2,5 +2,5 @@ class HalloweenShellGasbag extends ShellGasbag;
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AG.HalloweenShellGasbagAmmo'
+     AmmunitionClass=Class'DEKMonsters208AH.HalloweenShellGasbagAmmo'
 }

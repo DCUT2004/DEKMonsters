@@ -85,7 +85,7 @@ defaultproperties
      MaxSpeed=200.000000
      TossZ=225.000000
      Damage=90.000000
-     MyDamageType=Class'DEKMonsters208AG.DamTypePhantomProjectile'
+     MyDamageType=Class'DEKMonsters208AH.DamTypePhantomProjectile'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'AW-2004Particles.Weapons.PlasmaSphere'
      Physics=PHYS_Flying

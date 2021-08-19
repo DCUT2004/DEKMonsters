@@ -3,5 +3,5 @@ class DamTypeNaliFighter extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AG.WeaponNaliFighter'
+     WeaponClass=Class'DEKMonsters208AH.WeaponNaliFighter'
 }

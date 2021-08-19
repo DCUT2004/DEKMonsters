@@ -5,5 +5,5 @@ defaultproperties
      bRecommendSplashDamage=True
      bLeadTarget=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters208AG.IceTitanBigCrystal'
+     ProjectileClass=Class'DEKMonsters208AH.IceTitanBigCrystal'
 }

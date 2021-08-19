@@ -136,8 +136,8 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     ProjectileClass=Class'DEKMonsters208AG.FireSkaarjTrooperProjectile'
-     GibGroupClass=Class'DEKMonsters208AG.FireGibGroup'
+     ProjectileClass=Class'DEKMonsters208AH.FireSkaarjTrooperProjectile'
+     GibGroupClass=Class'DEKMonsters208AH.FireGibGroup'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjTrooperFinalBlend1'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjTrooperFinalBlend2'
 }

@@ -129,8 +129,8 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AG.FireTentacleAmmo'
-     GibGroupClass=Class'DEKMonsters208AG.FireGibGroup'
+     AmmunitionClass=Class'DEKMonsters208AH.FireTentacleAmmo'
+     GibGroupClass=Class'DEKMonsters208AH.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.JtentacleFireShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.JtentacleFireShader'
 }

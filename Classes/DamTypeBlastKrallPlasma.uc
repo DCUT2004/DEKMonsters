@@ -3,5 +3,5 @@ class DamTypeBlastKrallPlasma extends DamTypeLinkPlasma
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AG.WeaponBlastKrall'
+     WeaponClass=Class'DEKMonsters208AH.WeaponBlastKrall'
 }

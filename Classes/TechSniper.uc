@@ -1,22 +1,13 @@
-class TechSniper extends DCSkaarjSniper;
+class TechSniper extends DCSkaarjSniper
+	config(satoreMonsterPack);
 
-var config float ProtectionMultiplier;
-var RPGRules RPGRules;
+var config float NetworkRadius;
+var xEmitter NetworkChain;
 
 function PostBeginPlay()
 {
-	Local GameRules G;
 	super.PostBeginPlay();
-	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
-	{
-		if(G.isA('RPGRules'))
-		{
-			RPGRules = RPGRules(G);
-			break;
-		}
-	}
 	GiveTechInv();
-
 }
 function GiveTechInv()
 {
@@ -76,6 +67,65 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 	return false;
 }
 
+function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector momentum, class<DamageType> damageType)
+{
+	//Check to see if other tech monsters are nearby when taking damage
+	//If there are other nearby tech monsters, divide the damage by the number of tech monsters and distribute the damage equally
+	//Otherwise, just take the normal damage
+	
+	local Controller C, NextC;
+	local Array < Pawn > TechMonsters;
+	local int x;
+	local int NetworkDamage;
+	
+	if (Instigator == None || instigatedBy == None)
+		return;
+	
+	if (damageType != Class'DamTypeSharedDamage' && (instigatedBy != None && instigatedBy.Weapon != None && ((RPGWeapon(instigatedBy.Weapon) != None && !RPGWeapon(instigatedBy.Weapon).IsA('RW_Waterfall')) || RPGWeapon(instigatedBy.Weapon) == None)) )
+	{
+		TechMonsters.Length = 0;
+		TechMonsters.Insert(0, 1);	//Insert 1 Monster element at index 0
+		TechMonsters[0] = Instigator;
+		x = 1;
+		
+		C = Level.ControllerList;
+		
+		while (C != None)
+		{
+			NextC = C.NextController;
+			if (C != None && C.Pawn != None && C.Pawn.Health > 0 && Instigator != None && C.Pawn != Instigator &&  C.Pawn.GetTeamNum() == Instigator.GetTeamNum() && TechInv(C.Pawn.FindInventoryType(Class'TechInv')) != None && VSize(C.Pawn.Location - Instigator.Location) <= NetworkRadius && FastTrace(C.Pawn.Location, Instigator.Location))
+			{
+				TechMonsters[x] = C.Pawn;
+				x++;
+			}
+			C = NextC;
+		}
+		
+		if (TechMonsters.Length > 1)	//We have an additional tech monster besides Instigator that we can split the damage with
+		{
+			NetworkDamage = Damage/TechMonsters.Length;
+			if (NetworkDamage < 1)
+				NetworkDamage = 1;
+			for (x = 0; x < TechMonsters.Length; x++)
+			{
+				TechMonsters[x].TakeDamage(NetworkDamage, instigatedBy, TechMonsters[x].Location, Vect(0,0,0), Class'DamTypeSharedDamage');
+
+				NetworkChain = Spawn(class'TechNetworkChain',Instigator,,Instigator.Location,rotator(Instigator.Location - TechMonsters[x].Location));
+				if (NetworkChain != None)
+				{
+					NetworkChain.mSpawnVecA = TechMonsters[x].Location;
+					NetworkChain.SetRotation(rotator(TechMonsters[x].Location - Instigator.Location));
+					NetworkChain.SetBase(Instigator);
+				}
+			}
+		}
+		else	//Otherwise the array has 1 or fewer elements.
+			Super.TakeDamage(Damage, instigatedBy, hitlocation, momentum, damageType);
+	}
+	else
+		Super.TakeDamage(Damage, instigatedBy, hitlocation, momentum, damageType);
+}
+
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)
 {
 	if (SummonedMonster)
@@ -86,16 +136,17 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
+	 NetworkRadius=1000.0000
      DamageMin=35
      DamageMax=45
      NumArcs=8
-     DamageType=Class'DEKMonsters208AG.DamTypeTechSniper'
-     DamageTypeHeadShot=Class'DEKMonsters208AG.DamTypeTechSniperHeadShot'
-     HitEmitterClass=Class'DEKRPG208AG.RedBoltEmitter'
-     SecHitEmitterClass=Class'DEKMonsters208AG.RedBoltChild'
+     DamageType=Class'DEKMonsters208AH.DamTypeTechSniper'
+     DamageTypeHeadShot=Class'DEKMonsters208AH.DamTypeTechSniperHeadShot'
+     HitEmitterClass=Class'DEKRPG208AH.RedBoltEmitter'
+     SecHitEmitterClass=Class'DEKMonsters208AH.RedBoltChild'
      ScoringValue=12
-     GibGroupClass=Class'DEKMonsters208AG.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AH.DEKTechGibGroup'
      Health=300
-     ControllerClass=Class'DEKMonsters208AG.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AH.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
 }

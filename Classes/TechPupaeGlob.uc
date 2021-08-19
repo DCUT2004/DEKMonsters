@@ -5,5 +5,5 @@ defaultproperties
      BaseDamage=5
      GoopLevel=1
      Damage=5.000000
-     MyDamageType=Class'DEKMonsters208AG.DamTypeTechPupae'
+     MyDamageType=Class'DEKMonsters208AH.DamTypeTechPupae'
 }

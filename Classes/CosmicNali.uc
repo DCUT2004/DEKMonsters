@@ -351,9 +351,9 @@ defaultproperties
      HitSound(3)=Sound'satoreMonsterPackv120.Nali.injur2n'
      DeathSound(0)=Sound'satoreMonsterPackv120.Nali.death1n'
      DeathSound(1)=Sound'satoreMonsterPackv120.Nali.death2n'
-     AmmunitionClass=Class'DEKMonsters208AG.CosmicNaliAmmo'
+     AmmunitionClass=Class'DEKMonsters208AH.CosmicNaliAmmo'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters208AG.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AH.CosmicGibGroup'
      SoundFootsteps(0)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(1)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(2)=Sound'satoreMonsterPackv120.Nali.walkC'
@@ -376,7 +376,7 @@ defaultproperties
      AirSpeed=1000.000000
      AccelRate=1700.000000
      Health=15
-     ControllerClass=Class'DEKMonsters208AG.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

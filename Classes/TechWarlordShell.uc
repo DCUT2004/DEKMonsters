@@ -98,7 +98,7 @@ defaultproperties
      MiniboltInterval=2.000000
      MiniboltDamage=50
      MiniboltRadius=1800.000000
-     MiniboltDamageType=Class'DEKMonsters208AG.DamTypeTechWarlord'
+     MiniboltDamageType=Class'DEKMonsters208AH.DamTypeTechWarlord'
      Speed=1500.000000
      TossZ=330.000000
      Damage=45.000000

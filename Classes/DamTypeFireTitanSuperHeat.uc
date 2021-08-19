@@ -3,7 +3,7 @@ class DamTypeFireTitanSuperHeat extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AG.WeaponFireTitanSuperHeat'
+     WeaponClass=Class'DEKMonsters208AH.WeaponFireTitanSuperHeat'
      DeathString="%o was melted by a Fire Titan's heat wave."
      bDetonatesGoop=True
      bSkeletize=True

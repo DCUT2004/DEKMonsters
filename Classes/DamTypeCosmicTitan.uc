@@ -7,7 +7,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AG.WeaponCosmicTitan'
+     WeaponClass=Class'DEKMonsters208AH.WeaponCosmicTitan'
      DeathString="%o was fried by a Cosmic Titan's plasma blast."
      DamageOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'
      DeathOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'

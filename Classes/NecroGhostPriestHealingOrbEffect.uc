@@ -20,7 +20,7 @@ defaultproperties
          SecondsBeforeInactive=0.000000
          LifetimeRange=(Min=1.000000,Max=1.000000)
      End Object
-     Emitters(0)=MeshEmitter'DEKMonsters208AG.NecroGhostPriestHealingOrbEffect.MeshEmitter0'
+     Emitters(0)=MeshEmitter'DEKMonsters208AH.NecroGhostPriestHealingOrbEffect.MeshEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

@@ -1,8 +1,9 @@
-class TechTitan extends DCTitan;
+class TechTitan extends DCTitan
+	config(satoreMonsterPack);
 
 var TechTitanShield Shield;
-var int numChildren;
-var() int MaxChildren;
+var config float NetworkRadius;
+var xEmitter NetworkChain;
 
 simulated function PostBeginPlay()
 {
@@ -66,33 +67,63 @@ function SpawnShield()
 
 }
 
-function SpawnChildren() //we're not going to actually spawn children. Just a hack for the Tech Skaarj mine
+function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector momentum, class<DamageType> damageType)
 {
-	local NavigationPoint N;
-	local SMPChildPupae P;
-
-	if(numChildren>=MaxChildren)
-		return;
-	else if(vsize(N.Location-Location)<2000 && FastTrace(N.Location,Location))
-	{
-		P=spawn(class 'SMPChildPupae' ,self,,N.Location);
-		   if(P!=none)
-		   {
-		    P.LifeSpan=20+Rand(10);
-			numChildren++;
-			}
-	}
-
-}
-
-function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation, vector momentum, class<DamageType> damageType)
-{
-   	local vector HitNormal;
+	//Check to see if other tech monsters are nearby when taking damage
+	//If there are other nearby tech monsters, divide the damage by the number of tech monsters and distribute the damage equally
+	//Otherwise, just take the normal damage
 	
-	if(CheckReflect(HitLocation,HitNormal,Damage))
-		Damage*=0;
-	Momentum = vect(0,0,0);		// its a ghost - you can't knock it back
-	Super.TakeDamage( Damage, InstigatedBy, Hitlocation, Momentum, damageType);
+	local Controller C, NextC;
+	local Array < Pawn > TechMonsters;
+	local int x;
+	local int NetworkDamage;
+	
+	if (Instigator == None || instigatedBy == None)
+		return;
+	
+	if (damageType != Class'DamTypeSharedDamage' && (instigatedBy != None && instigatedBy.Weapon != None && ((RPGWeapon(instigatedBy.Weapon) != None && !RPGWeapon(instigatedBy.Weapon).IsA('RW_Waterfall')) || RPGWeapon(instigatedBy.Weapon) == None)) )
+	{
+		TechMonsters.Length = 0;
+		TechMonsters.Insert(0, 1);	//Insert 1 Monster element at index 0
+		TechMonsters[0] = Instigator;
+		x = 1;
+		
+		C = Level.ControllerList;
+		
+		while (C != None)
+		{
+			NextC = C.NextController;
+			if (C != None && C.Pawn != None && C.Pawn.Health > 0 && Instigator != None && C.Pawn != Instigator &&  C.Pawn.GetTeamNum() == Instigator.GetTeamNum() && TechInv(C.Pawn.FindInventoryType(Class'TechInv')) != None && VSize(C.Pawn.Location - Instigator.Location) <= NetworkRadius && FastTrace(C.Pawn.Location, Instigator.Location))
+			{
+				TechMonsters[x] = C.Pawn;
+				x++;
+			}
+			C = NextC;
+		}
+		
+		if (TechMonsters.Length > 1)	//We have an additional tech monster besides Instigator that we can split the damage with
+		{
+			NetworkDamage = Damage/TechMonsters.Length;
+			if (NetworkDamage < 1)
+				NetworkDamage = 1;
+			for (x = 0; x < TechMonsters.Length; x++)
+			{
+				TechMonsters[x].TakeDamage(NetworkDamage, instigatedBy, TechMonsters[x].Location, Vect(0,0,0), Class'DamTypeSharedDamage');
+
+				NetworkChain = Spawn(class'TechNetworkChain',Instigator,,Instigator.Location,rotator(Instigator.Location - TechMonsters[x].Location));
+				if (NetworkChain != None)
+				{
+					NetworkChain.mSpawnVecA = TechMonsters[x].Location;
+					NetworkChain.SetRotation(rotator(TechMonsters[x].Location - Instigator.Location));
+					NetworkChain.SetBase(Instigator);
+				}
+			}
+		}
+		else	//Otherwise the array has 1 or fewer elements.
+			Super.TakeDamage(Damage, instigatedBy, hitlocation, momentum, damageType);
+	}
+	else
+		Super.TakeDamage(Damage, instigatedBy, hitlocation, momentum, damageType);
 }
 
 function bool CheckReflect( Vector HitLocation, out Vector RefNormal, int Damage )
@@ -238,15 +269,16 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AG.TechTitanAmmo'
+	 NetworkRadius=1000.0000
+     AmmunitionClass=Class'DEKMonsters208AH.TechTitanAmmo'
      ScoringValue=15
-     GibGroupClass=Class'DEKMonsters208AG.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AH.DEKTechGibGroup'
      GroundSpeed=200.000000
      WaterSpeed=100.000000
      AirSpeed=200.000000
      AccelRate=400.000000
      Health=750
-     ControllerClass=Class'DEKMonsters208AG.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AH.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Buoyancy=80.000000

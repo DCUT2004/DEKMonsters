@@ -2,8 +2,8 @@ class CosmicGibCalf extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AG.CosmicGibGroup'
-     TrailClass=Class'DEKMonsters208AG.CosmicTrail'
+     GibGroupClass=Class'DEKMonsters208AH.CosmicGibGroup'
+     TrailClass=Class'DEKMonsters208AH.CosmicTrail'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'XEffects.GibBotCalf'
      DrawScale=0.300000

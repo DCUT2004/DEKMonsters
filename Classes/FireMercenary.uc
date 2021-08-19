@@ -155,9 +155,9 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     RocketAmmoClass=Class'DEKMonsters208AG.FireMerceRocketAmmo'
-     AmmunitionClass=Class'DEKMonsters208AG.FireMercenaryAmmo'
-     GibGroupClass=Class'DEKMonsters208AG.FireGibGroup'
+     RocketAmmoClass=Class'DEKMonsters208AH.FireMerceRocketAmmo'
+     AmmunitionClass=Class'DEKMonsters208AH.FireMercenaryAmmo'
+     GibGroupClass=Class'DEKMonsters208AH.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireMercenaryShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireMercenaryShader'
 }

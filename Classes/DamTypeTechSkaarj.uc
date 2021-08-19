@@ -9,7 +9,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AG.WeaponTechSkaarj'
+     WeaponClass=Class'DEKMonsters208AH.WeaponTechSkaarj'
      DeathString="The Tech Skaarj's nanites turned %o into mush."
      bArmorStops=False
      bDetonatesGoop=True
