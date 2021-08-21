@@ -324,7 +324,7 @@ defaultproperties
 {
      SuckDamage=15.000000
      SuckDamageMax=20.000000
-     SuckDamageType=Class'DEKMonsters208AH.DamTypeSoulWraith'
+     SuckDamageType=Class'DEKMonsters208AJ.DamTypeSoulWraith'
      AChannel=255
      DeathAnim(0)="Dead"
      DeathAnim(1)="Dead2"
@@ -352,7 +352,7 @@ defaultproperties
      MeleeRange=60.000000
      HealthMax=400.000000
      Health=200
-     ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

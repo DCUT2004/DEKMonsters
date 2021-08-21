@@ -3,5 +3,5 @@ class LavaBioSkaarjAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AH.LavaBioSkaarjGlob'
+     ProjectileClass=Class'DEKMonsters208AJ.LavaBioSkaarjGlob'
 }

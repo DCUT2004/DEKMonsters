@@ -103,21 +103,21 @@ function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation, vector m
 	{
 		if (Damage <= default.LowDamageAmount)
 		{
-			DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG208AH.GemExperiencePickupBlue', None, 1);
+			DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG208AJ.GemExperiencePickupBlue', None, 1);
 			Damage *= 0;
 			if (Rules != None && (XPForLowHit > 0))
 				Rules.ShareExperience(RPGStatsInv(instigatedBy.FindInventoryType(class'RPGStatsInv')), XPForLowHit);			
 		}
 		else if (Damage <= default.MediumDamageAmount)
 		{
-			DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG208AH.GemExperiencePickupGreen', None, 2);
+			DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG208AJ.GemExperiencePickupGreen', None, 2);
 			Damage *= 0;
 			if (Rules != None && (XPForMedHit > 0))
 				Rules.ShareExperience(RPGStatsInv(instigatedBy.FindInventoryType(class'RPGStatsInv')), XPForMedHit);	
 		}
 		else
 		{
-			DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG208AH.GemExperiencePickupPurple', None, 3);
+			DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG208AJ.GemExperiencePickupPurple', None, 3);
 			Damage *= 0;
 			if (Rules != None && (XPForHighHit > 0))
 				Rules.ShareExperience(RPGStatsInv(instigatedBy.FindInventoryType(class'RPGStatsInv')), XPForHighHit);	
@@ -258,7 +258,7 @@ defaultproperties
      JumpZ=200.000000
      AirControl=0.100000
      Health=2500
-     ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
      MovementAnims(0)="Jump"
      MovementAnims(1)="Jump"
      MovementAnims(2)="Jump"

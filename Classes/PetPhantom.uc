@@ -9,5 +9,5 @@ simulated function PostBeginPlay()
 
 defaultproperties
 {
-     ProjectileClass(0)=Class'DEKMonsters208AH.NecroPhantomPetProjectile'
+     ProjectileClass(0)=Class'DEKMonsters208AJ.NecroPhantomPetProjectile'
 }

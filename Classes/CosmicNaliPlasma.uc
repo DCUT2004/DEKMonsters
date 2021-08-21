@@ -17,5 +17,5 @@ defaultproperties
      MaxSpeed=25000.000000
      Damage=40.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters208AH.DamTypeCosmicNali'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeCosmicNali'
 }

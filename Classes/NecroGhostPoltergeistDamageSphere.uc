@@ -100,7 +100,7 @@ simulated function Destroyed()
 
 defaultproperties
 {
-     SphereEffectClass=Class'DEKMonsters208AH.NecroGhostPoltergeistDamageSphereEffect'
+     SphereEffectClass=Class'DEKMonsters208AJ.NecroGhostPoltergeistDamageSphereEffect'
      CheckInterval=1.000000
      DamageSphereRadius=900.000000
 	 DamageMultiplier=1.200000

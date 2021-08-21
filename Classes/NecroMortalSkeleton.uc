@@ -125,7 +125,7 @@ defaultproperties
      DeathSound(1)=Sound'NewDeath.MaleNightmare.mn_death07'
      DeathSound(2)=Sound'NewDeath.MaleNightmare.mn_death04'
      DeathSound(3)=Sound'NewDeath.MaleNightmare.mn_death03'
-     GibGroupClass=Class'DEKMonsters208AH.BoneGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.BoneGibGroup'
      SoundFootsteps(0)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(1)=Sound'satoreMonsterPackv120.Nali.walkC'
      SoundFootsteps(2)=Sound'satoreMonsterPackv120.Nali.walkC'
@@ -140,7 +140,7 @@ defaultproperties
      WaterSpeed=120.000000
      AirSpeed=340.000000
      JumpZ=140.000000
-     ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
      TurnLeftAnim="TurnL"
      TurnRightAnim="TurnR"
      CrouchAnims(0)="CrouchF"

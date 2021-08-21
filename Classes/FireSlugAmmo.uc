@@ -2,5 +2,5 @@ class FireSlugAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.FireSlugBioGlob'
+     ProjectileClass=Class'DEKMonsters208AJ.FireSlugBioGlob'
 }

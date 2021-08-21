@@ -87,5 +87,5 @@ function SpawnChunks(int num)
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AH.DamTypeTitanRock'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeTitanRock'
 }

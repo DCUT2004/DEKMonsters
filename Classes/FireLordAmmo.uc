@@ -2,5 +2,5 @@ class FireLordAmmo extends WarlordAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.FireLordRocket'
+     ProjectileClass=Class'DEKMonsters208AJ.FireLordRocket'
 }

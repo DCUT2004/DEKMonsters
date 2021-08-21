@@ -44,5 +44,5 @@ function FireProjectile()
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AH.RedGreenWarlordAmmo'
+     AmmunitionClass=Class'DEKMonsters208AJ.RedGreenWarlordAmmo'
 }

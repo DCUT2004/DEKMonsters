@@ -4,7 +4,7 @@ class DamTypeSoulWraith extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponNecroSoulWraith'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponNecroSoulWraith'
      DeathString="%o's soul is gone... forever."
      FemaleSuicide="%o's soul is gone... forever."
      MaleSuicide="%o's soul is gone... forever."

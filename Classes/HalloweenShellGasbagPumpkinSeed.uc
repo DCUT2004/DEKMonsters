@@ -137,7 +137,7 @@ defaultproperties
      MaxSpeed=2700.000000
      Damage=13.000000
      MomentumTransfer=10000.000000
-     MyDamageType=Class'DEKMonsters208AH.DamTypeShellGasbag'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeShellGasbag'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'PumpkinGunStat.Seed2'
      CullDistance=3000.000000

@@ -3,5 +3,5 @@ class DamTypeNecroSkeleton extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponSkeleton'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponSkeleton'
 }

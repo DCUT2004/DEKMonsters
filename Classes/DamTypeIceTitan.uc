@@ -3,7 +3,7 @@ class DamTypeIceTitan extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponIceTitan'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponIceTitan'
      DeathString="%o was frozen to death by an Ice Titan's icicle."
      bDetonatesGoop=True
 }

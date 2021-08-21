@@ -52,7 +52,7 @@ simulated function Destroyed()
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AH.DamTypeGoldSlug'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeGoldSlug'
      LightHue=45
      Skins(0)=Texture'DEKMonstersTexturesMaster208.GoldMonsters.FunkyYellow'
 }

@@ -2,5 +2,5 @@ class FireTitanAmmo extends SMPTitanAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.FireTitanHeatWave'
+     ProjectileClass=Class'DEKMonsters208AJ.FireTitanHeatWave'
 }

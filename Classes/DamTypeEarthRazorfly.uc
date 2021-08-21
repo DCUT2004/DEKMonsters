@@ -3,6 +3,6 @@ class DamTypeEarthRazorfly extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponEarthRazorfly'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponEarthRazorfly'
      DeathString="%o was eaten alive by an Earth Razorfly."
 }

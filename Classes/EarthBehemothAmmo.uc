@@ -2,5 +2,5 @@ class EarthBehemothAmmo extends DCBehemothAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.EarthBehemothProjectile'
+     ProjectileClass=Class'DEKMonsters208AJ.EarthBehemothProjectile'
 }

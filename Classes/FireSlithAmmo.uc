@@ -2,5 +2,5 @@ class FireSlithAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.FireSlithProjectile'
+     ProjectileClass=Class'DEKMonsters208AJ.FireSlithProjectile'
 }

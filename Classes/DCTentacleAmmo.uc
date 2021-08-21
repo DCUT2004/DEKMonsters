@@ -3,5 +3,5 @@ class DCTentacleAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AH.DCTentacleProjectile'
+     ProjectileClass=Class'DEKMonsters208AJ.DCTentacleProjectile'
 }

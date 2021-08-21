@@ -420,11 +420,11 @@ function PlayVictory()
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)
 {
 	if (rand(99) >= 33)
-		Self.PlaySound(sound'DEKMonsters208AH.MonsterSounds.NecroGhostDeathSound1',,500.00);
+		Self.PlaySound(sound'DEKMonsters208AJ.MonsterSounds.NecroGhostDeathSound1',,500.00);
 	else if (rand(99) >= 66)
-		Self.PlaySound(sound'DEKMonsters208AH.MonsterSounds.NecroGhostDeathSound2',,500.00);
+		Self.PlaySound(sound'DEKMonsters208AJ.MonsterSounds.NecroGhostDeathSound2',,500.00);
 	else
-		Self.PlaySound(sound'DEKMonsters208AH.MonsterSounds.NecroGhostDeathSound3',,500.00);
+		Self.PlaySound(sound'DEKMonsters208AJ.MonsterSounds.NecroGhostDeathSound3',,500.00);
 	Super.Died(Killer, damageType, HitLocation);
 }
 
@@ -434,10 +434,10 @@ defaultproperties
      TargetRadius=2000.000000
      MaxDamageBoost=0.500000
      bMeleeFighter=False
-     DeathSound(0)=Sound'DEKMonsters208AH.MonsterSounds.NecroGhostDeathSound1'
-     DeathSound(1)=Sound'DEKMonsters208AH.MonsterSounds.NecroGhostDeathSound2'
+     DeathSound(0)=Sound'DEKMonsters208AJ.MonsterSounds.NecroGhostDeathSound1'
+     DeathSound(1)=Sound'DEKMonsters208AJ.MonsterSounds.NecroGhostDeathSound2'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters208AH.NecroGhostExpGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.NecroGhostExpGibGroup'
      WallDodgeAnims(0)="Swim_Tread"
      WallDodgeAnims(1)="Swim_Tread"
      WallDodgeAnims(2)="Swim_Tread"
@@ -451,7 +451,7 @@ defaultproperties
      AirSpeed=800.000000
      AccelRate=800.000000
      Health=200
-     ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
      MovementAnims(0)="Swim_Tread"
      MovementAnims(1)="Swim_Tread"
      MovementAnims(2)="Swim_Tread"

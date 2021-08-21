@@ -78,5 +78,5 @@ defaultproperties
 	ScaleMultiplier=1.5000
 	NewHealth=450
     GroundSpeed=980.000000
-    ControllerClass=Class'DEKMonsters208AH.DCMonsterController'
+    ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
 }

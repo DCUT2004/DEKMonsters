@@ -37,9 +37,9 @@ function bool SameSpeciesAs(Pawn P)
 defaultproperties
 {
      FireSound=Sound'ONSBPSounds.Artillery.ShellIncoming1'
-     AmmunitionClass=Class'DEKMonsters208AH.CosmicSkaarjAmmo'
+     AmmunitionClass=Class'DEKMonsters208AJ.CosmicSkaarjAmmo'
      ScoringValue=9
-     GibGroupClass=Class'DEKMonsters208AH.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.CosmicGibGroup'
      bCanFly=True
      GroundSpeed=500.000000
      AirSpeed=600.000000

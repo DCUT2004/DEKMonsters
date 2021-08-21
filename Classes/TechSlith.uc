@@ -151,15 +151,15 @@ defaultproperties
 {
 	 NetworkRadius=1000.0000
      MonsterName="Tech Slith"
-     AmmunitionClass=Class'DEKMonsters208AH.TechSlithAmmo'
+     AmmunitionClass=Class'DEKMonsters208AJ.TechSlithAmmo'
      ScoringValue=8
-     GibGroupClass=Class'DEKMonsters208AH.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.DEKTechGibGroup'
      GroundSpeed=400.000000
      WaterSpeed=100.000000
      AirSpeed=400.000000
      AccelRate=700.000000
      Health=225
-     ControllerClass=Class'DEKMonsters208AH.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Mass=80.000000

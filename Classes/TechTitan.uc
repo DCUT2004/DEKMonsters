@@ -270,15 +270,15 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 defaultproperties
 {
 	 NetworkRadius=1000.0000
-     AmmunitionClass=Class'DEKMonsters208AH.TechTitanAmmo'
+     AmmunitionClass=Class'DEKMonsters208AJ.TechTitanAmmo'
      ScoringValue=15
-     GibGroupClass=Class'DEKMonsters208AH.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.DEKTechGibGroup'
      GroundSpeed=200.000000
      WaterSpeed=100.000000
      AirSpeed=200.000000
      AccelRate=400.000000
      Health=750
-     ControllerClass=Class'DEKMonsters208AH.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Buoyancy=80.000000

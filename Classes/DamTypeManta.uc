@@ -3,5 +3,5 @@ class DamTypeManta extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponManta'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponManta'
 }

@@ -62,7 +62,7 @@ defaultproperties
      MaxSpeed=1500.000000
      Damage=17.000000
      MomentumTransfer=25000.000000
-     MyDamageType=Class'DEKMonsters208AH.DamTypeFireKrall'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeFireKrall'
      LifeSpan=4.000000
      PrePivot=(X=10.000000)
 }

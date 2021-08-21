@@ -2,7 +2,7 @@ class FireGibTorso extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AH.FireGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.FireGibGroup'
      HitSounds(0)=Sound'PlayerSounds.BFootsteps.BFootstepDirt2'
      HitSounds(1)=Sound'PlayerSounds.BFootsteps.BFootstepPlant4'
      DrawType=DT_StaticMesh

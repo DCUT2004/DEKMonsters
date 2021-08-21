@@ -3,7 +3,7 @@ class DamTypeFireSkaarjSuperHeat extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponFireSkaarjSuperHeat'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponFireSkaarjSuperHeat'
      DeathString="A fire skaarj burned %o."
      bDetonatesGoop=True
 }

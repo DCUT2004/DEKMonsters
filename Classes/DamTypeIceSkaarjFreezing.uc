@@ -3,7 +3,7 @@ class DamTypeIceSkaarjFreezing extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponIceSkaarjFreezing'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponIceSkaarjFreezing'
      DeathString="A freezing ice skaarj froze %o."
      bDetonatesGoop=True
 }

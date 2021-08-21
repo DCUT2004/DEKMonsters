@@ -21,7 +21,7 @@ defaultproperties
          SecondsBeforeInactive=0.000000
          LifetimeRange=(Min=1.000000,Max=1.000000)
      End Object
-     Emitters(0)=MeshEmitter'DEKMonsters208AH.NecroGhostPoltergeistDamageSphereEffect.MeshEmitter0'
+     Emitters(0)=MeshEmitter'DEKMonsters208AJ.NecroGhostPoltergeistDamageSphereEffect.MeshEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

@@ -2,5 +2,5 @@ class DCKrallBolt extends KrallBolt;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AH.DamTypeKrall'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeKrall'
 }

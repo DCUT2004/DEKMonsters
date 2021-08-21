@@ -2,5 +2,5 @@ class HalloweenTitanAmmo extends TitanAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.HalloweenTitanPumpkin'
+     ProjectileClass=Class'DEKMonsters208AJ.HalloweenTitanPumpkin'
 }

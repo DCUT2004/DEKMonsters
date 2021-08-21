@@ -3,5 +3,5 @@ class DamTypeMercenaryAmmo extends SMPMerceAmmoDamType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponMercenary'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponMercenary'
 }

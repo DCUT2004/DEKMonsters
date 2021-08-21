@@ -3,7 +3,7 @@ class DamTypeTechPupae extends weaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponTechPupae'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponTechPupae'
      DeathString="%o was consumed by a Tech Pupae's nanites."
      bArmorStops=False
      DamageOverlayMaterial=Shader'DEKMonstersTexturesMaster208.TechMonsters.TechShader'

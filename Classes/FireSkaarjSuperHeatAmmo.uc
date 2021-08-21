@@ -2,5 +2,5 @@ class FireSkaarjSuperHeatAmmo extends DCSkaarjAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AH.FireSkaarjSuperHeatProjectile'
+     ProjectileClass=Class'DEKMonsters208AJ.FireSkaarjSuperHeatProjectile'
 }

@@ -206,7 +206,7 @@ defaultproperties
      Damage=25.000000
      DamageRadius=150.000000
      MomentumTransfer=70000.000000
-     MyDamageType=Class'DEKMonsters208AH.DamTypeIceSkaarjFreezing'
+     MyDamageType=Class'DEKMonsters208AJ.DamTypeIceSkaarjFreezing'
      ImpactSound=Sound'WeaponSounds.ShockRifle.ShockRifleExplosion'
      MaxEffectDistance=7000.000000
      LightType=LT_Steady

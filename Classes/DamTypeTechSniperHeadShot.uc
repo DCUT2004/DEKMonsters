@@ -27,7 +27,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponTechSniper'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponTechSniper'
      DeathString="%o's cranium was made extra crispy by a Tech Sniper."
      bArmorStops=False
 }

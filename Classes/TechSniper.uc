@@ -140,13 +140,13 @@ defaultproperties
      DamageMin=35
      DamageMax=45
      NumArcs=8
-     DamageType=Class'DEKMonsters208AH.DamTypeTechSniper'
-     DamageTypeHeadShot=Class'DEKMonsters208AH.DamTypeTechSniperHeadShot'
-     HitEmitterClass=Class'DEKRPG208AH.RedBoltEmitter'
-     SecHitEmitterClass=Class'DEKMonsters208AH.RedBoltChild'
+     DamageType=Class'DEKMonsters208AJ.DamTypeTechSniper'
+     DamageTypeHeadShot=Class'DEKMonsters208AJ.DamTypeTechSniperHeadShot'
+     HitEmitterClass=Class'DEKRPG208AJ.RedBoltEmitter'
+     SecHitEmitterClass=Class'DEKMonsters208AJ.RedBoltChild'
      ScoringValue=12
-     GibGroupClass=Class'DEKMonsters208AH.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters208AJ.DEKTechGibGroup'
      Health=300
-     ControllerClass=Class'DEKMonsters208AH.TechMonsterController'
+     ControllerClass=Class'DEKMonsters208AJ.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
 }

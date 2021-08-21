@@ -10,5 +10,5 @@ function bool SameSpeciesAs(Pawn P)
 
 defaultproperties
 {
-     RocketAmmoClass=Class'DEKMonsters208AH.RedGreenEliteMercenaryRocketAmmo'
+     RocketAmmoClass=Class'DEKMonsters208AJ.RedGreenEliteMercenaryRocketAmmo'
 }

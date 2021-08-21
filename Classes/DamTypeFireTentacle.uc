@@ -3,7 +3,7 @@ class DamTypeFireTentacle extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AH.WeaponFireTentacle'
+     WeaponClass=Class'DEKMonsters208AJ.WeaponFireTentacle'
      DeathString="%o was scorched by a Fire Tentacle"
      bDetonatesGoop=True
 }
