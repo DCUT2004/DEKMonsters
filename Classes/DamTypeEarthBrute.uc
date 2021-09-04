@@ -3,6 +3,6 @@ class DamTypeEarthBrute extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponEarthBrute'
+     WeaponClass=Class'DEKMonsters209A.WeaponEarthBrute'
      DeathString="%o was quaked by an Earth Brute."
 }

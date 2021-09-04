@@ -172,8 +172,8 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters208AJ.FireSlugAmmo'
-     GibGroupClass=Class'DEKMonsters208AJ.FireGibGroup'
+     AmmunitionClass=Class'DEKMonsters209A.FireSlugAmmo'
+     GibGroupClass=Class'DEKMonsters209A.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireSlithShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireSlithShader'
 }

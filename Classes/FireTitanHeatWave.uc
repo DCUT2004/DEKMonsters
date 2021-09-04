@@ -149,7 +149,7 @@ defaultproperties
      Speed=300.000000
      MaxSpeed=300.000000
      Damage=100.000000
-     MyDamageType=Class'DEKMonsters208AJ.DamTypeFireTitanSuperHeat'
+     MyDamageType=Class'DEKMonsters209A.DamTypeFireTitanSuperHeat'
      ImpactSound=Sound'ONSVehicleSounds-S.Explosions.VehicleExplosion02'
      LightType=LT_Steady
      LightEffect=LE_Spotlight
@@ -158,13 +158,13 @@ defaultproperties
      LightBrightness=300.000000
      LightRadius=30.000000
      DrawType=DT_StaticMesh
-     StaticMesh=StaticMesh'DEKStaticsMaster208K.fX.SolarWave'
+     StaticMesh=StaticMesh'DEKStaticsMaster209B.fX.SolarWave'
      bDynamicLight=True
      bIgnoreEncroachers=True
      AmbientSound=Sound'GeneralAmbience.firefx8'
      LifeSpan=3.000000
      PrePivot=(X=210.000000)
-     Skins(0)=FinalBlend'DEKRPGTexturesMaster208K.fX.ShieldHitOrangeEdgesFinal'
+     Skins(0)=FinalBlend'DEKRPGTexturesMaster209A.fX.ShieldHitOrangeEdgesFinal'
      Skins(1)=Texture'AW-2k4XP.Weapons.ElectricShockTex2'
      AmbientGlow=254
      SoundVolume=255

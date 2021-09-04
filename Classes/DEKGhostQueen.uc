@@ -527,7 +527,7 @@ defaultproperties
      AmmunitionClass=Class'satoreMonsterPackv120.SMPQueenAmmo'
      ScoringValue=23
      InvisMaterial=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.InvshadeFB'
-     GibGroupClass=Class'DEKMonsters208AJ.DEKGhostGibGroup'
+     GibGroupClass=Class'DEKMonsters209A.DEKGhostGibGroup'
      bCanSwim=False
      bCanFly=True
      MeleeRange=120.000000
@@ -536,7 +536,7 @@ defaultproperties
      AccelRate=1600.000000
      JumpZ=800.000000
      Health=2000
-     ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209A.DCMonsterController'
      MovementAnims(0)="Run"
      MovementAnims(1)="Run"
      MovementAnims(2)="Run"

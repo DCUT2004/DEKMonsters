@@ -219,13 +219,13 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 defaultproperties
 {
 	 NetworkRadius=1000.0000
-     AmmunitionClass=Class'DEKMonsters208AJ.TechPupaeAmmo'
+     AmmunitionClass=Class'DEKMonsters209A.TechPupaeAmmo'
      ScoringValue=3
-     GibGroupClass=Class'DEKMonsters208AJ.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters209A.DEKTechGibGroup'
      MeleeRange=90.000000
      GroundSpeed=500.000000
      Health=120
-     ControllerClass=Class'DEKMonsters208AJ.TechMonsterController'
+     ControllerClass=Class'DEKMonsters209A.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Buoyancy=80.000000

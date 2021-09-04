@@ -137,9 +137,9 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=2
-     RocketAmmoClass=Class'DEKMonsters208AJ.IceMercRocketAmmo'
-     AmmunitionClass=Class'DEKMonsters208AJ.IceMercenaryAmmo'
-     GibGroupClass=Class'DEKMonsters208AJ.IceGibGroup'
+     RocketAmmoClass=Class'DEKMonsters209A.IceMercRocketAmmo'
+     AmmunitionClass=Class'DEKMonsters209A.IceMercenaryAmmo'
+     GibGroupClass=Class'DEKMonsters209A.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceMercenaryShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceMercenaryShader'
 }

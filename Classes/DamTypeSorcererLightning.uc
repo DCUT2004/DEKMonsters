@@ -3,5 +3,5 @@ class DamTypeSorcererLightning extends DamTypeSniperShot
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponNecroSorcerer'
+     WeaponClass=Class'DEKMonsters209A.WeaponNecroSorcerer'
 }

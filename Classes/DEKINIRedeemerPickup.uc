@@ -2,6 +2,6 @@ class DEKINIRedeemerPickup extends RedeemerPickup;
 
 defaultproperties
 {
-     InventoryType=Class'DEKMonsters208AJ.DEKINIRedeemer'
+     InventoryType=Class'DEKMonsters209A.DEKINIRedeemer'
      PickupMessage="You can has DEEMER!?"
 }

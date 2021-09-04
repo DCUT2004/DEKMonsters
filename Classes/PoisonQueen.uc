@@ -384,7 +384,7 @@ defaultproperties
      AmmunitionClass=None
      ScoringValue=15
      GroundSpeed=700.000000
-     ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209A.DCMonsterController'
      Skins(0)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.PoisonQueen'
      Skins(1)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.PoisonQueen'
 }

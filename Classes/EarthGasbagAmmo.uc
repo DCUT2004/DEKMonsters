@@ -2,5 +2,5 @@ class EarthGasbagAmmo extends DCGasbagAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AJ.EarthGasbagBelch'
+     ProjectileClass=Class'DEKMonsters209A.EarthGasbagBelch'
 }

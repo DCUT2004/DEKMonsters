@@ -3,5 +3,5 @@ class ShellGasBagAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AJ.GasBagFlakShell'
+     ProjectileClass=Class'DEKMonsters209A.GasBagFlakShell'
 }

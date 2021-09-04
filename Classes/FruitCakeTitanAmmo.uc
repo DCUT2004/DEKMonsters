@@ -2,5 +2,5 @@ class FruitCakeTitanAmmo extends TitanAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AJ.FruitCakeTitanCake'
+     ProjectileClass=Class'DEKMonsters209A.FruitCakeTitanCake'
 }

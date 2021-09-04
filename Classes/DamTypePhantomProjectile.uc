@@ -4,7 +4,7 @@ class DamTypePhantomProjectile extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponNecroPhantom'
+     WeaponClass=Class'DEKMonsters209A.WeaponNecroPhantom'
      DeathString="%o succumbed to the Phantom's curse."
      bArmorStops=False
      bDetonatesGoop=True

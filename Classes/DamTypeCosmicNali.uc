@@ -7,7 +7,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponCosmicNali'
+     WeaponClass=Class'DEKMonsters209A.WeaponCosmicNali'
      DeathString="%o was star-struck by a Cosmic Nali."
      DamageOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'
      DeathOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'

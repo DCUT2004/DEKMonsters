@@ -3,5 +3,5 @@ class DamTypeSkaarjSniper extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponSkaarjSniper'
+     WeaponClass=Class'DEKMonsters209A.WeaponSkaarjSniper'
 }

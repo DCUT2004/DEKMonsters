@@ -3,7 +3,7 @@ class DamTypeIceBrute extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponIceBrute'
+     WeaponClass=Class'DEKMonsters209A.WeaponIceBrute'
      DeathString="An ice brute froze %o."
      bDetonatesGoop=True
 }

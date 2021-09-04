@@ -2,7 +2,7 @@ class FlameGibCalf extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AJ.FlameGibGroup'
+     GibGroupClass=Class'DEKMonsters209A.FlameGibGroup'
      TrailClass=Class'XEffects.HitSmoke'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'XEffects.GibBotCalf'

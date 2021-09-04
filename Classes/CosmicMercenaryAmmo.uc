@@ -2,5 +2,5 @@ class CosmicMercenaryAmmo extends Ammunition;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AJ.CosmicMercenaryRocket'
+     ProjectileClass=Class'DEKMonsters209A.CosmicMercenaryRocket'
 }

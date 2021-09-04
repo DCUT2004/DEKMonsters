@@ -1,7 +1,7 @@
 //Code from SpecialSkaarjPackv4, based on the Crystalis. Author: Ace08.
 class IceTitanBigCrystal extends SMPTitanBigRock;
 
-#exec OBJ LOAD FILE=DEKStaticsMaster208K.usx
+#exec OBJ LOAD FILE=DEKStaticsMaster209B.usx
 #exec OBJ LOAD FILE=AW-2004Crystals.usx
 
 var config float BaseChance;
@@ -168,9 +168,9 @@ defaultproperties
      Speed=1350.000000
      MaxSpeed=1350.000000
      Damage=20.000000
-     MyDamageType=Class'DEKMonsters208AJ.DamTypeIceTitan'
+     MyDamageType=Class'DEKMonsters209A.DamTypeIceTitan'
      ImpactSound=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
-     StaticMesh=StaticMesh'DEKStaticsMaster208K.Meshes.CrystalA'
+     StaticMesh=StaticMesh'DEKStaticsMaster209B.Meshes.CrystalA'
      DrawScale=4.000000
      DrawScale3D=(X=2.000000,Y=2.000000,Z=2.000000)
      SoundVolume=255

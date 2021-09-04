@@ -3,5 +3,5 @@ class TechQueenAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters208AJ.TechQueenEgg'
+     ProjectileClass=Class'DEKMonsters209A.TechQueenEgg'
 }

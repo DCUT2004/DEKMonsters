@@ -10,5 +10,5 @@ simulated function PostBeginPlay()
 
 defaultproperties
 {
-     Skins(0)=Texture'DEKRPGTexturesMaster208K.fX.TexLightningBeam'
+     Skins(0)=Texture'DEKRPGTexturesMaster209A.fX.TexLightningBeam'
 }

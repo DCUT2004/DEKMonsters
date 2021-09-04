@@ -2,12 +2,12 @@ class FlameGibGroup extends xPawnGibGroup;
 
 defaultproperties
 {
-     Gibs(0)=Class'DEKMonsters208AJ.FlameGibCalf'
-     Gibs(1)=Class'DEKMonsters208AJ.FlameGibForearm'
-     Gibs(2)=Class'DEKMonsters208AJ.FlameGibForearm'
-     Gibs(3)=Class'DEKMonsters208AJ.FlameGibHead'
-     Gibs(4)=Class'DEKMonsters208AJ.FlameGibTorso'
-     Gibs(5)=Class'DEKMonsters208AJ.FlameGibUpperArm'
+     Gibs(0)=Class'DEKMonsters209A.FlameGibCalf'
+     Gibs(1)=Class'DEKMonsters209A.FlameGibForearm'
+     Gibs(2)=Class'DEKMonsters209A.FlameGibForearm'
+     Gibs(3)=Class'DEKMonsters209A.FlameGibHead'
+     Gibs(4)=Class'DEKMonsters209A.FlameGibTorso'
+     Gibs(5)=Class'DEKMonsters209A.FlameGibUpperArm'
      BloodHitClass=Class'SkaarjPack.BelchFlames'
      LowGoreBloodHitClass=Class'SkaarjPack.BelchFlames'
      BloodGibClass=Class'XEffects.HitSmoke'

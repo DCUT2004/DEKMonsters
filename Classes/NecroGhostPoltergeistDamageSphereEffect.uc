@@ -4,7 +4,7 @@ class NecroGhostPoltergeistDamageSphereEffect extends Emitter
 defaultproperties
 {
      Begin Object Class=MeshEmitter Name=MeshEmitter0
-         StaticMesh=StaticMesh'DEKStaticsMaster208K.fX.SphereDamage'
+         StaticMesh=StaticMesh'DEKStaticsMaster209B.fX.SphereDamage'
          RenderTwoSided=True
          UseParticleColor=True
          UseColorScale=True
@@ -21,7 +21,7 @@ defaultproperties
          SecondsBeforeInactive=0.000000
          LifetimeRange=(Min=1.000000,Max=1.000000)
      End Object
-     Emitters(0)=MeshEmitter'DEKMonsters208AJ.NecroGhostPoltergeistDamageSphereEffect.MeshEmitter0'
+     Emitters(0)=MeshEmitter'DEKMonsters209A.NecroGhostPoltergeistDamageSphereEffect.MeshEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

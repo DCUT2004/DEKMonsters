@@ -2,5 +2,5 @@ class DCGiantGasbagAmmo extends GasbagAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AJ.DCGiantGasbagBelch'
+     ProjectileClass=Class'DEKMonsters209A.DCGiantGasbagBelch'
 }

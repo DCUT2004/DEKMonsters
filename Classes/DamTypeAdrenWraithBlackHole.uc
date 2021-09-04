@@ -4,7 +4,7 @@ class DamTypeAdrenWraithBlackHole extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponNecroAdrenWraith'
+     WeaponClass=Class'DEKMonsters209A.WeaponNecroAdrenWraith'
      DeathString="%o never saw light again."
      bDetonatesGoop=True
      bDelayedDamage=True

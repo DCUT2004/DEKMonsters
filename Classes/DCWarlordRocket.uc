@@ -2,5 +2,5 @@ class DCWarlordRocket extends WarlordRocket;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters208AJ.DamTypeDCWarlordRocket'
+     MyDamageType=Class'DEKMonsters209A.DamTypeDCWarlordRocket'
 }

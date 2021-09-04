@@ -2,11 +2,11 @@ class BoneGibSmallLeg extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters208AJ.BoneGibGroup'
+     GibGroupClass=Class'DEKMonsters209A.BoneGibGroup'
      HitSounds(0)=Sound'PlayerSounds.ImpactSounds.BodyHit8'
      HitSounds(1)=Sound'PlayerSounds.ImpactSounds.BodyHit5'
      DrawType=DT_StaticMesh
-     StaticMesh=StaticMesh'DEKStaticsMaster208K.Meshes.bone_smallleg'
+     StaticMesh=StaticMesh'DEKStaticsMaster209B.Meshes.bone_smallleg'
      DrawScale=4.500000
      Skins(0)=Texture'DEKMonstersTexturesMaster208.NecroMonsters.NecroSkeleton'
      Skins(1)=Texture'DEKMonstersTexturesMaster208.NecroMonsters.NecroSkeleton'

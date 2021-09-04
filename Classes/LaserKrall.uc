@@ -77,7 +77,7 @@ function bool SameSpeciesAs(Pawn P)
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters208AJ.LaserKrallAmmo'
+     AmmunitionClass=Class'DEKMonsters209A.LaserKrallAmmo'
      ScoringValue=6
      Health=200
 }

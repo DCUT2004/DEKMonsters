@@ -28,5 +28,5 @@ defaultproperties
 {
     NewHealth=850
 	ScaleMultiplier=1.5000
-    ControllerClass=Class'DEKMonsters208AJ.DCMonsterController'
+    ControllerClass=Class'DEKMonsters209A.DCMonsterController'
 }

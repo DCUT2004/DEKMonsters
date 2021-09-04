@@ -2,5 +2,5 @@ class IceTentacleAmmo extends GasbagAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AJ.IceTentacleProj'
+     ProjectileClass=Class'DEKMonsters209A.IceTentacleProj'
 }

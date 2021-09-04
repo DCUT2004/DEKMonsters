@@ -2,5 +2,5 @@ class FireMercenaryAmmo extends Ammunition;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters208AJ.FireMercenaryLaser'
+     ProjectileClass=Class'DEKMonsters209A.FireMercenaryLaser'
 }

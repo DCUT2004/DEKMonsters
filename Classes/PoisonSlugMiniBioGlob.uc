@@ -53,6 +53,6 @@ defaultproperties
      PoisonLifespan=4.000000
      BaseChance=33.000000
      Speed=1000.000000
-     MyDamageType=Class'DEKMonsters208AJ.DamTypePoisonSlug'
+     MyDamageType=Class'DEKMonsters209A.DamTypePoisonSlug'
      LightBrightness=80.000000
 }

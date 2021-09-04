@@ -3,7 +3,7 @@ class DamTypeFireBrute extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters208AJ.WeaponFireBrute'
+     WeaponClass=Class'DEKMonsters209A.WeaponFireBrute'
      DeathString="A fire brute burned %o."
      bDetonatesGoop=True
 }

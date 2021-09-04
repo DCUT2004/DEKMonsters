@@ -1,7 +1,7 @@
 //Code from Special Skaarj Packv4, based off of the Crystalis Titan.
 class IceTitanBigCrystalA extends SMPTitanBigRock;
 
-#exec OBJ LOAD FILE=DEKStaticsMaster208K
+#exec OBJ LOAD FILE=DEKStaticsMaster209B
 #exec OBJ LOAD FILE=AW-2004Crystals.usx
 
 var config float BaseChance;
@@ -140,7 +140,7 @@ defaultproperties
      BaseChance=25.000000
      Speed=1950.000000
      MaxSpeed=1950.000000
-     StaticMesh=StaticMesh'DEKStaticsMaster208K.Meshes.crystal'
+     StaticMesh=StaticMesh'DEKStaticsMaster209B.Meshes.crystal'
      DrawScale=15.000000
      DrawScale3D=(X=0.500000,Y=0.500000,Z=0.500000)
      CollisionRadius=60.000000

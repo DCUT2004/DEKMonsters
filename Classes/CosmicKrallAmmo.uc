@@ -5,5 +5,5 @@ defaultproperties
      bRecommendSplashDamage=True
      bLeadTarget=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters208AJ.CosmicKrallPlasma'
+     ProjectileClass=Class'DEKMonsters209A.CosmicKrallPlasma'
 }
