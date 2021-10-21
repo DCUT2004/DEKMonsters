@@ -176,7 +176,7 @@ defaultproperties
      Damage=30.000000
      DamageRadius=150.000000
      MomentumTransfer=1000.000000
-     MyDamageType=Class'DEKMonsters209A.DamTypeTechSkaarj'
+     MyDamageType=Class'DEKMonsters209B.DamTypeTechSkaarj'
      ImpactSound=SoundGroup'WeaponSounds.BioRifle.BioRifleGoo2'
      LightHue=120
      LightSaturation=250

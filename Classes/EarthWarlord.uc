@@ -210,9 +210,9 @@ defaultproperties
      DamageMin=20.000000
      DamageMax=30.000000
      DamageMomentum=10000.000000
-     BeamDamageType=Class'DEKMonsters209A.DamTypeEarthWarlordBeam'
-     FireSound=Sound'DEKMonsters209A.MonsterSounds.EarthWarlordFire'
-     GibGroupClass=Class'DEKMonsters209A.EarthGibGroup'
+     BeamDamageType=Class'DEKMonsters209B.DamTypeEarthWarlordBeam'
+     FireSound=Sound'DEKMonsters209B.MonsterSounds.EarthWarlordFire'
+     GibGroupClass=Class'DEKMonsters209B.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Warlord_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Warlord_Earth-Shader'
 }

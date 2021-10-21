@@ -2,5 +2,5 @@ class IceSlithAmmo extends SMPSlithAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209A.IceSlithProjectile'
+     ProjectileClass=Class'DEKMonsters209B.IceSlithProjectile'
 }

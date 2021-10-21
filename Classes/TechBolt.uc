@@ -42,7 +42,7 @@ defaultproperties
          LifetimeRange=(Min=0.500000,Max=1.000000)
          StartVelocityRange=(X=(Min=1.000000,Max=1.000000))
      End Object
-     Emitters(0)=BeamEmitter'DEKMonsters209A.TechBolt.BE0'
+     Emitters(0)=BeamEmitter'DEKMonsters209B.TechBolt.BE0'
 
      AutoDestroy=True
      bNoDelete=False

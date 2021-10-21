@@ -420,11 +420,11 @@ function PlayVictory()
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)
 {
 	if (rand(99) >= 33)
-		Self.PlaySound(sound'DEKMonsters209A.MonsterSounds.NecroGhostDeathSound1',,500.00);
+		Self.PlaySound(sound'DEKMonsters209B.MonsterSounds.NecroGhostDeathSound1',,500.00);
 	else if (rand(99) >= 66)
-		Self.PlaySound(sound'DEKMonsters209A.MonsterSounds.NecroGhostDeathSound2',,500.00);
+		Self.PlaySound(sound'DEKMonsters209B.MonsterSounds.NecroGhostDeathSound2',,500.00);
 	else
-		Self.PlaySound(sound'DEKMonsters209A.MonsterSounds.NecroGhostDeathSound3',,500.00);
+		Self.PlaySound(sound'DEKMonsters209B.MonsterSounds.NecroGhostDeathSound3',,500.00);
 	Super.Died(Killer, damageType, HitLocation);
 }
 
@@ -434,10 +434,10 @@ defaultproperties
      TargetRadius=2000.000000
      MaxDamageBoost=0.500000
      bMeleeFighter=False
-     DeathSound(0)=Sound'DEKMonsters209A.MonsterSounds.NecroGhostDeathSound1'
-     DeathSound(1)=Sound'DEKMonsters209A.MonsterSounds.NecroGhostDeathSound2'
+     DeathSound(0)=Sound'DEKMonsters209B.MonsterSounds.NecroGhostDeathSound1'
+     DeathSound(1)=Sound'DEKMonsters209B.MonsterSounds.NecroGhostDeathSound2'
      ScoringValue=10
-     GibGroupClass=Class'DEKMonsters209A.NecroGhostExpGibGroup'
+     GibGroupClass=Class'DEKMonsters209B.NecroGhostExpGibGroup'
      WallDodgeAnims(0)="Swim_Tread"
      WallDodgeAnims(1)="Swim_Tread"
      WallDodgeAnims(2)="Swim_Tread"
@@ -451,7 +451,7 @@ defaultproperties
      AirSpeed=800.000000
      AccelRate=800.000000
      Health=200
-     ControllerClass=Class'DEKMonsters209A.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209B.DCMonsterController'
      MovementAnims(0)="Swim_Tread"
      MovementAnims(1)="Swim_Tread"
      MovementAnims(2)="Swim_Tread"
@@ -496,7 +496,7 @@ defaultproperties
      IdleSwimAnim="Swim_Tread"
      IdleChatAnim="Swim_Tread"
      Mesh=SkeletalMesh'HumanMaleA.NightMaleB'
-     Skins(0)=FinalBlend'DEKRPGTexturesMaster209A.fX.SphereDamageFB'
-     Skins(1)=FinalBlend'DEKRPGTexturesMaster209A.fX.SphereDamageFB'
+     Skins(0)=FinalBlend'DEKRPGTexturesMaster209B.fX.SphereDamageFB'
+     Skins(1)=FinalBlend'DEKRPGTexturesMaster209B.fX.SphereDamageFB'
      TransientSoundRadius=800.000000
 }

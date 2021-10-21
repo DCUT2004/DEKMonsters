@@ -94,7 +94,7 @@ simulated function Destroyed()
 
 defaultproperties
 {
-     OrbEffectClass=Class'DEKMonsters209A.NecroGhostPriestHealingOrbEffect'
+     OrbEffectClass=Class'DEKMonsters209B.NecroGhostPriestHealingOrbEffect'
      HealInterval=1.000000
      OrbHealRadius=900.000000
      HealAmount=10

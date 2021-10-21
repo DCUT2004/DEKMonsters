@@ -14,5 +14,5 @@ function bool SameSpeciesAs(Pawn P)
 defaultproperties
 {
      MaxChildren=0
-     AmmunitionClass=Class'DEKMonsters209A.PrincessAmmo'
+     AmmunitionClass=Class'DEKMonsters209B.PrincessAmmo'
 }

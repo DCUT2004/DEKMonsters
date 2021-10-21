@@ -2,5 +2,5 @@ class EarthTentacleProjectile extends DCTentacleProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209A.DamTypeEarthTentacle'
+     MyDamageType=Class'DEKMonsters209B.DamTypeEarthTentacle'
 }

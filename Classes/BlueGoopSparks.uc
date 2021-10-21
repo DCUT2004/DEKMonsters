@@ -24,7 +24,7 @@ defaultproperties
      mColorRange(1)=(B=180,G=160)
      mAttenKa=0.000000
      RemoteRole=ROLE_SimulatedProxy
-     Skins(0)=Texture'DEKRPGTexturesMaster209A.fX.TexLightningBeam'
+     Skins(0)=Texture'DEKRPGTexturesMaster209B.fX.TexLightningBeam'
      ScaleGlow=2.000000
      Style=STY_Additive
 }

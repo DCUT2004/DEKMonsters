@@ -220,13 +220,13 @@ defaultproperties
 {
 	 NetworkRadius=1000.0000
      KnockbackSound=Sound'WeaponSounds.Misc.ballgun_launch'
-     GibGroupClass=Class'DEKMonsters209A.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters209B.DEKTechGibGroup'
      MeleeRange=350.000000
      WaterSpeed=400.000000
      AirSpeed=800.000000
      AccelRate=500.000000
      Health=250
-     ControllerClass=Class'DEKMonsters209A.TechMonsterController'
+     ControllerClass=Class'DEKMonsters209B.TechMonsterController'
      DrawScale=2.500000
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'

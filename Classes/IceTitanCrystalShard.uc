@@ -2,7 +2,7 @@
 
 class IceTitanCrystalShard extends SMPTitanBigRock;
 
-#exec OBJ LOAD FILE=DEKStaticsMaster209B.usx
+#exec OBJ LOAD FILE=DEKStaticsMaster209C.usx
 #exec OBJ LOAD FILE=AW-2004Crystals.usx
 
 var config float BaseChance;
@@ -25,7 +25,7 @@ simulated function PostBeginPlay()
 	else if (decision < 0.33)
 		SetStaticMesh(staticmesh'AW-2004Crystals.Crops.CrystalShard');
 	else if (decision < 0.33)
-		SetStaticMesh(staticmesh'DEKStaticsMaster209B.Meshes.CrystalA');
+		SetStaticMesh(staticmesh'DEKStaticsMaster209C.Meshes.CrystalA');
 }
 
 function ProcessTouch (Actor Other, Vector HitLocation)
@@ -173,9 +173,9 @@ defaultproperties
      Speed=1350.000000
      MaxSpeed=1350.000000
      Damage=20.000000
-     MyDamageType=Class'DEKMonsters209A.DamTypeIceTitan'
+     MyDamageType=Class'DEKMonsters209B.DamTypeIceTitan'
      ImpactSound=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
-     StaticMesh=StaticMesh'DEKStaticsMaster209B.Meshes.CrystalA'
+     StaticMesh=StaticMesh'DEKStaticsMaster209C.Meshes.CrystalA'
      DrawScale=4.000000
      DrawScale3D=(X=0.700000,Y=0.700000,Z=0.700000)
      SoundVolume=255

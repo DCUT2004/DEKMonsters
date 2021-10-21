@@ -79,7 +79,7 @@ defaultproperties
          WarmupTicksPerSecond=1.000000
          RelativeWarmupTime=5.000000
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters209A.FX_DEK_Plasma.SpriteEmitter2'
+     Emitters(0)=SpriteEmitter'DEKMonsters209B.FX_DEK_Plasma.SpriteEmitter2'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter3
          UseColorScale=True
@@ -111,7 +111,7 @@ defaultproperties
          WarmupTicksPerSecond=1.000000
          RelativeWarmupTime=5.000000
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters209A.FX_DEK_Plasma.SpriteEmitter3'
+     Emitters(1)=SpriteEmitter'DEKMonsters209B.FX_DEK_Plasma.SpriteEmitter3'
 
      Begin Object Class=MeshEmitter Name=MeshEmitter1
          StaticMesh=StaticMesh'AS_Weapons_SM.Projectiles.Skaarj_Energy'
@@ -135,7 +135,7 @@ defaultproperties
          WarmupTicksPerSecond=1.000000
          RelativeWarmupTime=1.000000
      End Object
-     Emitters(2)=MeshEmitter'DEKMonsters209A.FX_DEK_Plasma.MeshEmitter1'
+     Emitters(2)=MeshEmitter'DEKMonsters209B.FX_DEK_Plasma.MeshEmitter1'
 
      bNoDelete=False
      bHardAttach=True

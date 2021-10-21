@@ -35,7 +35,7 @@ defaultproperties
      WeaponClassName(8)="XWeapons.ShieldGun"
      ScoringValue=5
      InvisMaterial=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.InvshadeFB'
-     GibGroupClass=Class'DEKMonsters209A.DEKGhostGibGroup'
+     GibGroupClass=Class'DEKMonsters209B.DEKGhostGibGroup'
      bCanFly=True
      AirSpeed=300.000000
      AccelRate=400.000000

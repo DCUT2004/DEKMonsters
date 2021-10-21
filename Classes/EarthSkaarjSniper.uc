@@ -69,10 +69,10 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
-     DamageType=Class'DEKMonsters209A.DamTypeEarthSkaarjSniper'
-     HitEmitterClass=Class'DEKRPG209A.DefenseBoltEmitter'
-     SecHitEmitterClass=Class'DEKRPG209A.DefenseBoltEmitterChild'
-     GibGroupClass=Class'DEKMonsters209A.EarthGibGroup'
+     DamageType=Class'DEKMonsters209B.DamTypeEarthSkaarjSniper'
+     HitEmitterClass=Class'DEKRPG209B.DefenseBoltEmitter'
+     SecHitEmitterClass=Class'DEKRPG209B.DefenseBoltEmitterChild'
+     GibGroupClass=Class'DEKMonsters209B.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.SkaarjSniper_Earth-Shader'
      Skins(1)=FinalBlend'XEffectMat.Shield.RedShell'
 }

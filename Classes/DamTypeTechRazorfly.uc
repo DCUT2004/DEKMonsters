@@ -3,7 +3,7 @@ class DamTypeTechRazorfly extends weaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209A.WeaponTechRazorfly'
+     WeaponClass=Class'DEKMonsters209B.WeaponTechRazorfly'
      DeathString="%o was consumed by a Tech Razorfly's nanites."
      bArmorStops=False
      DamageOverlayMaterial=Shader'DEKMonstersTexturesMaster208.TechMonsters.TechShader'

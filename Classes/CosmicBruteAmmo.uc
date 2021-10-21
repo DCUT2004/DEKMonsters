@@ -2,5 +2,5 @@ class CosmicBruteAmmo extends BruteAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209A.CosmicBrutePlasma'
+     ProjectileClass=Class'DEKMonsters209B.CosmicBrutePlasma'
 }

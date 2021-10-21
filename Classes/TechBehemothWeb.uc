@@ -2,11 +2,11 @@ class TechBehemothWeb extends ONSRVWebProjectile;
 
 defaultproperties
 {
-     ProjectileEffectClass=Class'DEKMonsters209A.TechWebProjectileEffect'
+     ProjectileEffectClass=Class'DEKMonsters209B.TechWebProjectileEffect'
      ExplodeDelay=1.000000
      Speed=750.000000
      MaxSpeed=750.000000
      Damage=30.000000
      MomentumTransfer=0.000000
-     MyDamageType=Class'DEKMonsters209A.DamTypeTechBehemothWeb'
+     MyDamageType=Class'DEKMonsters209B.DamTypeTechBehemothWeb'
 }

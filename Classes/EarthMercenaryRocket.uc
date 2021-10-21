@@ -49,7 +49,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 		HurtRadius(Damage, DamageRadius, MyDamageType, MomentumTransfer, HitLocation);	
 	}
     if ( EffectIsRelevant(Location,false) )
-		Spawn(class'DEKMonsters209A.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+		Spawn(class'DEKMonsters209B.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
     PlaySound(Sound'WeaponSounds.BaseImpactAndExplosions.BExplosion3');
 	Destroy();
 }
@@ -75,7 +75,7 @@ simulated function Destroyed()
 defaultproperties
 {
      bSwitchToZeroCollision=True
-     MyDamageType=Class'DEKMonsters209A.DamTypeEarthMercenaryRocket'
+     MyDamageType=Class'DEKMonsters209B.DamTypeEarthMercenaryRocket'
      ImpactSound=Sound'WeaponSounds.ShockRifle.ShockRifleExplosion'
      MaxEffectDistance=7000.000000
      LightHue=90

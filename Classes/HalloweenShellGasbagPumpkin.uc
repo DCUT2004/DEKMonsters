@@ -108,7 +108,7 @@ defaultproperties
      TossZ=330.000000
      Damage=55.000000
      MomentumTransfer=75000.000000
-     MyDamageType=Class'DEKMonsters209A.DamTypeShellGasbag'
+     MyDamageType=Class'DEKMonsters209B.DamTypeShellGasbag'
      ExplosionDecal=Class'XEffects.ShockAltDecal'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'PumpkinGunStat.pumpkinLower1c'

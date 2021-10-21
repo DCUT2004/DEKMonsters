@@ -3,6 +3,6 @@ class DamTypeEarthGasbag extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209A.WeaponEarthGasbag'
+     WeaponClass=Class'DEKMonsters209B.WeaponEarthGasbag'
      DeathString="%o was roasted by an Earth Gasbag."
 }

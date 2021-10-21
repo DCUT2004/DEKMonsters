@@ -2,8 +2,8 @@ class DEKINIRedeemer extends Redeemer ;
 
 defaultproperties
 {
-     FireModeClass(0)=Class'DEKMonsters209A.DEKINIRedeemerFire'
-     FireModeClass(1)=Class'DEKMonsters209A.DEKINIRedeemerFire'
-     PickupClass=Class'DEKMonsters209A.DEKINIRedeemerPickup'
-     AttachmentClass=Class'DEKMonsters209A.DEKINIRedeemerAttach'
+     FireModeClass(0)=Class'DEKMonsters209B.DEKINIRedeemerFire'
+     FireModeClass(1)=Class'DEKMonsters209B.DEKINIRedeemerFire'
+     PickupClass=Class'DEKMonsters209B.DEKINIRedeemerPickup'
+     AttachmentClass=Class'DEKMonsters209B.DEKINIRedeemerAttach'
 }

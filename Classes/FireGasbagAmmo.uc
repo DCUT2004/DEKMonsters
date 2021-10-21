@@ -2,5 +2,5 @@ class FireGasbagAmmo extends GasbagAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209A.FireGasbagBelch'
+     ProjectileClass=Class'DEKMonsters209B.FireGasbagBelch'
 }
