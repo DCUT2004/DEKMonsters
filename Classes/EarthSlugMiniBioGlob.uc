@@ -84,7 +84,7 @@ simulated function Destroyed()
 defaultproperties
 {
      Speed=1000.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeEarthSlug'
+     MyDamageType=Class'DEKMonsters209C.DamTypeEarthSlug'
      LightHue=90
      bDynamicLight=False
      Skins(0)=Texture'FireEngine.Liquids.water04go'

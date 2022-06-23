@@ -3,7 +3,7 @@ class GiantCosmicBunny extends GiantWarBunny
 
 defaultproperties
 {
-     ChargerClass=Class'DEKMonsters209B.GiantCosmicBunnyCharger'
+     ChargerClass=Class'DEKMonsters209C.GiantCosmicBunnyCharger'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.CosmicMonsters.CosmicKrall'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.CosmicMonsters.CosmicKrall'
 }

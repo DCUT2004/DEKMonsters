@@ -22,7 +22,7 @@ function RangedAttack(Actor A)
 defaultproperties
 {
 	 BiteDamage=10
-     ControllerClass=Class'DEKMonsters209B.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209C.DCMonsterController'
      HealthMax=20.000000
      Health=20
      AirSpeed=2000.000000

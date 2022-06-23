@@ -110,7 +110,7 @@ defaultproperties
      bMergeGlobs=False
      TossZ=300.000000
      Damage=30.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeLavaBioSkaarjGlob'
+     MyDamageType=Class'DEKMonsters209C.DamTypeLavaBioSkaarjGlob'
      LightHue=30
      LightSaturation=15
      DrawScale=1.500000

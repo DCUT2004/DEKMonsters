@@ -21,7 +21,7 @@ defaultproperties
          WarmupTicksPerSecond=2.000000
          RelativeWarmupTime=2.000000
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters209B.FireMercenaryPlasmaEffect.SpriteEmitter37'
+     Emitters(0)=SpriteEmitter'DEKMonsters209C.FireMercenaryPlasmaEffect.SpriteEmitter37'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter38
          UseDirectionAs=PTDU_Right
@@ -40,7 +40,7 @@ defaultproperties
          WarmupTicksPerSecond=2.000000
          RelativeWarmupTime=2.000000
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters209B.FireMercenaryPlasmaEffect.SpriteEmitter38'
+     Emitters(1)=SpriteEmitter'DEKMonsters209C.FireMercenaryPlasmaEffect.SpriteEmitter38'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter39
          UseColorScale=True
@@ -69,6 +69,6 @@ defaultproperties
          WarmupTicksPerSecond=1.000000
          RelativeWarmupTime=1.000000
      End Object
-     Emitters(2)=SpriteEmitter'DEKMonsters209B.FireMercenaryPlasmaEffect.SpriteEmitter39'
+     Emitters(2)=SpriteEmitter'DEKMonsters209C.FireMercenaryPlasmaEffect.SpriteEmitter39'
 
 }

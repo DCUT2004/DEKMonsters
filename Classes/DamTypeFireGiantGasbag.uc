@@ -3,7 +3,7 @@ class DamTypeFireGiantGasbag extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponFireGiantGasbag'
+     WeaponClass=Class'DEKMonsters209C.WeaponFireGiantGasbag'
      DeathString="A giant fire gasbag burned %o."
      bDetonatesGoop=True
 }

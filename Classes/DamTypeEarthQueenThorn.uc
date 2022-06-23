@@ -3,6 +3,6 @@ class DamTypeEarthQueenThorn extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponEarthQueen'
+     WeaponClass=Class'DEKMonsters209C.WeaponEarthQueen'
      DeathString="%o was punctured by an Earth Queen's thorns."
 }

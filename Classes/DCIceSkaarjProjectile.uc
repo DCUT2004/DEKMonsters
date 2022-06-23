@@ -2,5 +2,5 @@ class DCIceSkaarjProjectile extends IceSkaarjProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209B.DamTypeIceSkaarj'
+     MyDamageType=Class'DEKMonsters209C.DamTypeIceSkaarj'
 }

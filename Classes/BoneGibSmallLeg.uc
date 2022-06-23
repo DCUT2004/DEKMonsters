@@ -2,7 +2,7 @@ class BoneGibSmallLeg extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209B.BoneGibGroup'
+     GibGroupClass=Class'DEKMonsters209C.BoneGibGroup'
      HitSounds(0)=Sound'PlayerSounds.ImpactSounds.BodyHit8'
      HitSounds(1)=Sound'PlayerSounds.ImpactSounds.BodyHit5'
      DrawType=DT_StaticMesh

@@ -3,6 +3,6 @@ class DamTypeEarthMercenaryThorn extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponEarthMercenary'
+     WeaponClass=Class'DEKMonsters209C.WeaponEarthMercenary'
      DeathString="%o was punctured by an Earth Mercenary's thorns."
 }

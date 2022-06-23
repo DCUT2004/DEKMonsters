@@ -18,7 +18,7 @@ defaultproperties
      MaxSpeed=3000.000000
      Damage=36.000000
      DamageRadius=200.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeCosmicSkaarj'
+     MyDamageType=Class'DEKMonsters209C.DamTypeCosmicSkaarj'
      LifeSpan=3.000000
      DrawScale=1.500000
      Mass=2.000000

@@ -173,7 +173,7 @@ defaultproperties
      TeamNum=1
      Damage=30.000000
      DamageRadius=300.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeTechTitanMine'
+     MyDamageType=Class'DEKMonsters209C.DamTypeTechTitanMine'
      LifeSpan=6.000000
      DrawScale=0.100000
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'

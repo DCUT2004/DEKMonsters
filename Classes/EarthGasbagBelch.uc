@@ -43,7 +43,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 	PlaySound(sound'WeaponSounds.BExplosion3',,2.5*TransientSoundVolume);
 	spawn(class'EarthFlashExplosion',,,HitLocation + HitNormal*16 );
     if ( EffectIsRelevant(Location,false) )
-		Spawn(class'DEKMonsters209B.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+		Spawn(class'DEKMonsters209C.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
  	
 	BlowUp(HitLocation);
 	Destroy(); 
@@ -66,7 +66,7 @@ defaultproperties
      Damage=45.000000
      DamageRadius=140.000000
      MomentumTransfer=50000.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeEarthGasbag'
+     MyDamageType=Class'DEKMonsters209C.DamTypeEarthGasbag'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=90

@@ -2,5 +2,5 @@ class FireQueenAmmo extends SMPQueenAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209B.FireQueenProjectile'
+     ProjectileClass=Class'DEKMonsters209C.FireQueenProjectile'
 }

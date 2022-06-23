@@ -3,5 +3,5 @@ class DamTypeTechSlithMine extends DamTypeTechTitanMine
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponTechSlith'
+     WeaponClass=Class'DEKMonsters209C.WeaponTechSlith'
 }

@@ -3,7 +3,7 @@ class DamTypeArcticBioSkaarjGlob extends DamTypeBioGlob
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponArcticSkaarjGlob'
+     WeaponClass=Class'DEKMonsters209C.WeaponArcticSkaarjGlob'
      DeathString="%o was slimed by the Arctic Skaarj."
      DeathOverlayMaterial=TexPanner'XGameShaders.PlayerShaders.PlayerTransPan'
 }

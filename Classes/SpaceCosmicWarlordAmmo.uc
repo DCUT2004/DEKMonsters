@@ -2,5 +2,5 @@ class SpaceCosmicWarlordAmmo extends CosmicWarlordAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209B.SpaceCosmicWarlordPlasma'
+     ProjectileClass=Class'DEKMonsters209C.SpaceCosmicWarlordPlasma'
 }

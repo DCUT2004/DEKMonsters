@@ -3,7 +3,7 @@ class DamTypeIceQueen extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponIceQueen'
+     WeaponClass=Class'DEKMonsters209C.WeaponIceQueen'
      DeathString="An ice queen froze %o."
      bDetonatesGoop=True
 }

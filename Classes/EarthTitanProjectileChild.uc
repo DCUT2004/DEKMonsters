@@ -56,7 +56,7 @@ simulated function SpawnEffects(vector HitLocation, vector HitNormal)
         if (ExplosionDecal != None && Level.NetMode != NM_DedicatedServer)
             Spawn(ExplosionDecal, self,, HitLocation, rotator(-HitNormal));
 		if (Rand(99) <= 30)
-			Spawn(class'DEKMonsters209B.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+			Spawn(class'DEKMonsters209C.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
     }
 }
 
@@ -87,7 +87,7 @@ defaultproperties
      Damage=60.000000
      DamageRadius=400.000000
      MomentumTransfer=1000.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeEarthTitan'
+     MyDamageType=Class'DEKMonsters209C.DamTypeEarthTitan'
      ImpactSound=Sound'WeaponSounds.BaseImpactAndExplosions.BExplosion3'
      ExplosionDecal=Class'XEffects.RocketMark'
      DrawType=DT_StaticMesh

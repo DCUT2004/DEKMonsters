@@ -3,6 +3,6 @@ class DamTypeEarthTentacle extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponEarthTentacle'
+     WeaponClass=Class'DEKMonsters209C.WeaponEarthTentacle'
      DeathString="%o was punctured by an Earth Tentacle."
 }

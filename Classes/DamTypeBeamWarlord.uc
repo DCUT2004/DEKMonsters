@@ -8,7 +8,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponBeamWarlord'
+     WeaponClass=Class'DEKMonsters209C.WeaponBeamWarlord'
      DeathString="%o was zapped by a warlord."
      bDetonatesGoop=True
      KDamageImpulse=10000.000000

@@ -2,7 +2,7 @@ class FlameGibForearm extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209B.FlameGibGroup'
+     GibGroupClass=Class'DEKMonsters209C.FlameGibGroup'
      TrailClass=Class'XEffects.HitSmoke'
      DrawType=DT_StaticMesh
      StaticMesh=StaticMesh'XEffects.GibOrganicUpperarm'

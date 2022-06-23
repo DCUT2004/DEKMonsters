@@ -2,5 +2,5 @@ class RedGreenWarlordAmmo extends DCWarlordAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209B.RedGreenWarlordRocket'
+     ProjectileClass=Class'DEKMonsters209C.RedGreenWarlordRocket'
 }

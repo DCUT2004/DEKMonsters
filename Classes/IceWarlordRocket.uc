@@ -196,14 +196,14 @@ defaultproperties
      ShakeOffsetMag=(Z=10.000000)
      ShakeOffsetRate=(Z=200.000000)
      ShakeOffsetTime=10.000000
-     ExplosionEffectClass=Class'DEKRPG209B.RuneIceBeamExplosion'
+     ExplosionEffectClass=Class'DEKRPG209C.RuneIceBeamExplosion'
      Team=255
      Speed=1000.000000
      MaxSpeed=1000.000000
      Damage=60.000000
      DamageRadius=800.000000
      MomentumTransfer=15000.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeIceWarlord'
+     MyDamageType=Class'DEKMonsters209C.DamTypeIceWarlord'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=120

@@ -115,8 +115,8 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=2
-     ProjectileClass=Class'DEKMonsters209B.IceSkaarjTrooperProjectile'
-     GibGroupClass=Class'DEKMonsters209B.IceGibGroup'
+     ProjectileClass=Class'DEKMonsters209C.IceSkaarjTrooperProjectile'
+     GibGroupClass=Class'DEKMonsters209C.IceGibGroup'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjTrooperFinalBlend1'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjTrooperFinalBlend2'
 }

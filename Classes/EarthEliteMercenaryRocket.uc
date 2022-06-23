@@ -2,5 +2,5 @@ class EarthEliteMercenaryRocket extends EarthMercenaryRocket;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209B.DamTypeEarthEliteMercenaryRocket'
+     MyDamageType=Class'DEKMonsters209C.DamTypeEarthEliteMercenaryRocket'
 }

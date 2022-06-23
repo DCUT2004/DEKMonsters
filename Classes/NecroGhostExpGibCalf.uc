@@ -2,7 +2,7 @@ class NecroGhostExpGibCalf extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209B.NecroGhostExpGibGroup'
+     GibGroupClass=Class'DEKMonsters209C.NecroGhostExpGibGroup'
      HitSounds(0)=Sound'WeaponSounds.BaseGunTech.BShell1'
      HitSounds(1)=Sound'WeaponSounds.BaseGunTech.BShell2'
      DrawType=DT_StaticMesh

@@ -7,7 +7,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponCosmicQueen'
+     WeaponClass=Class'DEKMonsters209C.WeaponCosmicQueen'
      DeathString="%o was slaughtered by the Cosmic Queen."
      DamageOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'
      DeathOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'

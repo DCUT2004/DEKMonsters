@@ -3,7 +3,7 @@ class DamTypeTechSlug extends weaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponTechSlug'
+     WeaponClass=Class'DEKMonsters209C.WeaponTechSlug'
      DeathString="%o couldn't avoid a giant Tech mine."
      bArmorStops=False
      DamageOverlayMaterial=Shader'DEKMonstersTexturesMaster208.TechMonsters.TechShader'

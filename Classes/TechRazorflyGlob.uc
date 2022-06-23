@@ -2,5 +2,5 @@ class TechRazorflyGlob extends TechPupaeGlob;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209B.DamTypeTechRazorfly'
+     MyDamageType=Class'DEKMonsters209C.DamTypeTechRazorfly'
 }

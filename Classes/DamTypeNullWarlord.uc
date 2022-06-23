@@ -4,5 +4,5 @@ class DamTypeNullWarlord extends DamTypeWarlordRocket
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponNullWarLord'
+     WeaponClass=Class'DEKMonsters209C.WeaponNullWarLord'
 }

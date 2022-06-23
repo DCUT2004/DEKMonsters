@@ -2,12 +2,12 @@ class BoneGibGroup extends xPawnGibGroup;
 
 defaultproperties
 {
-     Gibs(0)=Class'DEKMonsters209B.BoneGibSmallLeg'
-     Gibs(1)=Class'DEKMonsters209B.BoneGibBigLeg'
-     Gibs(2)=Class'DEKMonsters209B.BoneGibBladeBone'
-     Gibs(3)=Class'DEKMonsters209B.BoneGibKuan'
-     Gibs(4)=Class'DEKMonsters209B.BoneGibKuan'
-     Gibs(5)=Class'DEKMonsters209B.BoneGibSmallLeg'
+     Gibs(0)=Class'DEKMonsters209C.BoneGibSmallLeg'
+     Gibs(1)=Class'DEKMonsters209C.BoneGibBigLeg'
+     Gibs(2)=Class'DEKMonsters209C.BoneGibBladeBone'
+     Gibs(3)=Class'DEKMonsters209C.BoneGibKuan'
+     Gibs(4)=Class'DEKMonsters209C.BoneGibKuan'
+     Gibs(5)=Class'DEKMonsters209C.BoneGibSmallLeg'
      BloodHitClass=None
      LowGoreBloodHitClass=None
      BloodGibClass=None

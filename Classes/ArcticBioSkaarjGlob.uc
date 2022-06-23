@@ -4,8 +4,8 @@ simulated function Destroyed()
 {
     if ( !bNoFX && EffectIsRelevant(Location,false) )
     {
-        Spawn(class'DEKMonsters209B.BlueGoopSmoke');
-        Spawn(class'DEKMonsters209B.BlueGoopSparks');
+        Spawn(class'DEKMonsters209C.BlueGoopSmoke');
+        Spawn(class'DEKMonsters209C.BlueGoopSparks');
     }
 	if ( Fear != None )
 		Fear.Destroy();
@@ -116,7 +116,7 @@ defaultproperties
      bMergeGlobs=False
      TossZ=300.000000
      Damage=40.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeArcticBioSkaarjGlob'
+     MyDamageType=Class'DEKMonsters209C.DamTypeArcticBioSkaarjGlob'
      LightHue=120
      LightSaturation=135
      Skins(0)=Texture'DEKMonstersTexturesMaster208.IceMonsters.IceGib'

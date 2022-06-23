@@ -95,7 +95,7 @@ defaultproperties
 {
      HeatLifespan=3
      HeatModifier=2
-     AmmunitionClass=Class'DEKMonsters209B.LavaBioSkaarjAmmo'
+     AmmunitionClass=Class'DEKMonsters209C.LavaBioSkaarjAmmo'
      ScoringValue=12
      Health=250
      Skins(0)=Shader'DEKMonstersTexturesMaster208.GenericMonsters.BioSkaarjShader'

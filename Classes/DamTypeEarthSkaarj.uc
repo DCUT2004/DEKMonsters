@@ -3,6 +3,6 @@ class DamTypeEarthSkaarj extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponEarthSkaarj'
+     WeaponClass=Class'DEKMonsters209C.WeaponEarthSkaarj'
      DeathString="%o was scorched by an Earth Skaarj."
 }

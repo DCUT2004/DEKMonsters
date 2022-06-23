@@ -132,7 +132,7 @@ defaultproperties
 {
      PoisonLifespan=4
      PoisonModifier=2
-     AmmunitionClass=Class'DEKMonsters209B.PoisonSlugAmmo'
+     AmmunitionClass=Class'DEKMonsters209C.PoisonSlugAmmo'
      ScoringValue=9
      GroundSpeed=670.000000
      WaterSpeed=650.000000

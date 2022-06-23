@@ -3,5 +3,5 @@ class DamTypeTitanRock extends SMPDamTypeTitanRock
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponTitan'
+     WeaponClass=Class'DEKMonsters209C.WeaponTitan'
 }

@@ -10,7 +10,7 @@ function bool SameSpeciesAs(Pawn P)
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters209B.ShellGasBagAmmo'
+     AmmunitionClass=Class'DEKMonsters209C.ShellGasBagAmmo'
      AirSpeed=530.000000
      Skins(0)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.ShellGasBag1'
      Skins(1)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.ShellGasBag2'

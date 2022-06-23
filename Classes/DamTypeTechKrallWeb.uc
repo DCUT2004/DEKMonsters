@@ -2,7 +2,7 @@ class DamTypeTechKrallWeb extends WeaponDamageType;
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponTechKrall'
+     WeaponClass=Class'DEKMonsters209C.WeaponTechKrall'
      DeathString="%o got caught in a Tech Krall's web."
      bArmorStops=False
      bDetonatesGoop=True

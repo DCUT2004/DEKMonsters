@@ -173,7 +173,7 @@ defaultproperties
      Speed=1350.000000
      MaxSpeed=1350.000000
      Damage=20.000000
-     MyDamageType=Class'DEKMonsters209B.DamTypeIceTitan'
+     MyDamageType=Class'DEKMonsters209C.DamTypeIceTitan'
      ImpactSound=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      StaticMesh=StaticMesh'DEKStaticsMaster209C.Meshes.CrystalA'
      DrawScale=4.000000

@@ -3,7 +3,7 @@ class GiantRageBunny extends GiantWarBunny
 
 defaultproperties
 {
-     ChargerClass=Class'DEKMonsters209B.GiantRageBunnyCharger'
+     ChargerClass=Class'DEKMonsters209C.GiantRageBunnyCharger'
      NumGemDrop=3
      Skins(0)=FinalBlend'D-E-K-HoloGramFX.NonWireframe.FunkyStuff'
      Skins(1)=FinalBlend'D-E-K-HoloGramFX.NonWireframe.FunkyStuff'

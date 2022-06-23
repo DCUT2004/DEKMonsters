@@ -2,5 +2,5 @@ class NullWarlordAmmo extends WarlordAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209B.NullWarlordRocket'
+     ProjectileClass=Class'DEKMonsters209C.NullWarlordRocket'
 }

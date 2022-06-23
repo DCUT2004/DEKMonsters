@@ -3,7 +3,7 @@ class DamTypeEarthSkaarjSniper extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209B.WeaponEarthSkaarjSniper'
+     WeaponClass=Class'DEKMonsters209C.WeaponEarthSkaarjSniper'
      DeathString="%o was sniped down by an Earth Skaarj Sniper."
      DamageOverlayMaterial=Shader'XGameShaders.PlayerShaders.LinkHit'
      DamageOverlayTime=1.000000
