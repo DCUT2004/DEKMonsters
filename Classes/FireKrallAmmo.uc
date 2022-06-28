@@ -2,5 +2,5 @@ class FireKrallAmmo extends DCKrallAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209C.FireKrallBolt'
+     ProjectileClass=Class'DEKMonsters209D.FireKrallBolt'
 }

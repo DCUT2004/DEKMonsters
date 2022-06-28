@@ -45,7 +45,7 @@ defaultproperties
          TextureVSubdivisions=4
          LifetimeRange=(Min=0.200000,Max=0.200000)
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters209C.IceMercenaryPlasmaHitEffect.SpriteEmitter1'
+     Emitters(0)=SpriteEmitter'DEKMonsters209D.IceMercenaryPlasmaHitEffect.SpriteEmitter1'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter5
          UseDirectionAs=PTDU_Normal
@@ -72,7 +72,7 @@ defaultproperties
          Texture=Texture'AW-2004Particles.Weapons.PlasmaStar'
          LifetimeRange=(Min=0.200000,Max=0.200000)
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters209C.IceMercenaryPlasmaHitEffect.SpriteEmitter5'
+     Emitters(1)=SpriteEmitter'DEKMonsters209D.IceMercenaryPlasmaHitEffect.SpriteEmitter5'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter7
          UseDirectionAs=PTDU_Scale
@@ -93,7 +93,7 @@ defaultproperties
          Texture=Texture'EpicParticles.Flares.FlashFlare1'
          LifetimeRange=(Min=0.300000,Max=0.300000)
      End Object
-     Emitters(2)=SpriteEmitter'DEKMonsters209C.IceMercenaryPlasmaHitEffect.SpriteEmitter7'
+     Emitters(2)=SpriteEmitter'DEKMonsters209D.IceMercenaryPlasmaHitEffect.SpriteEmitter7'
 
      AutoDestroy=True
      bNoDelete=False

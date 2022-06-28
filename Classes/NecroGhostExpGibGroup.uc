@@ -2,12 +2,12 @@ class NecroGhostExpGibGroup extends xPawnGibGroup;
 
 defaultproperties
 {
-     Gibs(0)=Class'DEKMonsters209C.NecroGhostExpGibCalf'
-     Gibs(1)=Class'DEKMonsters209C.NecroGhostExpGibForearm'
-     Gibs(2)=Class'DEKMonsters209C.NecroGhostExpGibForearm'
-     Gibs(3)=Class'DEKMonsters209C.NecroGhostExpGibHead'
-     Gibs(4)=Class'DEKMonsters209C.NecroGhostExpGibTorso'
-     Gibs(5)=Class'DEKMonsters209C.NecroGhostExpGibUpperArm'
+     Gibs(0)=Class'DEKMonsters209D.NecroGhostExpGibCalf'
+     Gibs(1)=Class'DEKMonsters209D.NecroGhostExpGibForearm'
+     Gibs(2)=Class'DEKMonsters209D.NecroGhostExpGibForearm'
+     Gibs(3)=Class'DEKMonsters209D.NecroGhostExpGibHead'
+     Gibs(4)=Class'DEKMonsters209D.NecroGhostExpGibTorso'
+     Gibs(5)=Class'DEKMonsters209D.NecroGhostExpGibUpperArm'
      BloodHitClass=None
      LowGoreBloodHitClass=None
      BloodGibClass=None

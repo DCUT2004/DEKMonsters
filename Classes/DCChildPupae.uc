@@ -45,5 +45,5 @@ simulated function Destroyed()
 
 defaultproperties
 {
-     ControllerClass=Class'DEKMonsters209C.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209D.DCMonsterController'
 }

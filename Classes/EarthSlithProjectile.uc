@@ -83,7 +83,7 @@ simulated function Destroyed()
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209C.DamTypeEarthSlith'
+     MyDamageType=Class'DEKMonsters209D.DamTypeEarthSlith'
      LightHue=90
      bDynamicLight=False
      Skins(0)=Texture'FireEngine.Liquids.water04go'

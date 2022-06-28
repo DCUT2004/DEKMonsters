@@ -39,7 +39,7 @@ defaultproperties
      GhostChance=60
      ScoringValue=7
      InvisMaterial=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.InvshadeFB'
-     GibGroupClass=Class'DEKMonsters209C.DEKGhostGibGroup'
+     GibGroupClass=Class'DEKMonsters209D.DEKGhostGibGroup'
      AirSpeed=363.000000
      Health=300
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.shadeFB'

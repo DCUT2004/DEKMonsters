@@ -199,14 +199,14 @@ defaultproperties
      HitSound(3)=Sound'satoreMonsterPackSound.Slith.injur2sl'
      DeathSound(0)=Sound'satoreMonsterPackSound.Slith.deathLsl'
      DeathSound(1)=Sound'satoreMonsterPackSound.Slith.deathWsl'
-     AmmunitionClass=Class'DEKMonsters209C.DCTentacleAmmo'
+     AmmunitionClass=Class'DEKMonsters209D.DCTentacleAmmo'
      bCanJump=False
      bCanWalk=False
      bCanFly=True
      MeleeRange=70.000000
      AirSpeed=330.000000
      Health=50
-     ControllerClass=Class'DEKMonsters209C.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209D.DCMonsterController'
      MovementAnims(0)="Waver"
      MovementAnims(1)="Waver"
      MovementAnims(2)="Waver"

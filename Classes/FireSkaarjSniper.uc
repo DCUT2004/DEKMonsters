@@ -131,11 +131,11 @@ defaultproperties
 {
      HeatLifespan=4
      HeatModifier=2
-     HitEmitterClass=Class'DEKRPG209C.RedBoltEmitter'
-     SecHitEmitterClass=Class'DEKMonsters209C.RedBoltChild'
-     GibGroupClass=Class'DEKMonsters209C.FireGibGroup'
+     HitEmitterClass=Class'DEKRPG209D.RedBoltEmitter'
+     SecHitEmitterClass=Class'DEKMonsters209D.RedBoltChild'
+     GibGroupClass=Class'DEKMonsters209D.FireGibGroup'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjTrooperFinalBlend1'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireSkaarjTrooperFinalBlend2'
-     DamageType=Class'DEKMonsters209C.DamTypeFireSkaarjSniper'
-     DamageTypeHeadShot=Class'DEKMonsters209C.DamTypeFireSkaarjSniperHeadShot'
+     DamageType=Class'DEKMonsters209D.DamTypeFireSkaarjSniper'
+     DamageTypeHeadShot=Class'DEKMonsters209D.DamTypeFireSkaarjSniperHeadShot'
 }

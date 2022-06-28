@@ -31,7 +31,7 @@ function SpawnChunks(int num)
 defaultproperties
 {
      Damage=100.500000
-     MyDamageType=Class'DEKMonsters209C.DamTypeFruitCakeTitanRock'
+     MyDamageType=Class'DEKMonsters209D.DamTypeFruitCakeTitanRock'
      StaticMesh=StaticMesh'DEKStaticsMaster209C.ChristmasMeshes.FruitCake'
      DrawScale=3.500000
      Skins(0)=Texture'DEKMonstersTexturesMaster208.ChristmasMonsters.FruitCake'

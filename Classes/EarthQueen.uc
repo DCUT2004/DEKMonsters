@@ -190,7 +190,7 @@ function SpawnShot()
 		}
 	}
 	else
-		spawn(class'DEKMonsters209C.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
+		spawn(class'DEKMonsters209D.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
 
 	projStart = Location + 1 * CollisionRadius * X + ( 0.7 - 0.2 * row) * CollisionHeight * Z - 0.2 * CollisionRadius * Y;
 	if (Rand(99) <= EggChance && EggCount < MaxEggs)
@@ -203,7 +203,7 @@ function SpawnShot()
 		}
 	}
 	else
-		spawn(class'DEKMonsters209C.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
+		spawn(class'DEKMonsters209D.EarthQueenThorn',self,,projStart,Controller.AdjustAim(SavedFireProperties,projStart,600));
 	row++;
 }
 
@@ -297,8 +297,8 @@ defaultproperties
 {
      EggChance=10
      MaxEggs=5
-     GibGroupClass=Class'DEKMonsters209C.EarthGibGroup'
-     ControllerClass=Class'DEKMonsters209C.DCMonsterController'
+     GibGroupClass=Class'DEKMonsters209D.EarthGibGroup'
+     ControllerClass=Class'DEKMonsters209D.DCMonsterController'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Queen_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Queen_Earth-Shader'
 }

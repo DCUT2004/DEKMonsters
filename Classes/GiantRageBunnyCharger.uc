@@ -108,7 +108,7 @@ defaultproperties
      ChargeTime=3.000000
      Damage=200.000000
      DamageRadius=600.000000
-     DamageType=Class'DEKMonsters209C.DamTypeGiantRageBunny'
+     DamageType=Class'DEKMonsters209D.DamTypeGiantRageBunny'
      MomentumTransfer=200000.000000
      DrawType=DT_None
      TransientSoundVolume=1.000000

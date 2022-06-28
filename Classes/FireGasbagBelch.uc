@@ -66,5 +66,5 @@ defaultproperties
 {
      HeatLifespan=4.000000
      BaseChance=25.000000
-     MyDamageType=Class'DEKMonsters209C.DamTypeFireGasbag'
+     MyDamageType=Class'DEKMonsters209D.DamTypeFireGasbag'
 }

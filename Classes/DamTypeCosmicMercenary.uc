@@ -7,7 +7,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209C.WeaponCosmicMercenary'
+     WeaponClass=Class'DEKMonsters209D.WeaponCosmicMercenary'
      DeathString="%o was star-struck by the Cosmic Mercenary."
      DamageOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'
      DeathOverlayMaterial=Shader'UT2004Weapons.Shaders.ShockHitShader'

@@ -8,7 +8,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictemHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209C.WeaponTechSniper'
+     WeaponClass=Class'DEKMonsters209D.WeaponTechSniper'
      DeathString="%o was zapped by a Tech Sniper."
      bArmorStops=False
      VehicleDamageScaling=1.500000

@@ -3,5 +3,5 @@ class IceKrallAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters209C.IceKrallProj'
+     ProjectileClass=Class'DEKMonsters209D.IceKrallProj'
 }

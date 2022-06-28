@@ -2,5 +2,5 @@ class TechBehemothAmmo extends BruteAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209C.TechBehemothRocket'
+     ProjectileClass=Class'DEKMonsters209D.TechBehemothRocket'
 }

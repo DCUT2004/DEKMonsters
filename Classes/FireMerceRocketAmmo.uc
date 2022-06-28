@@ -2,5 +2,5 @@ class FireMerceRocketAmmo extends SMPMerceRocketAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209C.FireMercRocket'
+     ProjectileClass=Class'DEKMonsters209D.FireMercRocket'
 }

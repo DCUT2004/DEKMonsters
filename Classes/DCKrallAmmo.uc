@@ -2,5 +2,5 @@ class DCKrallAmmo extends KrallAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209C.DCKrallBolt'
+     ProjectileClass=Class'DEKMonsters209D.DCKrallBolt'
 }
