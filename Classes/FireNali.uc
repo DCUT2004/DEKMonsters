@@ -34,7 +34,7 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209D.FireGibGroup'
+     GibGroupClass=Class'DEKMonsters209E.FireGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireNaliShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.FireMonsters.FireNaliShader'
 }

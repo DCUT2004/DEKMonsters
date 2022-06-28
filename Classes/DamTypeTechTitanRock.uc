@@ -3,7 +3,7 @@ class DamTypeTechTitanRock extends SMPDamTypeTitanRock
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209D.WeaponTechTitan'
+     WeaponClass=Class'DEKMonsters209E.WeaponTechTitan'
      DeathString="%o was consumed by a Tech Titan's nanites."
      bArmorStops=False
      bDelayedDamage=True

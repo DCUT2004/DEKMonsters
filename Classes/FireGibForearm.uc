@@ -2,7 +2,7 @@ class FireGibForearm extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209D.FireGibGroup'
+     GibGroupClass=Class'DEKMonsters209E.FireGibGroup'
      HitSounds(0)=Sound'PlayerSounds.BFootsteps.BFootstepDirt2'
      HitSounds(1)=Sound'PlayerSounds.BFootsteps.BFootstepPlant4'
      DrawType=DT_StaticMesh

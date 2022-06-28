@@ -68,7 +68,7 @@ function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation, vector m
 	{
 		instigatedBy.Controller.Adrenaline = 0; //reset adrenaline back to 0 to avoid globing on wave 17.
 	
-		DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG209D.GemExperiencePickupGold', None, NumGemDrop);
+		DropPickups(Instigator.Controller, InstigatedBy.Controller, class'DEKRPG209E.GemExperiencePickupGold', None, NumGemDrop);
     
 		Spawn(ChargerClass, MC,,Location);
 		gibbedBy(instigatedBy);
@@ -138,14 +138,14 @@ defaultproperties
 {
      XPForKill=30
      bOnlyHumansCanDamage=True
-     ChargerClass=Class'DEKMonsters209D.BunnyGhostUltimaCharger'
+     ChargerClass=Class'DEKMonsters209E.BunnyGhostUltimaCharger'
      NumGemDrop=2
      Footstep(0)=None
      Footstep(1)=None
      GroundSpeed=150.000000
      AccelRate=562.500000
      JumpZ=75.000000
-     ControllerClass=Class'DEKMonsters209D.DCMonsterController'
+     ControllerClass=Class'DEKMonsters209E.DCMonsterController'
      DrawScale=6.000000
      CollisionRadius=50.000000
      CollisionHeight=93.500000

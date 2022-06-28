@@ -3,7 +3,7 @@ class GiantShockBunny extends GiantWarBunny
 
 defaultproperties
 {
-     ChargerClass=Class'DEKMonsters209D.GiantShockBunnyCharger'
+     ChargerClass=Class'DEKMonsters209E.GiantShockBunnyCharger'
      Skins(0)=Shader'EpicParticles.Beams.hotbolt03SHAD'
      Skins(1)=Shader'EpicParticles.Beams.hotbolt03SHAD'
 }

@@ -149,7 +149,7 @@ defaultproperties
      Speed=300.000000
      MaxSpeed=300.000000
      Damage=100.000000
-     MyDamageType=Class'DEKMonsters209D.DamTypeFireTitanSuperHeat'
+     MyDamageType=Class'DEKMonsters209E.DamTypeFireTitanSuperHeat'
      ImpactSound=Sound'ONSVehicleSounds-S.Explosions.VehicleExplosion02'
      LightType=LT_Steady
      LightEffect=LE_Spotlight

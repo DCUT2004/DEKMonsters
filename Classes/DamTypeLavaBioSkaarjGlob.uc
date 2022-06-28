@@ -3,7 +3,7 @@ class DamTypeLavaBioSkaarjGlob extends DamTypeBioGlob
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209D.WeaponLavaSkaarjGlob'
+     WeaponClass=Class'DEKMonsters209E.WeaponLavaSkaarjGlob'
      DeathString="%o was slimed by the Lava Skaarj."
      DeathOverlayMaterial=TexPanner'XGameShaders.PlayerShaders.PlayerTransPanRed'
 }

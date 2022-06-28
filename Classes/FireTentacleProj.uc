@@ -49,6 +49,6 @@ defaultproperties
 {
      HeatLifespan=4.000000
      BaseChance=25.000000
-     MyDamageType=Class'DEKMonsters209D.DamTypeFireTentacle'
+     MyDamageType=Class'DEKMonsters209E.DamTypeFireTentacle'
      Skins(0)=Texture'DEKMonstersTexturesMaster208.FireMonsters.FireGib'
 }

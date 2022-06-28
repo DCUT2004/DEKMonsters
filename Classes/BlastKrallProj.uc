@@ -58,7 +58,7 @@ defaultproperties
 {
      Speed=1500.000000
      Damage=80.000000
-     MyDamageType=Class'DEKMonsters209D.DamTypeBlastKrallPlasma'
+     MyDamageType=Class'DEKMonsters209E.DamTypeBlastKrallPlasma'
      LightHue=40
      DrawScale3D=(X=5.295000)
      Skins(0)=FinalBlend'AW-2004Particles.Weapons.MuzzlePart2Final'

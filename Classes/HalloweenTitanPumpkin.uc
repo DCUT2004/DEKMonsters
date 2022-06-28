@@ -6,7 +6,7 @@ defaultproperties
      MaxSpeed=900.000000
      TossZ=0.000000
      Damage=200.500000
-     MyDamageType=Class'DEKMonsters209D.DamTypePumpkinTitan'
+     MyDamageType=Class'DEKMonsters209E.DamTypePumpkinTitan'
      Physics=PHYS_Flying
      AmbientSound=None
      DrawScale=16.000000

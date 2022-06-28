@@ -11,7 +11,7 @@ function bool SameSpeciesAs(Pawn P)
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters209D.BlastKrallAmmo'
+     AmmunitionClass=Class'DEKMonsters209E.BlastKrallAmmo'
      ScoringValue=7
      Health=130
      Skins(0)=Texture'XEffectMat.goop.SlimeSkin'

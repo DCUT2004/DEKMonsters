@@ -2,5 +2,5 @@ class FireBruteAmmo extends BruteAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209D.FireBruteRocket'
+     ProjectileClass=Class'DEKMonsters209E.FireBruteRocket'
 }

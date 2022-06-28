@@ -37,7 +37,7 @@ function FireProjectile()
 defaultproperties
 {
      FireSound=SoundGroup'WeaponSounds.ShockRifle.ShockRifleAltFire'
-     AmmunitionClass=Class'DEKMonsters209D.BeamWarlordAmmo'
+     AmmunitionClass=Class'DEKMonsters209E.BeamWarlordAmmo'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.GenericMonsters.BeamWarlordShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.GenericMonsters.BeamWarlordShader'
 }

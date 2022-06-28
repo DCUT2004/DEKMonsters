@@ -3,5 +3,5 @@ class DamTypeKrall extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209D.WeaponKrall'
+     WeaponClass=Class'DEKMonsters209E.WeaponKrall'
 }

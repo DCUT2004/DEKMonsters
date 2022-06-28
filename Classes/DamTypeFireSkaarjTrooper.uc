@@ -3,7 +3,7 @@ class DamTypeFireSkaarjTrooper extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209D.WeaponFireSkaarjTrooper'
+     WeaponClass=Class'DEKMonsters209E.WeaponFireSkaarjTrooper'
      DeathString="A fire trooper burned %o."
      bDetonatesGoop=True
 }

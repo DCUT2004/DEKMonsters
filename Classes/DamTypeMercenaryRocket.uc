@@ -3,5 +3,5 @@ class DamTypeMercenaryRocket extends SMPDamTypeMerceRocket
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209D.WeaponMercenary'
+     WeaponClass=Class'DEKMonsters209E.WeaponMercenary'
 }

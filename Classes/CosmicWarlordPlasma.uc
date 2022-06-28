@@ -60,7 +60,7 @@ defaultproperties
      MaxSpeed=2500.000000
      Damage=55.000000
      DamageRadius=250.000000
-     MyDamageType=Class'DEKMonsters209D.DamTypeCosmicWarlord'
+     MyDamageType=Class'DEKMonsters209E.DamTypeCosmicWarlord'
      LightHue=210
      LightSaturation=75
 }

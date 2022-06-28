@@ -6,7 +6,7 @@ defaultproperties
      MaxSpeed=750.000000
      Damage=30.000000
      MomentumTransfer=0.000000
-     MyDamageType=Class'DEKMonsters209D.DamTypeTechBehemothWeb'
+     MyDamageType=Class'DEKMonsters209E.DamTypeTechBehemothWeb'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
 }

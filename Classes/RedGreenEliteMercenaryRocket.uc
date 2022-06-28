@@ -35,5 +35,5 @@ simulated function Destroyed()
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209D.DamTypeEliteMercenaryRocket'
+     MyDamageType=Class'DEKMonsters209E.DamTypeEliteMercenaryRocket'
 }
