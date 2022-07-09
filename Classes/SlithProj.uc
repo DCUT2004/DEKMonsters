@@ -2,5 +2,5 @@ class SlithProj extends SMPSlithProj;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209E.DamTypeSlith'
+     MyDamageType=Class'DEKMonsters209F.DamTypeSlith'
 }

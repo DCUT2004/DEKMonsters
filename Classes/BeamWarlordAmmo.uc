@@ -3,5 +3,5 @@ class BeamWarlordAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters209E.BeamWarlordProj'
+     ProjectileClass=Class'DEKMonsters209F.BeamWarlordProj'
 }

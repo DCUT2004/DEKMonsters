@@ -15,7 +15,7 @@ defaultproperties
      WeaponClassName(7)="XWeapons.BioRifle"
      WeaponClassName(8)="XWeapons.ShieldGun"
      ScoringValue=5
-     GibGroupClass=Class'DEKMonsters209E.IceGibGroup'
+     GibGroupClass=Class'DEKMonsters209F.IceGibGroup'
      Health=122
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceNaliShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceNaliShader'

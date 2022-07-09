@@ -2,5 +2,5 @@ class DCFireSkaarjProjectile extends FireSkaarjProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209E.DamTypeFireSkaarj'
+     MyDamageType=Class'DEKMonsters209F.DamTypeFireSkaarj'
 }

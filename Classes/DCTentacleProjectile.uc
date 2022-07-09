@@ -2,5 +2,5 @@ class DCTentacleProjectile extends SMPTentacleProj;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209E.DamTypeTentacle'
+     MyDamageType=Class'DEKMonsters209F.DamTypeTentacle'
 }

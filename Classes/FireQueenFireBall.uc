@@ -20,7 +20,7 @@ defaultproperties
          WarmupTicksPerSecond=20.000000
          RelativeWarmupTime=1.000000
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters209E.FireQueenFireBall.SpriteEmitter0'
+     Emitters(0)=SpriteEmitter'DEKMonsters209F.FireQueenFireBall.SpriteEmitter0'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter1
          FadeOut=True
@@ -42,7 +42,7 @@ defaultproperties
          WarmupTicksPerSecond=20.000000
          RelativeWarmupTime=1.000000
      End Object
-     Emitters(1)=SpriteEmitter'DEKMonsters209E.FireQueenFireBall.SpriteEmitter1'
+     Emitters(1)=SpriteEmitter'DEKMonsters209F.FireQueenFireBall.SpriteEmitter1'
 
      Begin Object Class=SpriteEmitter Name=SpriteEmitter2
          FadeOut=True
@@ -63,6 +63,6 @@ defaultproperties
          WarmupTicksPerSecond=50.000000
          RelativeWarmupTime=1.000000
      End Object
-     Emitters(2)=SpriteEmitter'DEKMonsters209E.FireQueenFireBall.SpriteEmitter2'
+     Emitters(2)=SpriteEmitter'DEKMonsters209F.FireQueenFireBall.SpriteEmitter2'
 
 }

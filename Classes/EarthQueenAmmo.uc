@@ -2,5 +2,5 @@ class EarthQueenAmmo extends SMPQueenAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209E.EarthQueenEgg'
+     ProjectileClass=Class'DEKMonsters209F.EarthQueenEgg'
 }

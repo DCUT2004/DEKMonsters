@@ -59,6 +59,6 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 defaultproperties
 {
      ScoringValue=7
-     ControllerClass=Class'DEKMonsters209E.DCMonsterController'
-     AmbientSound=Sound'DEKMonsters209E.MonsterSounds.BuzzingWings'
+     ControllerClass=Class'DEKMonsters209F.DCMonsterController'
+     AmbientSound=Sound'DEKMonsters209F.MonsterSounds.BuzzingWings'
 }

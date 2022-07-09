@@ -5,6 +5,6 @@ defaultproperties
      Speed=2100.000000
      MaxSpeed=2100.000000
      Damage=30.000000
-     MyDamageType=Class'DEKMonsters209E.DamTypeFireQueen'
+     MyDamageType=Class'DEKMonsters209F.DamTypeFireQueen'
      LifeSpan=5.000000
 }

@@ -24,7 +24,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 		HurtRadius(Damage, DamageRadius, MyDamageType, MomentumTransfer, HitLocation);	
 	}
     if ( EffectIsRelevant(Location,false) )
-		Spawn(class'DEKMonsters209E.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+		Spawn(class'DEKMonsters209F.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
     PlaySound(Sound'WeaponSounds.BaseImpactAndExplosions.BExplosion3');
 	Destroy();
 }
@@ -44,7 +44,7 @@ defaultproperties
      Damage=20.000000
      DamageRadius=120.000000
      MomentumTransfer=25000.000000
-     MyDamageType=Class'DEKMonsters209E.DamTypeKrall'
+     MyDamageType=Class'DEKMonsters209F.DamTypeKrall'
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=90

@@ -40,5 +40,5 @@ defaultproperties
      fDamage=75.000000
      fDamageRadius=800.000000
      fDeniedScoreAward=25.000000
-     MyDamageType=Class'DEKMonsters209E.DEKDamTypeINIRedeemer'
+     MyDamageType=Class'DEKMonsters209F.DEKDamTypeINIRedeemer'
 }

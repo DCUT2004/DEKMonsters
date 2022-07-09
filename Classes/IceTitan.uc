@@ -163,8 +163,8 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=3
-     AmmunitionClass=Class'DEKMonsters209E.IceTitanAmmo'
-     GibGroupClass=Class'DEKMonsters209E.IceGibGroup'
+     AmmunitionClass=Class'DEKMonsters209F.IceTitanAmmo'
+     GibGroupClass=Class'DEKMonsters209F.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceTitanShader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceTitanShader'
 }

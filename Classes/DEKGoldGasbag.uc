@@ -38,7 +38,7 @@ defaultproperties
 {
      HeatDamageMultiplier=1.150000
      ScoringValue=9
-     GibGroupClass=Class'DEKMonsters209E.DEKGoldGibGroup'
+     GibGroupClass=Class'DEKMonsters209F.DEKGoldGibGroup'
      AirSpeed=231.000000
      Health=450
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'

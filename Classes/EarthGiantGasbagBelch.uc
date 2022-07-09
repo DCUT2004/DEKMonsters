@@ -33,7 +33,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 		A=none;
 	}
     if ( EffectIsRelevant(Location,false) )
-		Spawn(class'DEKMonsters209E.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
+		Spawn(class'DEKMonsters209F.EarthDebrisExplosion', Self,, HitLocation, rotator(-HitNormal));
 
 	BlowUp(HitLocation);
 	Destroy();
@@ -43,6 +43,6 @@ defaultproperties
 {
      Damage=50.000000
      DamageRadius=230.000000
-     MyDamageType=Class'DEKMonsters209E.DamTypeEarthGiantGasbag'
+     MyDamageType=Class'DEKMonsters209F.DamTypeEarthGiantGasbag'
      DrawScale=0.600000
 }

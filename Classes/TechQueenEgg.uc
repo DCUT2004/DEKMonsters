@@ -20,7 +20,7 @@ defaultproperties
      HatchChance=20.000000
      Damage=0.000000
      MomentumTransfer=100.000000
-     MyDamageType=Class'DEKMonsters209E.DamTypeTechQueen'
+     MyDamageType=Class'DEKMonsters209F.DamTypeTechQueen'
      DrawScale=4.000000
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
 }

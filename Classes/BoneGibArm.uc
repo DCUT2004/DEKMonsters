@@ -2,7 +2,7 @@ class BoneGibArm extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209E.BoneGibGroup'
+     GibGroupClass=Class'DEKMonsters209F.BoneGibGroup'
      HitSounds(0)=Sound'PlayerSounds.ImpactSounds.BodyHit8'
      HitSounds(1)=Sound'PlayerSounds.ImpactSounds.BodyHit5'
      DrawType=DT_StaticMesh

@@ -2,7 +2,7 @@ class EarthGibHand extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209E.EarthGibGroup'
+     GibGroupClass=Class'DEKMonsters209F.EarthGibGroup'
      HitSounds(0)=Sound'PlayerSounds.BFootsteps.BFootstepDirt2'
      HitSounds(1)=Sound'PlayerSounds.BFootsteps.BFootstepPlant4'
      DrawType=DT_StaticMesh

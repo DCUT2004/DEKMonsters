@@ -3,7 +3,7 @@ class DamTypeIceWarlord extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209E.WeaponIceWarlord'
+     WeaponClass=Class'DEKMonsters209F.WeaponIceWarlord'
      DeathString="An ice warlord froze %o."
      bDetonatesGoop=True
 }

@@ -18,7 +18,7 @@ defaultproperties
          LifetimeRange=(Min=3.300000,Max=3.300000)
          StartVelocityRange=(X=(Min=-30.000000,Max=30.000000),Y=(Min=-30.000000,Max=30.000000),Z=(Min=150.000000,Max=150.000000))
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters209E.NecroSorcererReviveFX.SpriteEmitter0'
+     Emitters(0)=SpriteEmitter'DEKMonsters209F.NecroSorcererReviveFX.SpriteEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

@@ -37,7 +37,7 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209E.DamTypeMercenaryAmmo'
-     RocketAmmoClass=Class'DEKMonsters209E.MercenaryRocketAmmo'
-     ControllerClass=Class'DEKMonsters209E.DCMonsterController'
+     MyDamageType=Class'DEKMonsters209F.DamTypeMercenaryAmmo'
+     RocketAmmoClass=Class'DEKMonsters209F.MercenaryRocketAmmo'
+     ControllerClass=Class'DEKMonsters209F.DCMonsterController'
 }

@@ -209,7 +209,7 @@ defaultproperties
      AccelRate=1300.000000
      HealthMax=200.000000
      Health=40
-     ControllerClass=Class'DEKMonsters209E.VampireGnatController'
+     ControllerClass=Class'DEKMonsters209F.VampireGnatController'
      DrawScale=0.500000
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GenericMonsters.VGnatFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.GenericMonsters.VGnatFB'

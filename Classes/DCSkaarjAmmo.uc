@@ -3,5 +3,5 @@ class DCSkaarjAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters209E.DCSkaarjProjectile'
+     ProjectileClass=Class'DEKMonsters209F.DCSkaarjProjectile'
 }
