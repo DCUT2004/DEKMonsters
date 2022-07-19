@@ -23,7 +23,7 @@ defaultproperties
          TextureVSubdivisions=4
          LifetimeRange=(Min=0.500000,Max=0.500000)
      End Object
-     Emitters(0)=SpriteEmitter'DEKMonsters209F.GiantIceBunnyChargerExplosion.SpriteEmitter0'
+     Emitters(0)=SpriteEmitter'DEKMonsters999X.GiantIceBunnyChargerExplosion.SpriteEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

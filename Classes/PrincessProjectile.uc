@@ -2,5 +2,5 @@ class PrincessProjectile extends SMPQueenProjectile;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209F.DamTypePrincess'
+     MyDamageType=Class'DEKMonsters999X.DamTypePrincess'
 }

@@ -113,11 +113,11 @@ defaultproperties
      IceLifespan=3
      IceModifier=1
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
-     HitEmitterClass=Class'DEKRPG209F.LightningBeamEmitter'
-     SecHitEmitterClass=Class'DEKMonsters209F.BlueBoltChild'
-     GibGroupClass=Class'DEKMonsters209F.IceGibGroup'
+     HitEmitterClass=Class'DEKRPG999X.LightningBeamEmitter'
+     SecHitEmitterClass=Class'DEKMonsters999X.BlueBoltChild'
+     GibGroupClass=Class'DEKMonsters999X.IceGibGroup'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjTrooperFinalBlend1'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceSkaarjTrooperFinalBlend2'
-     DamageType=Class'DEKMonsters209F.DamTypeIceSkaarjSniper'
-     DamageTypeHeadShot=Class'DEKMonsters209F.DamTypeIceSkaarjSniperHeadShot'
+     DamageType=Class'DEKMonsters999X.DamTypeIceSkaarjSniper'
+     DamageTypeHeadShot=Class'DEKMonsters999X.DamTypeIceSkaarjSniperHeadShot'
 }

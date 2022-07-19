@@ -163,7 +163,7 @@ defaultproperties
      ChallengeSound(1)=Sound'GeneralAmbience.tortureloop3'
      ChallengeSound(2)=Sound'GeneralAmbience.tortureloop3'
      ChallengeSound(3)=Sound'GeneralAmbience.tortureloop3'
-     GibGroupClass=Class'DEKMonsters209F.SkullGibGroup'
+     GibGroupClass=Class'DEKMonsters999X.SkullGibGroup'
      HeadRadius=20.000000
      MovementAnims(0)="Chase"
      MovementAnims(1)="Chase"

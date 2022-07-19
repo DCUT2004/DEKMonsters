@@ -3,7 +3,7 @@ class DamTypeIceSkaarjTrooper extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponIceSkaarjTrooper'
+     WeaponClass=Class'DEKMonsters999X.WeaponIceSkaarjTrooper'
      DeathString="An ice trooper froze %o."
      bDetonatesGoop=True
 }

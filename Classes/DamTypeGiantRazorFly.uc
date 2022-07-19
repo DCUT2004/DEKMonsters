@@ -3,5 +3,5 @@ class DamTypeGiantRazorFly extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponGiantRazorFly'
+     WeaponClass=Class'DEKMonsters999X.WeaponGiantRazorFly'
 }

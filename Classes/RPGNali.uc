@@ -66,5 +66,5 @@ function bool SameSpeciesAs(Pawn P)
 
 defaultproperties
 {
-     ControllerClass=Class'DEKMonsters209F.DCNaliFighterController'
+     ControllerClass=Class'DEKMonsters999X.DCNaliFighterController'
 }

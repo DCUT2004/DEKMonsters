@@ -150,5 +150,5 @@ defaultproperties
      DefenseRadius=600.000000
      MinDefenseInterval=3.000000
      DefenseIntervalMultiplier=0.850000
-     HitEmitterClass=Class'DEKRPG209F.DefenseBoltEmitter'
+     HitEmitterClass=Class'DEKRPG999X.DefenseBoltEmitter'
 }

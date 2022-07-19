@@ -2,8 +2,8 @@ class DEKGhostGibBotHead extends GibHead;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209F.DEKGhostGibGroup'
-     TrailClass=Class'DEKMonsters209F.DEKBlueTrail'
+     GibGroupClass=Class'DEKMonsters999X.DEKGhostGibGroup'
+     TrailClass=Class'DEKMonsters999X.DEKBlueTrail'
      HitSounds(0)=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      HitSounds(1)=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      DrawType=DT_StaticMesh

@@ -4,5 +4,5 @@ defaultproperties
 {
      Damage=25.000000
      DamageRadius=135.000000
-     MyDamageType=Class'DEKMonsters209F.DamTypeEarthEliteKrall'
+     MyDamageType=Class'DEKMonsters999X.DamTypeEarthEliteKrall'
 }

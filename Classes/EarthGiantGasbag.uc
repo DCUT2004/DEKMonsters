@@ -75,7 +75,7 @@ function SpawnBelch()
 				SavedFireProperties.bInstantHit = MyAmmo.bInstantHit;
 				SavedFireProperties.bInitialized = true;
 			}
-			Spawn(class'DEKMonsters209F.EarthGiantGasbagBelch',,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
+			Spawn(class'DEKMonsters999X.EarthGiantGasbagBelch',,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
 			PlaySound(FireSound,SLOT_Interact);
 		}
 
@@ -108,8 +108,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters209F.EarthGiantGasbagAmmo'
-     GibGroupClass=Class'DEKMonsters209F.EarthGibGroup'
+     AmmunitionClass=Class'DEKMonsters999X.EarthGiantGasbagAmmo'
+     GibGroupClass=Class'DEKMonsters999X.EarthGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Gasbag_Earth1-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Gasbag_Earth2-Shader'
 }

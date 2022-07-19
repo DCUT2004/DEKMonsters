@@ -2,5 +2,5 @@ class DCGasBagBelch extends GasbagBelch;
 
 defaultproperties
 {
-     MyDamageType=Class'DEKMonsters209F.DamTypeGasbag'
+     MyDamageType=Class'DEKMonsters999X.DamTypeGasbag'
 }

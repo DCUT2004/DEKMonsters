@@ -4,7 +4,7 @@ class DamTypeGiantCosmicBunny extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponGiantCosmicBunny'
+     WeaponClass=Class'DEKMonsters999X.WeaponGiantCosmicBunny'
      DeathString="%o never saw light again."
      bDetonatesGoop=True
      bDelayedDamage=True

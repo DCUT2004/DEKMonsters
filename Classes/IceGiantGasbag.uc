@@ -63,7 +63,7 @@ function SpawnBelch()
 				SavedFireProperties.bInstantHit = MyAmmo.bInstantHit;
 				SavedFireProperties.bInitialized = true;
 			}
-			Spawn(class'DEKMonsters209F.IceGiantGasbagBelch',,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
+			Spawn(class'DEKMonsters999X.IceGiantGasbagBelch',,,FireStart,Controller.AdjustAim(SavedFireProperties,FireStart,600));
 			PlaySound(FireSound,SLOT_Interact);
 		}
 
@@ -151,8 +151,8 @@ defaultproperties
 {
      IceLifespan=3
      IceModifier=2
-     AmmunitionClass=Class'DEKMonsters209F.IceGiantGasbagAmmo'
-     GibGroupClass=Class'DEKMonsters209F.IceGibGroup'
+     AmmunitionClass=Class'DEKMonsters999X.IceGiantGasbagAmmo'
+     GibGroupClass=Class'DEKMonsters999X.IceGibGroup'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceGasbagShader1'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.IceMonsters.IceGasbagShader2'
 }

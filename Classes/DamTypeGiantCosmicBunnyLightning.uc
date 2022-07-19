@@ -4,7 +4,7 @@ class DamTypeGiantCosmicBunnyLightning extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponGiantCosmicBunny'
+     WeaponClass=Class'DEKMonsters999X.WeaponGiantCosmicBunny'
      DeathString="%o was zapped by a Cosmic Bunny's black hole."
      bDetonatesGoop=True
      bDelayedDamage=True

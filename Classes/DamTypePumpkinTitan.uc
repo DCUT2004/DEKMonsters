@@ -3,7 +3,7 @@ class DamTypePumpkinTitan extends SMPDamTypeTitanRock
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponTitan'
+     WeaponClass=Class'DEKMonsters999X.WeaponTitan'
      DeathString="%o was served some delicious pumpkin!"
      FemaleSuicide="%o was served some delicious pumpkin!"
      MaleSuicide="%o was served some delicious pumpkin!"

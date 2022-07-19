@@ -192,7 +192,7 @@ defaultproperties
      Damage=45.000000
      DamageRadius=200.000000
      MomentumTransfer=70000.000000
-     MyDamageType=Class'DEKMonsters209F.DamTypeFireSkaarjSuperHeat'
+     MyDamageType=Class'DEKMonsters999X.DamTypeFireSkaarjSuperHeat'
      ImpactSound=Sound'WeaponSounds.ShockRifle.ShockRifleExplosion'
      MaxEffectDistance=7000.000000
      LightType=LT_Steady

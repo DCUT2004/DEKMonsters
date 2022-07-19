@@ -3,5 +3,5 @@ class DamTypeBehemothRocket extends DamTypeBruteRocket
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponBehemoth'
+     WeaponClass=Class'DEKMonsters999X.WeaponBehemoth'
 }

@@ -105,9 +105,9 @@ function SpawnRock()
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters209F.CosmicTitanAmmo'
+     AmmunitionClass=Class'DEKMonsters999X.CosmicTitanAmmo'
      ScoringValue=15
-     GibGroupClass=Class'DEKMonsters209F.CosmicGibGroup'
+     GibGroupClass=Class'DEKMonsters999X.CosmicGibGroup'
      bCanFly=True
      GroundSpeed=900.000000
      AirSpeed=600.000000

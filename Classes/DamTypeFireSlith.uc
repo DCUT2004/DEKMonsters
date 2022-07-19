@@ -3,7 +3,7 @@ class DamTypeFireSlith extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponFireSlith'
+     WeaponClass=Class'DEKMonsters999X.WeaponFireSlith'
      DeathString="A fire slith burned %o."
      bDetonatesGoop=True
 }

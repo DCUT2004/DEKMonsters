@@ -34,6 +34,6 @@ defaultproperties
      Speed=900.000000
      MaxSpeed=900.000000
      Damage=150.000000
-     MyDamageType=Class'DEKMonsters209F.DamTypeTechTitanRock'
+     MyDamageType=Class'DEKMonsters999X.DamTypeTechTitanRock'
      DrawScale=16.000000
 }

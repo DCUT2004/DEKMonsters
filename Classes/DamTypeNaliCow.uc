@@ -3,5 +3,5 @@ class DamTypeNaliCow extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponNaliCow'
+     WeaponClass=Class'DEKMonsters999X.WeaponNaliCow'
 }

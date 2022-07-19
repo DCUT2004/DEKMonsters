@@ -414,17 +414,17 @@ defaultproperties
      HeadShotRadius=8.000000
      HeadShotDamageMult=2.000000
      SecDamageMult=0.500000
-     DamageType=Class'DEKMonsters209F.DamTypeTechQueen'
-     DamageTypeHeadShot=Class'DEKMonsters209F.DamTypeTechQueen'
-     HitEmitterClass=Class'DEKRPG209F.RedBoltEmitter'
-     SecHitEmitterClass=Class'DEKMonsters209F.RedBoltChild'
+     DamageType=Class'DEKMonsters999X.DamTypeTechQueen'
+     DamageTypeHeadShot=Class'DEKMonsters999X.DamTypeTechQueen'
+     HitEmitterClass=Class'DEKRPG999X.RedBoltEmitter'
+     SecHitEmitterClass=Class'DEKMonsters999X.RedBoltChild'
      SecTraceDist=300.000000
      TraceRange=3000.000000
      MaxChildren=0
      ScoringValue=16
-     GibGroupClass=Class'DEKMonsters209F.DEKTechGibGroup'
+     GibGroupClass=Class'DEKMonsters999X.DEKTechGibGroup'
      Health=1200
-     ControllerClass=Class'DEKMonsters209F.TechMonsterController'
+     ControllerClass=Class'DEKMonsters999X.TechMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.TechMonsters.TechProjFB'
 }

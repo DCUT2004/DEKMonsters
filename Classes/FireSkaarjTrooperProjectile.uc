@@ -5,5 +5,5 @@ defaultproperties
      Speed=1000.000000
      MaxSpeed=1000.000000
      Damage=30.000000
-     MyDamageType=Class'DEKMonsters209F.DamTypeFireSkaarjTrooper'
+     MyDamageType=Class'DEKMonsters999X.DamTypeFireSkaarjTrooper'
 }

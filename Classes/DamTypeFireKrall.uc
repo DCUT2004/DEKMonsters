@@ -3,7 +3,7 @@ class DamTypeFireKrall extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponFireKrall'
+     WeaponClass=Class'DEKMonsters999X.WeaponFireKrall'
      DeathString="A fire krall burned %o."
      bDetonatesGoop=True
 }

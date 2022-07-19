@@ -2,8 +2,8 @@ class DEKTechGibBotTorso extends Gib;
 
 defaultproperties
 {
-     GibGroupClass=Class'DEKMonsters209F.DEKTechGibGroup'
-     TrailClass=Class'DEKMonsters209F.DEKTechTrail'
+     GibGroupClass=Class'DEKMonsters999X.DEKTechGibGroup'
+     TrailClass=Class'DEKMonsters999X.DEKTechTrail'
      HitSounds(0)=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      HitSounds(1)=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      DrawType=DT_StaticMesh

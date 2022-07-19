@@ -110,6 +110,6 @@ defaultproperties
      DoubleJumpAnims(1)="TBrea001"
      DoubleJumpAnims(2)="TBrea001"
      DoubleJumpAnims(3)="TBrea001"
-     AmmunitionClass=Class'DEKMonsters209F.TitanAmmo'
-     ControllerClass=Class'DEKMonsters209F.DCMonsterController'
+     AmmunitionClass=Class'DEKMonsters999X.TitanAmmo'
+     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
 }

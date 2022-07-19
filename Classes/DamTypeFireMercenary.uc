@@ -3,7 +3,7 @@ class DamTypeFireMercenary extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponFireMercenary'
+     WeaponClass=Class'DEKMonsters999X.WeaponFireMercenary'
      DeathString="A fire mercenary burned %o."
      bDetonatesGoop=True
 }

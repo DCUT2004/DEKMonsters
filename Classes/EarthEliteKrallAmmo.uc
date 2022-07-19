@@ -2,5 +2,5 @@ class EarthEliteKrallAmmo extends DCEliteKrallAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209F.EarthEliteKrallProjectile'
+     ProjectileClass=Class'DEKMonsters999X.EarthEliteKrallProjectile'
 }

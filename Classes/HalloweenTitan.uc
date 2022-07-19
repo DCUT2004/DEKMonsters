@@ -63,5 +63,5 @@ function SpawnRock()
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters209F.HalloweenTitanAmmo'
+     AmmunitionClass=Class'DEKMonsters999X.HalloweenTitanAmmo'
 }

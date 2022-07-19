@@ -3,6 +3,6 @@ class DamTypeEarthSkaarjPupae extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponEarthSkaarjPupae'
+     WeaponClass=Class'DEKMonsters999X.WeaponEarthSkaarjPupae'
      DeathString="%o was eaten alive by an Earth Pupae."
 }

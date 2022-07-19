@@ -3,5 +3,5 @@ class LaserKrallAmmo extends Ammunition;
 defaultproperties
 {
      bLeadTarget=True
-     ProjectileClass=Class'DEKMonsters209F.LaserKrallProj'
+     ProjectileClass=Class'DEKMonsters999X.LaserKrallProj'
 }

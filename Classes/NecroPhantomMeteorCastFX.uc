@@ -26,7 +26,7 @@ defaultproperties
          StartVelocityRange=(Z=(Min=20.000000,Max=20.000000))
          RelativeWarmupTime=2.000000
      End Object
-     Emitters(1)=BeamEmitter'DEKMonsters209F.NecroPhantomMeteorCastFX.BeamEmitter0'
+     Emitters(1)=BeamEmitter'DEKMonsters999X.NecroPhantomMeteorCastFX.BeamEmitter0'
 
      AutoDestroy=True
      bNoDelete=False

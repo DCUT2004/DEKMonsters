@@ -3,7 +3,7 @@ class DamTypeIceSlug extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponIceSlug'
+     WeaponClass=Class'DEKMonsters999X.WeaponIceSlug'
      DeathString="An ice slug froze %o."
      bDetonatesGoop=True
 }

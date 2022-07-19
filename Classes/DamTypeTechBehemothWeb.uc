@@ -2,7 +2,7 @@ class DamTypeTechBehemothWeb extends WeaponDamageType;
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponTechBehemoth'
+     WeaponClass=Class'DEKMonsters999X.WeaponTechBehemoth'
      DeathString="%o got caught in a Tech Behemoth's web."
      bArmorStops=False
      bDetonatesGoop=True

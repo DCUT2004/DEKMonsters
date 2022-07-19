@@ -72,7 +72,7 @@ function SpawnRock()
 
 defaultproperties
 {
-     AmmunitionClass=Class'DEKMonsters209F.TitaniumTitanAmmo'
+     AmmunitionClass=Class'DEKMonsters999X.TitaniumTitanAmmo'
      ScoringValue=21
      GibGroupClass=Class'XEffects.xBotGibGroup'
      HealthMax=1400.000000

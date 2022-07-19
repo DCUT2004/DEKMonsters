@@ -3,7 +3,7 @@ class DamTypeIceSlith extends WeaponDamageType
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponIceSlith'
+     WeaponClass=Class'DEKMonsters999X.WeaponIceSlith'
      DeathString="An ice slith froze %o."
      bDetonatesGoop=True
 }

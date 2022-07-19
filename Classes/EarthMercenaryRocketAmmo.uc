@@ -5,6 +5,6 @@ defaultproperties
      bRecommendSplashDamage=True
      bLeadTarget=True
      bSplashDamage=True
-     ProjectileClass=Class'DEKMonsters209F.EarthMercenaryRocket'
+     ProjectileClass=Class'DEKMonsters999X.EarthMercenaryRocket'
      PickupClass=Class'XWeapons.RocketAmmoPickup'
 }

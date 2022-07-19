@@ -3,6 +3,6 @@ class DamTypeFireSkaarjSniperHeadShot extends DamTypeSniperHeadShot
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponFireSkaarjSniper'
+     WeaponClass=Class'DEKMonsters999X.WeaponFireSkaarjSniper'
      DeathString="%o's headshotted by an Fire Skaarj Sniper."
 }

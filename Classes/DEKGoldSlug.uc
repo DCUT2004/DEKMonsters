@@ -122,9 +122,9 @@ simulated function PlayDying(class<DamageType> DamageType, vector HitLoc)
 defaultproperties
 {
      HeatDamageMultiplier=1.150000
-     AmmunitionClass=Class'DEKMonsters209F.DEKGoldSlugAmmo'
+     AmmunitionClass=Class'DEKMonsters999X.DEKGoldSlugAmmo'
      ScoringValue=14
-     GibGroupClass=Class'DEKMonsters209F.DEKGoldGibGroup'
+     GibGroupClass=Class'DEKMonsters999X.DEKGoldGibGroup'
      Health=1350
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.GoldMonsters.GoldMonFB'

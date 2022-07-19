@@ -2,5 +2,5 @@ class EarthBruteAmmo extends DCBruteAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209F.EarthBruteProjectile'
+     ProjectileClass=Class'DEKMonsters999X.EarthBruteProjectile'
 }

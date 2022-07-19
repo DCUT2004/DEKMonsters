@@ -2,5 +2,5 @@ class DCBruteAmmo extends BruteAmmo;
 
 defaultproperties
 {
-     ProjectileClass=Class'DEKMonsters209F.DCBruteRocket'
+     ProjectileClass=Class'DEKMonsters999X.DCBruteRocket'
 }

@@ -14,7 +14,7 @@ static function GetHitEffects(out class<xEmitter> HitEffects[4], int VictimHealt
 
 defaultproperties
 {
-     WeaponClass=Class'DEKMonsters209F.WeaponEarthWarlord'
+     WeaponClass=Class'DEKMonsters999X.WeaponEarthWarlord'
      DeathString="%o was evaporated by an Earth Warlord."
      bDetonatesGoop=True
      bSkeletize=True
