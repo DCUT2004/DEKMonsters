@@ -61,7 +61,7 @@ defaultproperties
 {
      HeatLifespan=3.000000
      BaseChance=25.000000
-     HitEffectClass=Class'DEKMonsters999X.FireMercenaryPlasmaHitEffect'
+     HitEffectClass=Class'DEKRPG999X.HeatHitEffect'
      PlasmaEffectClass=Class'DEKMonsters999X.FireMercenaryPlasmaEffect'
      Speed=2000.000000
      MaxSpeed=2000.000000
