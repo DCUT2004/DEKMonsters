@@ -175,7 +175,7 @@ function SpawnSphere()
 //	if (P.Mass >= 19000)
 //		return;
 //		
-//	if(!class'RW_Freeze'.static.canTriggerPhysics(P))
+//	if(!class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 //	{
 //		return;
 //	}

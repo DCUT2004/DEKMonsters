@@ -109,7 +109,7 @@ function GiantMantaKnockBack(Actor Victim, vector Momentum)
 	Local Vector newLocation;
 
 	P = Pawn(Victim);
-	if(P == None || !class'RW_Freeze'.static.canTriggerPhysics(P))
+	if(P == None || !class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		return;
 
 	if (P.FindInventoryType(class'NullEntropyInv') != None)

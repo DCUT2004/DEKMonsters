@@ -97,7 +97,7 @@ function NullInBlast(float Radius)
 			pawndist = FMax(1,VSize(pawndir));
 			damageScale = 1 - FMax(0,pawndist/Radius);
 
-			if(!C.Pawn.isA('Vehicle') && class'RW_Freeze'.static.canTriggerPhysics(C.Pawn) && (C.Pawn.FindInventoryType(class'FreezeInv') == None))
+			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn) && (C.Pawn.FindInventoryType(class'FreezeInv') == None))
 			{
 				if(C.Pawn == None)
 				{

@@ -34,7 +34,7 @@ simulated function ProcessTouch(actor Other, vector HitLocation)
 		{
 			// now see if we can freeze em
 			P = Pawn(Other);
-			if (P != None && vehicle(P) == None && class'RW_Freeze'.static.canTriggerPhysics(P))
+			if (P != None && vehicle(P) == None && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 			{
 				MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
 				if (MInv != None)

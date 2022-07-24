@@ -80,7 +80,7 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 		Other.TakeDamage(Damage,Instigator,HitLocation,MomentumTransfer * Normal(Velocity),MyDamageType);
 		// now see if we can freeze em
 		P = Pawn(Other);
-		if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'RW_Freeze'.static.canTriggerPhysics(P))
+		if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		{
 			MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
 			if (MInv == None)

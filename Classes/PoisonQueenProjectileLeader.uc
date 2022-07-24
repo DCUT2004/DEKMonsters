@@ -33,7 +33,7 @@ simulated function ProcessTouch(actor Other, vector HitLocation)
 		{
 			// now see if we can freeze em
 			P = Pawn(Other);
-			if (P != None && vehicle(P) == None && class'RW_Freeze'.static.canTriggerPhysics(P))
+			if (P != None && vehicle(P) == None && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 			{
 				if (PoisonQueen(Owner) != None && PoisonQueen(Owner).SameSpeciesAs(P))
 					return;		// queens immune to their own null entropy

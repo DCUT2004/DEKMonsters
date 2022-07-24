@@ -103,7 +103,7 @@ function Burn(Pawn P)
 	local SuperHeatInv Inv;
 	
 	MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'RW_Freeze'.static.canTriggerPhysics(P))
+	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 	{
 		if (MInv == None)
 		{
