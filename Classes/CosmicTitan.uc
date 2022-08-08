@@ -29,7 +29,7 @@ function SetMovementPhysics()
 function bool SameSpeciesAs(Pawn P)
 {
 	if (SummonedMonster)
-		return ( P.class == class'HealerNali' || P.Class == Class'MissionCow');
+		return ( P.class == class'HealerNali');
 	else
 		return (  P.class == class'DCTitan' || P.class == class'DCStoneTitan' || P.class == class'CosmicTitan' || P.class == class'TechTitan' || P.Class == class'TitaniumTitan' || P.Class == class'FruitCakeTitan' || P.Class == class'HalloweenTitan');
 }

@@ -10,7 +10,7 @@ simulated function PostBeginPlay()
 function bool SameSpeciesAs(Pawn P)
 {
 	if (SummonedMonster)
-		return ( P.class == class'HealerNali' || P.class == class'MissionCow');
+		return ( P.class == class'HealerNali');
 	else
 		return ( P.class == class'TechBehemoth' || P.Class == class'TechPupae' || P.Class == class'TechRazorfly' || P.Class == class'TechSkaarj' || P.Class == class'TechSlith' || P.Class == class'TechSlug' || P.Class == class'TechTitan' || P.Class == class'TechWarlord' || P.Class == class'TechQueen');
 }

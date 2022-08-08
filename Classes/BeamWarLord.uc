@@ -3,7 +3,7 @@ class BeamWarLord extends DCWarlord;
 function bool SameSpeciesAs(Pawn P)
 {
 	if (SummonedMonster)
-		return ( P.class == class'HealerNali' || P.Class == Class'MissionCow');
+		return ( P.class == class'HealerNali');
 	else
 		return ( P.class == class'BeamWarlord' );
 }

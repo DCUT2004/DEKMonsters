@@ -57,7 +57,7 @@ simulated function Destroyed()
 function bool SameSpeciesAs(Pawn P)
 {
 	if (SummonedMonster)
-		return ( P.class == class'HealerNali' || P.class == class'MissionCow');
+		return ( P.class == class'HealerNali' );
 	else
 		return ( P.Class == class'NecroMortalSkeleton' || P.Class == class'NecroPhantom' || P.Class == class'NecroImmortalSkeleton' || P.Class == class'NecroSoulWraith' || P.Class == class'NecroSorcerer' || P.Class == class'NecroAdrenWraith');
 }

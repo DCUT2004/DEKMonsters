@@ -134,29 +134,20 @@ function AcquireTarget()
 
 function TakeDamage(int Damage, Pawn InstigatedBy, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	local MissionInv MiInv;
-	local Mission1Inv M1Inv;
-	local Mission2Inv M2Inv;
-	local MIssion3Inv M3Inv;
+	local MissionInvBETA MissionInv;
 	
-	if (InstigatedBy != None && InstigatedBy.Health > 0)
-	{
-		MiInv = MissionInv(InstigatedBy.FindInventoryType(class'MissionInv'));
-		M1Inv = Mission1Inv(InstigatedBy.FindInventoryType(class'Mission1Inv'));
-		M2Inv = Mission2Inv(InstigatedBy.FindInventoryType(class'Mission2Inv'));
-		M3Inv = Mission3Inv(InstigatedBy.FindInventoryType(class'Mission3Inv'));
-	
-		if (Damage > 0 && MiInv != None && !MiInv.DisarmerComplete)
-		{
-			if (M1Inv != None && !M1Inv.Stopped && M1Inv.DisarmerActive)
-				M1Inv.MissionCount++;
-			else if (M2Inv != None && !M2Inv.Stopped && M2Inv.DisarmerActive)
-				M2Inv.MissionCount++;
-			else if (M3Inv != None && !M3Inv.Stopped && M3Inv.DisarmerActive)
-				M3Inv.MissionCount++;
-		}
-	}
 	Super.TakeDamage(Damage, InstigatedBy, HitLocation, Momentum, DamageType);
+	
+	if (Damage > 0 && InstigatedBy != None && InstigatedBy.Controller != None)
+	{
+		MissionInv = Class'MissionInvBETA'.static.GetMissionInv(InstigatedBy.Controller);
+		if (MissionInv == None)
+			return;
+		if (!MissionInv.IsMissionActive("Disarmer"))
+			return;
+		MissionInv.TickMission(MissionInv.GetMissionIndex("Disarmer"), 1);
+	}
+	BlowUp(HitLocation);
 }
 
 simulated function Destroyed()
