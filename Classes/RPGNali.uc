@@ -27,6 +27,7 @@ function PostBeginPlay()
 	if(RPGWeapon == None)
 		return;
 
+    RPGWeapon.ModifiedWeapon = Weapon;
 	RPGWeapon.Generate(None);
 	RPGWeapon.SetModifiedWeapon(Weapon, true);
 
