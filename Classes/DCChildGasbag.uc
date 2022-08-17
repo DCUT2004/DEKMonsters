@@ -16,6 +16,11 @@ simulated function PreBeginPlay()
 	Super.PreBeginPlay();
 }
 
+simulated function PostBeginPlay()
+{
+	Super(DEKMonster).PostBeginPlay();
+}
+
 simulated function Destroyed()
 {
 	if ( ParentBagE != None )

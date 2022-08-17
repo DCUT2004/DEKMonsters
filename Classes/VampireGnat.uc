@@ -1,5 +1,5 @@
 class VampireGnat extends DCRazorFly
-	config(DEKMonstersTexturesMaster208);
+	config(satoreMonsterPack);
 
 // increases in size as it sucks blood
 // starts half size of normal razorfly. Max size increase fivefold

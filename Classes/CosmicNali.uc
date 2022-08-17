@@ -17,7 +17,7 @@ function PostNetBeginPlay()
 
 simulated function PostBeginPlay()
 {
-	Super.PostBeginPlay();
+	Super(DEKMonster).PostBeginPlay();
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;

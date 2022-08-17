@@ -4,19 +4,13 @@ var bool SummonedMonster;
 
 #exec  AUDIO IMPORT NAME="BuzzingWings" FILE="Sounds\BuzzingWings.WAV" GROUP="MonsterSounds"
 
+simulated function PostBeginPlay()
+{
+	Super(DEKMonster).PostBeginPlay();
+}
+
 simulated function PostNetBeginPlay()
 {
-	local ComboInv ComboInv;
-	
-	if (Instigator != None)
-	{
-		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-		if (ComboInv == None)
-		{
-			ComboInv = Instigator.Spawn(class'ComboInv');
-			ComboInv.GiveTo(Instigator);
-		}
-	}
 	AmbientSound.BaseRadius=5000.00;
 	Super.PostNetBeginPlay();
 }

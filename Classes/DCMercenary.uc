@@ -4,19 +4,7 @@ var bool SummonedMonster;
 
 simulated function PostBeginPlay()
 {
-	local ComboInv ComboInv;
-	
-	Super.PostBeginPlay();
-	
-	if (Instigator != None)
-	{
-		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-		if (ComboInv == None)
-		{
-			ComboInv = Instigator.Spawn(class'ComboInv');
-			ComboInv.GiveTo(Instigator);
-		}
-	}
+	Super(DEKMonster).PostBeginPlay();
 }
 
 function bool SameSpeciesAs(Pawn P)

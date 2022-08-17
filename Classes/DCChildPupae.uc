@@ -2,6 +2,11 @@ class DCChildPupae extends SMPChildPupae;
 
 var DCQueen ParentQueenE;
 
+simulated function PostBeginPlay()
+{
+	Super(DEKMonster).PostBeginPlay();
+}
+
 function bool SameSpeciesAs(Pawn P)
 {
 	return ( P.class == class'DCPupae' || P.class == class'DCChildPupae' || P.class == class'DCQueen');

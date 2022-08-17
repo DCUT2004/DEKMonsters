@@ -5,7 +5,7 @@ class NecroSkull extends DCManta;
 
 simulated function PostBeginPlay()
 {
-	Super.PostBeginPlay();
+	Super(DEKMonster).PostBeginPlay();
 	PlayAnim('Chase');
 }
 

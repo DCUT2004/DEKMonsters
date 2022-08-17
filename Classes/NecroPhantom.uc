@@ -18,19 +18,7 @@ replication
 
 simulated function PostBeginPlay()
 {
-	local ComboInv ComboInv;
-	Super.PostBeginPlay();
-	
-	if (Instigator != None)
-	{
-		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-		if (ComboInv == None)
-		{
-			ComboInv = Instigator.Spawn(class'ComboInv');
-			ComboInv.GiveTo(Instigator);
-		}
-	}
-	
+	Super(DEKMonster).PostBeginPlay();
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;

@@ -15,7 +15,7 @@ var bool SummonedMonster;
 simulated function PostBeginPlay()
 {
 	Local GameRules G;
-	local ComboInv ComboInv;
+	local StatusEffectInventory StatusInv;
 
 	Super(SMPMonster).PostBeginPlay();
 	
@@ -33,11 +33,11 @@ simulated function PostBeginPlay()
 	
 	if (Instigator != None)
 	{
-		ComboInv = ComboInv(Instigator.FindInventoryType(class'ComboInv'));
-		if (ComboInv == None)
+		StatusInv = StatusEffectInventory(Instigator.FindInventoryType(class'StatusEffectInventory'));
+		if (StatusInv == None)
 		{
-			ComboInv = Instigator.Spawn(class'ComboInv');
-			ComboInv.GiveTo(Instigator);
+			StatusInv = Instigator.Spawn(class'StatusEffectInventory');
+			StatusInv.GiveTo(Instigator);
 		}
 	}
 	
