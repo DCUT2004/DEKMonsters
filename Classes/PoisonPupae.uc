@@ -2,55 +2,20 @@ class PoisonPupae extends DCPupae;
 
 var int PoisonLifespan;
 var int PoisonModifier;
-var RPGRules RPGRules;
-
-function PostBeginPlay()
-{
-	Local GameRules G;
-	super.PostBeginPlay();
-	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
-	{
-		if(G.isA('RPGRules'))
-		{
-			RPGRules = RPGRules(G);
-			break;
-		}
-	}
-
-}
+var config bool bDispellable, bStackable;
 
 function PoisonTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local DruidPoisonInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
-
-	if (DamageType == class'DamTypePoison' )
-		return;
+	local StatusEffectManager StatusManager;
 
 	P = Pawn(Victim);
-	if (P != None)
+	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = DruidPoisonInv(P.FindInventoryType(class'DruidPoisonInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'DruidPoisonInv', P,,, rot(0,0,0));
-				Inv.Modifier = PoisonModifier;
-				Inv.LifeSpan = PoisonLifespan;
-				Inv.RPGRules = RPGRules;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(PoisonModifier,Inv.Modifier);
-				Inv.LifeSpan = max(PoisonLifespan,Inv.LifeSpan);
-			}
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Poison', -(abs(PoisonModifier)), True, PoisonLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -94,6 +59,8 @@ function bool SameSpeciesAs(Pawn P)
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      PoisonLifespan=4
      PoisonModifier=2
      ScoringValue=2

@@ -2,8 +2,8 @@ class NecroGhostPoltergeistProj extends UntargetedSeekerProjectile
 	config(satoreMonsterPack);
 
 var Emitter OrbFX;
-var config float AttackLifespan;
-var config float AttackMultiplier;
+var config int DamageReductionModifer, DamageReductionLifespan;
+var config bool bDispellable, bStackable;
 
 simulated function PostBeginPlay()
 {
@@ -29,8 +29,8 @@ simulated function Timer()
     local vector ForceDir;
     local float VelMag;
     local float SeekingDistance;
-	local ComboAttackInv Inv;
 	local Pawn P;
+	local StatusEffectManager StatusManager;
 	
 	P = Pawn(Seeking);
 
@@ -61,19 +61,9 @@ simulated function Timer()
 		SeekingDistance = VSize(P.Location - Location);
 		if(SeekingDistance < 50)
 		{
-		Inv = ComboAttackInv(P.FindInventoryType(class'ComboAttackInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'ComboAttackInv', P,,, rot(0,0,0));
-				Inv.Lifespan = AttackLifespan;
-				Inv.EffectMultiplier = AttackMultiplier;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				if (Inv.EffectMultiplier < 1.0)
-					Inv.EffectMultiplier -= (1-AttackMultiplier);
-			}
+			StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+			if (StatusManager != None)
+				StatusManager.AddStatusEffect(Class'StatusEffect_DamageBonus', -(abs(DamageReductionModifer)), True, DamageReductionLifespan, bDispellable, bStackable);
 			Destroy();
 		}
 	}
@@ -104,8 +94,10 @@ simulated function Destroyed()
 
 defaultproperties
 {
-	 AttackLifespan=10.00000
-	 AttackMultiplier=0.900000
+	bDispellable=False
+	bStackable=True
+	 DamageReductionLifespan=10
+	 DamageReductionModifer=3
      Speed=300.000000
      MaxSpeed=300.000000
      LightHue=90

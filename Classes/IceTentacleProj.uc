@@ -1,16 +1,15 @@
 class IceTentacleProj extends DCTentacleProjectile;
 
-var float FreezeLifespan;
+var config int FreezeModifier, FreezeLifespan;
+var config bool bDispellable, bStackable;
 var config float BaseChance;
 var sound FreezeSound;
 
 simulated function ProcessTouch (Actor Other, vector HitLocation)
 {
 	local Vector X, RefNormal, RefDir;
-	local FreezeInv Inv;
 	local Pawn P;
-	Local Actor A;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	if (Other == Instigator)
 		return;
@@ -30,39 +29,27 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 	if ( Role == ROLE_Authority )
 	{
 		Other.TakeDamage(Damage,Instigator,HitLocation,MomentumTransfer * Normal(Velocity),MyDamageType);
-		// now see if we can freeze em
+
 		P = Pawn(Other);
 		if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		{
-			MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-			if (MInv == None)
+			if(rand(100) < int(BaseChance))
 			{
-				Inv = FreezeInv(P.FindInventoryType(class'FreezeInv'));
-				//dont add to the time a pawn is already frozen. It just wouldn't be fair.
-				if (Inv == None)
-				{
-					Inv = spawn(class'FreezeInv', P,,, rot(0,0,0));
-					Inv.Modifier = 2;
-					Inv.LifeSpan = 3.0;
-					Inv.GiveTo(P);
-					A = P.spawn(class'IceKrallSmoke', P,, P.Location, P.Rotation);  // cant use IceSmoke as it assumes a PlayerController exists
-					if (A != None)
-					{
-						A.RemoteRole = ROLE_SimulatedProxy;
-						A.PlaySound(FreezeSound,,2.5*Other.TransientSoundVolume,,Other.TransientSoundRadius);
-					}
-				}
-				Explode(HitLocation,Normal(HitLocation-Other.Location));
+				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+				if (StatusManager != None)
+					StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
 			}
-			else
-				Explode(HitLocation,Normal(HitLocation-Other.Location));
+			Explode(Location, vect(0,0,1));				
 		}
-	}
+	}	
 }
 
 defaultproperties
 {
-     FreezeLifespan=4.000000
+	 bDispellable=True
+	 bStackable=False
+	 FreezeModifier=4
+	 FreezeLifespan=4.00
      BaseChance=25.000000
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'
      MyDamageType=Class'DEKMonsters999X.DamTypeIceTentacle'

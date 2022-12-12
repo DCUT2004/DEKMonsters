@@ -1,6 +1,7 @@
 class PoisonSlugMiniBioGlob extends BioGlob;
 
-var float PoisonLifeSpan;
+var config int MaxPoisonLifespan;
+var config bool bDispellable, bStackable;
 var config float BaseChance;
 
 function NullInBlast(float Radius)
@@ -8,35 +9,49 @@ function NullInBlast(float Radius)
 	local float damageScale, pawndist;
 	local vector pawndir;
 	local Controller C, NextC;
-	Local DruidPoisonInv Inv;
+	local StatusEffectManager StatusManager;
+	local int PoisonModifier, PoisonLifespan;
 
 	C = Level.ControllerList;
 	while (C != None)
 	{
 		// get next controller here because C may be destroyed if it's a nonplayer and C.Pawn is killed
 		NextC = C.NextController;
-		if ( C != None && C.Pawn != None && C.Pawn != Instigator && C.Pawn.Health > 0 && !C.Pawn.IsA('PoisonSlug') && !C.Pawn.IsA('PoisonPupae') && !C.Pawn.IsA('PoisonQueen')
-		     && VSize(C.Pawn.Location - Location) < Radius && FastTrace(C.Pawn.Location, Location))
+		if(C.Pawn == None)
+		{
+			C = NextC;
+			break;
+		}
+		if ( C.Pawn != None && C.Pawn.Health > 0 && VSize(C.Pawn.Location - Location) < Radius && FastTrace(C.Pawn.Location, Location) )
 		{
 			pawndir = C.Pawn.Location - Location;
 			pawndist = FMax(1,VSize(pawndir));
 			damageScale = 1 - FMax(0,pawndist/Radius);
 
-			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn) 
-				&& (C.Pawn.FindInventoryType(class'DruidPoisonInv') == None) && (C.Pawn.FindInventoryType(class'MagicShieldInv') == None))
-				
-				if(rand(99) < int(BaseChance))
+			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn))
 			{
-				Inv = spawn(class'DruidPoisonInv', C.Pawn,,, rot(0,0,0));
-				if(Inv != None)
+				if(C.Pawn == None)
 				{
-					Inv.LifeSpan = (damageScale * PoisonLifeSpan);	
-					Inv.Modifier = (damageScale * PoisonLifeSpan);	// *3 because the NullEntropyInv divides by 3
-					Inv.GiveTo(C.Pawn);
+					C = NextC;
+					break;
+				}
+				if(rand(100) < int(BaseChance))
+				{
+					StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(C.Pawn);
+					if (StatusManager != None)
+					{
+						PoisonModifier = damageScale * MaxPoisonLifespan;
+						PoisonLifespan = damageScale * MaxPoisonLifespan;
+						StatusManager.AddStatusEffect(Class'StatusEffect_Poison', -(abs(PoisonModifier)), True, PoisonLifespan, bDispellable, bStackable);
+					}
 				}
 			}
+			if(C.Pawn == None)
+			{
+				C = NextC;
+				break;
+			}
 		}
-
 		C = NextC;
 	}
 }
@@ -50,7 +65,9 @@ function BlowUp(vector HitLocation)
 
 defaultproperties
 {
-     PoisonLifespan=4.000000
+     MaxPoisonLifespan=4
+	 bDispellable=True
+	 bStackable=False
      BaseChance=33.000000
      Speed=1000.000000
      MyDamageType=Class'DEKMonsters999X.DamTypePoisonSlug'

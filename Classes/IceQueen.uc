@@ -4,6 +4,7 @@ class IceQueen extends SMPQueen
 var bool bRocketDir;
 var int IceLifespan;
 var int IceModifier;
+var config bool bDispellable, bStackable;
 
 function PostBeginPlay()
 {
@@ -64,34 +65,18 @@ function vector GetFireStart(vector X, vector Y, vector Z)
     return Location + 0.5 * CollisionRadius * (X+Z-Y);
 }
 
-function PoisonTarget(Actor Victim, class<DamageType> DamageType)
+function FreezeTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local FreezeInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	P = Pawn(Victim);
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = FreezeInv(P.FindInventoryType(class'FreezeInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'FreezeInv', P,,, rot(0,0,0));
-				Inv.Modifier = IceModifier;
-				Inv.LifeSpan = IceLifespan;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(IceModifier,Inv.Modifier);
-				Inv.LifeSpan = max(IceLifespan,Inv.LifeSpan);
-			}
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -110,7 +95,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 			return false;
 
 		// hee hee  got a hit. Poison the dude
-		PoisonTarget(Controller.Target, class'MeleeDamage');
+		FreezeTarget(Controller.Target, class'MeleeDamage');
 
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
@@ -180,6 +165,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      IceLifespan=3
      IceModifier=3
      AmmunitionClass=Class'DEKMonsters999X.IceQueenAmmo'

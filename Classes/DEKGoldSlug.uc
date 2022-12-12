@@ -13,21 +13,6 @@ function bool CheckReflect( Vector HitLocation, out Vector RefNormal, int Damage
 		return false;
 }
 
-function PostBeginPlay()
-{
-	Local GameRules G;
-	super.PostBeginPlay();
-	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
-	{
-		if(G.isA('RPGRules'))
-		{
-			RPGRules = RPGRules(G);
-			break;
-		}
-	}
-
-}
-
 function PoisonTarget(Actor Victim, class<DamageType> DamageType)
 {
 // do nothing. No poison for gold slug.

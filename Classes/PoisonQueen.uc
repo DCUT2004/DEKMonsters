@@ -11,6 +11,7 @@ var bool bStuckEnemy;		// true if we have stuck an enemy on the web
 var Actor StuckEnemy;
 var RPGRules RPGRules;
 var bool SummonedMonster;
+var config bool bDispellable, bStackable;
 
 simulated function PostBeginPlay()
 {
@@ -283,33 +284,16 @@ function SpawnShot()
 
 function PoisonTarget(Actor Victim)
 {
-	local DruidPoisonInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	P = Pawn(Victim);
-	if (P != None)
+	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = DruidPoisonInv(P.FindInventoryType(class'DruidPoisonInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'DruidPoisonInv', P,,, rot(0,0,0));
-				Inv.Modifier = PoisonModifier;
-				Inv.LifeSpan = PoisonLifespan;
-				Inv.RPGRules = RPGRules;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(PoisonModifier,Inv.Modifier);
-				Inv.LifeSpan = max(PoisonLifespan,Inv.LifeSpan);
-			}
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Poison', -(abs(PoisonModifier)), True, PoisonLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -372,6 +356,8 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      PoisonLifespan=5
      PoisonModifier=4
      MaxHoldTime=4.000000

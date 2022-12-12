@@ -2,7 +2,7 @@ class FireGasBag extends DCGasBag;
 
 var int HeatLifespan;
 var int HeatModifier;
-var RPGRules RPGRules;
+var config bool bDispellable, bStackable;
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -14,7 +14,6 @@ function bool SameSpeciesAs(Pawn P)
 
 function PostBeginPlay()
 {
-	Local GameRules G;
 	local FireInv Inv;
 	
 	if (Instigator != None)
@@ -38,23 +37,13 @@ function PostBeginPlay()
 		}
 	}
 	
-	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
-	{
-		if(G.isA('RPGRules'))
-		{
-			RPGRules = RPGRules(G);
-			break;
-		}
-	}
-	
 	Super.PostBeginPlay();
 }
 
-function PoisonTarget(Actor Victim, class<DamageType> DamageType)
+function BurnTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local SuperHeatInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	if (DamageType == class'DamTypeSuperHeat' )
 		return;
@@ -63,28 +52,10 @@ function PoisonTarget(Actor Victim, class<DamageType> DamageType)
 	
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = SuperHeatInv(P.FindInventoryType(class'SuperHeatInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'SuperHeatInv', P,,, rot(0,0,0));
-				Inv.Modifier = HeatModifier;
-				Inv.LifeSpan = HeatLifespan;
-				Inv.RPGRules = RPGRules;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(HeatModifier,Inv.Modifier);
-				Inv.LifeSpan = max(HeatLifespan,Inv.LifeSpan);
-			}
-			if (Inv == class'FreezeInv')
-				return;
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -102,8 +73,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 		if ( HitActor != None )
 			return false;
 
-		// hee hee  got a hit. Poison the dude
-		PoisonTarget(Controller.Target, class'MeleeDamage');
+		BurnTarget(Controller.Target, class'MeleeDamage');
 
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
@@ -127,6 +97,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      HeatLifespan=4
      HeatModifier=2
      AmmunitionClass=Class'DEKMonsters999X.FireGasbagAmmo'

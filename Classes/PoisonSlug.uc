@@ -4,7 +4,7 @@ class PoisonSlug extends DCSlith;
 
 var int PoisonLifespan;
 var int PoisonModifier;
-var RPGRules RPGRules;
+var config bool bDispellable, bStackable;
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -14,51 +14,18 @@ function bool SameSpeciesAs(Pawn P)
 		return ( P.Class == class'PoisonPupae' || P.Class == class'PoisonQueen' );
 }
 
-function PostBeginPlay()
-{
-	Local GameRules G;
-	
-	super.PostBeginPlay();
-	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
-	{
-		if(G.isA('RPGRules'))
-		{
-			RPGRules = RPGRules(G);
-			break;
-		}
-	}
-
-}
-
 function PoisonTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local DruidPoisonInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	P = Pawn(Victim);
-	if (P != None)
+	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = DruidPoisonInv(P.FindInventoryType(class'DruidPoisonInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'DruidPoisonInv', P,,, rot(0,0,0));
-				Inv.Modifier = PoisonModifier;
-				Inv.LifeSpan = PoisonLifespan;
-				Inv.RPGRules = RPGRules;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(PoisonModifier,Inv.Modifier);
-				Inv.LifeSpan = max(PoisonLifespan,Inv.LifeSpan);
-			}
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Poison', -(abs(PoisonModifier)), True, PoisonLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -130,6 +97,8 @@ simulated function PlayDying(class<DamageType> DamageType, vector HitLoc)
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      PoisonLifespan=4
      PoisonModifier=2
      AmmunitionClass=Class'DEKMonsters999X.PoisonSlugAmmo'

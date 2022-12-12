@@ -1,6 +1,9 @@
-class GiantManta extends DCManta;
+class GiantManta extends DCManta
+	config(satoreMonsterPack);
 
 var Sound KnockbackSound;
+var config int KnockbackModifier, KnockbackLifespan;
+var config bool bDispellable, bStackable;
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -105,22 +108,18 @@ singular function Bump(actor Other)
 function GiantMantaKnockBack(Actor Victim, vector Momentum)
 {
 	local Pawn P;
-	local KnockbackInv Inv;
+	local StatusEffectManager StatusManager;
 	Local Vector newLocation;
 
 	P = Pawn(Victim);
 	if(P == None || !class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		return;
 
-	if (P.FindInventoryType(class'NullEntropyInv') != None)
+	StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+	if (StatusManager == None)
 		return;
 
-	if(P.FindInventoryType(class'KnockbackInv') != None)
-		return ;
-
-	Inv = spawn(class'KnockbackInv', P,,, rot(0,0,0));
-	if(Inv == None)
-		return; //wow
+	StatusManager.AddStatusEffect(Class'StatusEffect_Momentum', -(abs(KnockbackModifier)), True, KnockbackLifespan, bDispellable, bStackable);
 	
 	// if they're not walking, falling, or hovering, 
 	// the momentum won't affect them correctly, so make them hover.
@@ -145,10 +144,6 @@ function GiantMantaKnockBack(Actor Victim, vector Momentum)
 		Momentum = Momentum*(100.0/P.Mass);
 	P.AddVelocity( Momentum );
 
-	Inv.LifeSpan = 2;
-	Inv.Modifier = 4;
-	Inv.GiveTo(P);
-
 	// if they dont notice they are flying through the air, dont tell them - so comment out
 	//if(PlayerController(P.Controller) != None)
  	//	PlayerController(P.Controller).ReceiveLocalizedMessage(class'KnockbackConditionMessage', 0); 
@@ -168,6 +163,10 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
+	KnockbackModifier=4
+	KnockbackLifespan=2
+	bDispellable=False
+	bStackable=True
      KnockbackSound=Sound'WeaponSounds.Misc.ballgun_launch'
      GibGroupClass=Class'DEKMonsters999X.DEKTechGibGroup'
      MeleeRange=350.000000

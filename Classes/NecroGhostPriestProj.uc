@@ -2,7 +2,7 @@ class NecroGhostPriestProj extends UntargetedSeekerProjectile
 	config(satoreMonsterPack);
 
 var Emitter OrbFX;
-var config float HealStopLifespan;
+var config int ParasiteModifier;
 
 simulated function PostBeginPlay()
 {
@@ -28,8 +28,8 @@ simulated function Timer()
     local vector ForceDir;
     local float VelMag;
     local float SeekingDistance;
-	local ComboHealStopInv Inv;
 	local Pawn P;
+	local StatusEffectManager StatusManager;
 	
 	P = Pawn(Seeking);
 
@@ -60,17 +60,9 @@ simulated function Timer()
 		SeekingDistance = VSize(P.Location - Location);
 		if(SeekingDistance < 50)
 		{
-		Inv = ComboHealStopInv(P.FindInventoryType(class'ComboHealStopInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'ComboHealStopInv', P,,, rot(0,0,0));
-				Inv.Lifespan = HealStopLifespan;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Lifespan += 5.00000;
-			}
+			StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+			if (StatusManager != None)
+				StatusManager.AddStatusEffect(Class'StatusEffect_Parasite', -(abs(ParasiteModifier)));	
 			Destroy();
 		}
 	}
@@ -101,7 +93,7 @@ simulated function Destroyed()
 
 defaultproperties
 {
-	 HealStopLifespan=10.00000
+	 ParasiteModifier=3
      Speed=300.000000
      MaxSpeed=300.000000
      LightHue=135

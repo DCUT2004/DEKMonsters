@@ -3,15 +3,15 @@
 //-----------------------------------------------------------
 class FireMercenaryLaser extends ONSAttackCraftPlasmaProjectileRed;
 
-var float HeatLifeSpan;
+var config int HeatModifier, HeatLifespan;
+var config bool bDispellable, bStackable;
 var config float BaseChance;
 
 simulated function ProcessTouch (Actor Other, vector HitLocation)
 {
 	local Vector X, RefNormal, RefDir;
-	local SuperHeatInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	if (Other == Instigator)
 		return;
@@ -31,35 +31,27 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 	if ( Role == ROLE_Authority )
 	{
 		Other.TakeDamage(Damage,Instigator,HitLocation,MomentumTransfer * Normal(Velocity),MyDamageType);
-		// now see if we can freeze em
+
 		P = Pawn(Other);
 		if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		{
-			MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-			if (MInv == None)
+			if(rand(100) < int(BaseChance))
 			{
-				if(rand(99) < int(BaseChance))
-				{
-					Inv = SuperHeatInv(P.FindInventoryType(class'SuperHeatInv'));
-					if (Inv == None)
-					{
-						Inv = spawn(class'SuperHeatInv', P,,, rot(0,0,0));
-						Inv.Modifier = 2;
-						Inv.LifeSpan = 3.0;
-						Inv.GiveTo(P);
-					}
-				}
-				Explode(Location, vect(0,0,1));				
+				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+				if (StatusManager != None)
+					StatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
 			}
-			else
-				Explode(Location, vect(0,0,1));
+			Explode(Location, vect(0,0,1));				
 		}
 	}	
 }
 
 defaultproperties
 {
-     HeatLifespan=3.000000
+	 bDispellable=True
+	 bStackable=False
+	 HeatModifier=4
+     HeatLifespan=4
      BaseChance=25.000000
      HitEffectClass=Class'DEKRPG999X.HeatHitEffect'
      PlasmaEffectClass=Class'DEKMonsters999X.FireMercenaryPlasmaEffect'

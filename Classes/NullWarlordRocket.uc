@@ -1,13 +1,15 @@
 class NullWarlordRocket extends WarlordRocket;
 
 var float MaxNullTime;
+var config bool bDispellable, bStackable;
 
 function NullInBlast(float Radius)
 {
 	local float damageScale, pawndist;
 	local vector pawndir;
 	local Controller C, NextC;
-	Local NullEntropyInv Inv;
+	local StatusEffectManager StatusManager;
+	local int NullLifespan;
 
 	// freezes anything not a null warlord. Any side.
 	
@@ -28,20 +30,18 @@ function NullInBlast(float Radius)
 			pawndist = FMax(1,VSize(pawndir));
 			damageScale = 1 - FMax(0,pawndist/Radius);
 
-			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn) && (C.Pawn.FindInventoryType(class'NullEntropyInv') == None))
+			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn))
 			{
 				if(C.Pawn == None)
 				{
 					C = NextC;
 					break;
 				}
-				Inv = spawn(class'NullEntropyInv', C.Pawn,,, rot(0,0,0));
-				if(Inv != None)
-				{
-					Inv.LifeSpan = (damageScale * MaxNullTime * 3);	
-					Inv.Modifier = (damageScale * MaxNullTime * 3);	// *3 because the NullEntropyInv divides by 3
-					Inv.GiveTo(C.Pawn);
-				}
+				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(C.Pawn);
+				if (StatusManager == None)
+					return;
+				NullLifespan = damageScale * MaxNullTime;
+				StatusManager.AddStatusEffect(Class'StatusEffect_NullEntropy', -1, True, NullLifespan, bDispellable, bStackable);
 			}
 			if(C.Pawn == None)
 			{
@@ -63,6 +63,8 @@ function BlowUp(vector HitLocation)
 
 defaultproperties
 {
+	bDispellable=True
+	bStackable=False
      MaxNullTime=3.000000
      Damage=50.000000
      MyDamageType=Class'DEKMonsters999X.DamTypeNullWarlord'

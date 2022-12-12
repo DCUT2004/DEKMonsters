@@ -4,7 +4,8 @@ class NecroGhostPoltergeistDamageSphere extends UntargetedProjectile
 var class<Emitter> SphereEffectClass;
 var Emitter SphereEffect;
 var config float CheckInterval, DamageSphereRadius;
-var config int DamageTime, DamageMultiplier;
+var config int DamageBonusLifespan, DamageBonusModifier;
+var config bool bStackable, bDispellable;
 var vector initialDir;
 
 #exec obj load file=GeneralAmbience.uax
@@ -40,7 +41,7 @@ simulated function DamageBoost()
 	local Controller C, NextC;
 	local FriendlyMonsterInv FInv;
 	local NecroGhostPoltergeistDamageMarker DamageMarker;
-	local ComboAttackInv Inv;
+	local StatusEffectManager StatusManager;
 	
 	C = Level.ControllerList;	
 	while (C != None)
@@ -54,14 +55,10 @@ simulated function DamageBoost()
 				FInv = FriendlyMonsterInv(C.Pawn.FindInventoryType(class'FriendlyMonsterInv'));
 				if (FInv == None)
 				{
-					Inv = ComboAttackInv(C.Pawn.FindInventoryType(Class'ComboAttackInv'));
-					if (Inv == None)
-					{
-						Inv = Spawn(Class'ComboAttackInv', C.Pawn);
-						Inv.Lifespan = DamageTime;
-						Inv.EffectMultiplier = DamageMultiplier;
-						Inv.GiveTo(C.Pawn);
-					}
+					StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(C.Pawn);
+					if (StatusManager != None)
+						StatusManager.AddStatusEffect(Class'StatusEffect_DamageBonus', DamageBonusModifier, True, DamageBonusLifespan, bDispellable, bStackable);
+
 					DamageMarker = Spawn(class'NecroGhostPoltergeistDamageMarker',C.Pawn,,C.Pawn.Location,C.Pawn.Rotation);
 					if (DamageMarker != None)
 					{
@@ -103,8 +100,10 @@ defaultproperties
      SphereEffectClass=Class'DEKMonsters999X.NecroGhostPoltergeistDamageSphereEffect'
      CheckInterval=1.000000
      DamageSphereRadius=900.000000
-	 DamageMultiplier=1.200000
-     DamageTime=10
+	 bDispellable=False
+	 bStackable=False
+	 DamageBonusModifier=3
+     DamageBonusLifespan=10
      MaxSpeed=0.000000
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence

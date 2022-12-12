@@ -5,14 +5,15 @@ var float ChargeTime;
 var float FreezeRadius;
 var AvoidMarker Fear;
 var Controller InstigatorController;
-var float MaxFreezeTime;
+var int NullLifespan;
+var config bool bDispellable, bStackable;
 
 function Freeze(float Radius)
 {
 	local float damageScale, dist;
 	local vector dir;
 	local Controller C, NextC;
-	Local NullEntropyInv Inv;
+	local StatusEffectManager StatusManager;
 
 	if (Instigator == None && InstigatorController != None)
 		Instigator = InstigatorController.Pawn;
@@ -28,16 +29,11 @@ function Freeze(float Radius)
 			dist = FMax(1,VSize(dir));
 			damageScale = 1 - FMax(0,dist/Radius);
 
-			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn) 
-				&& (C.Pawn.FindInventoryType(class'NullEntropyInv') == None))
+			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn) )
 			{
-				Inv = spawn(class'NullEntropyInv', C.Pawn,,, rot(0,0,0));
-				if(Inv != None)
-				{
-					Inv.LifeSpan = (damageScale * MaxFreezeTime * 3);	
-					Inv.Modifier = (damageScale * MaxFreezeTime * 3);	// *3 because the NullEntropyInv divides by 3
-					Inv.GiveTo(C.Pawn);
-				}
+				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(C.Pawn);
+				if (StatusManager != None)
+					StatusManager.AddStatusEffect(Class'StatusEffect_NullEntropy', -1, True, NullLifespan, bDispellable, bStackable);
 			}
 		}
 
@@ -92,7 +88,9 @@ defaultproperties
 {
      ChargeTime=3.000000
      FreezeRadius=1000.000000
-     MaxFreezeTime=20.000000
+	 bDispellable=True
+	 bStackable=False
+     NullLifespan=5
      DrawType=DT_None
      TransientSoundVolume=1.000000
      TransientSoundRadius=5000.000000

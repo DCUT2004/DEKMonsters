@@ -2,7 +2,8 @@ class FireTitanHeatWave extends Projectile;
 
 #exec obj load file=GeneralAmbience.uax
 
-var float HeatLifeSpan;
+var config int HeatModifier, HeatLifespan;
+var config bool bDispellable, bStackable;
 var config float BaseChance;
 
 simulated function PostBeginPlay()
@@ -99,29 +100,11 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 
 function Burn(Pawn P)
 {
-	local MagicShieldInv MInv;
-	local SuperHeatInv Inv;
-	
-	MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
-	{
-		if (MInv == None)
-		{
-			if(rand(99) < int(BaseChance))
-			{
-				Inv = SuperHeatInv(P.FindInventoryType(class'SuperHeatInv'));
-				if (Inv == None)
-				{
-					Inv = spawn(class'SuperHeatInv', P,,, rot(0,0,0));
-					Inv.Modifier = 4;
-					Inv.LifeSpan = HeatLifespan;
-					Inv.GiveTo(P);
-				}
-			}				
-		}
-		else
-			return;
-	}
+	local StatusEffectManager StatusManager;
+
+	StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+	if (StatusManager != None)
+		StatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
 }
 
 simulated function SpawnEffects( vector HitLocation, vector HitNormal )
@@ -144,7 +127,10 @@ simulated function SpawnEffects( vector HitLocation, vector HitNormal )
 
 defaultproperties
 {
-     HeatLifespan=4.000000
+	 bDispellable=True
+	 bStackable=False
+	 HeatModifier=4
+     HeatLifespan=4
      BaseChance=25.000000
      Speed=300.000000
      MaxSpeed=300.000000

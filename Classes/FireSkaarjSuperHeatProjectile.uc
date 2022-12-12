@@ -4,7 +4,8 @@ var FireSkaarjSuperHeatFireBall FireBallEffect;
 //var	xEmitter SmokeTrail;
 var Material ModifierOverlay;
 var config float BaseChance;
-var float HeatLifeSpan;
+var float MaxHeatLifeSpan;
+var config bool bDispellable, bStackable;
 
 simulated event PreBeginPlay()
 {
@@ -114,7 +115,8 @@ function NullInBlast(float Radius)
 	local float damageScale, pawndist;
 	local vector pawndir;
 	local Controller C, NextC;
-	Local SuperHeatInv Inv;
+	local StatusEffectManager StatusManager;
+	local int HeatModifier, HeatLifespan;
 
 	C = Level.ControllerList;
 	while (C != None)
@@ -126,28 +128,27 @@ function NullInBlast(float Radius)
 			C = NextC;
 			break;
 		}
-		if ( C != None && C.Pawn != None && C.Pawn != Instigator && C.Pawn.Health > 0 && !C.SameTeamAs(InstigatorController) && !C.Pawn.IsA('FireBrute') && !C.Pawn.IsA('FireChildGasbag') && !C.Pawn.IsA('FireChildSkaarjPupae') && !C.Pawn.IsA('FireGasbag') && !C.Pawn.IsA('FireGiantGasbag') && !C.Pawn.IsA('FireKrall') && !C.Pawn.IsA('FireLord') && !C.Pawn.IsA('FireManta') && !C.Pawn.IsA('FireMercenary') && !C.Pawn.IsA('FireNali') && !C.Pawn.IsA('FireNaliFighter') && !C.Pawn.IsA('FireQueen') && !C.Pawn.IsA('FireRazorfly') && !C.Pawn.IsA('FireSkaarjPupae') && !C.Pawn.IsA('FireSkaarjSniper') && !C.Pawn.IsA('FireSkaarjTrooper') && !C.Pawn.IsA('FireSkaarjSuperHeat') && !C.Pawn.IsA('FireSlith') && !C.Pawn.IsA('FireSlug') && !C.Pawn.IsA('FireTitan')  && !C.Pawn.IsA('FireTentacle')
-		     && VSize(C.Pawn.Location - Location) < Radius && FastTrace(C.Pawn.Location, Location) && MagicShieldInv(C.Pawn.FindInventoryType(class'MagicShieldInv')) == None )
+		if ( C.Pawn != None && C.Pawn.Health > 0 && FireInv(C.Pawn.FindInventoryType(Class'FireInv')) == None && VSize(C.Pawn.Location - Location) < Radius && FastTrace(C.Pawn.Location, Location) )
 		{
 			pawndir = C.Pawn.Location - Location;
 			pawndist = FMax(1,VSize(pawndir));
 			damageScale = 1 - FMax(0,pawndist/Radius);
 
-			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn) && (C.Pawn.FindInventoryType(class'SuperHeatInv') == None))
+			if(!C.Pawn.isA('Vehicle') && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(C.Pawn))
 			{
 				if(C.Pawn == None)
 				{
 					C = NextC;
 					break;
 				}
-				if(rand(99) < int(BaseChance))
+				if(rand(100) < int(BaseChance))
 				{
-					Inv = spawn(class'SuperHeatInv', C.Pawn,,, rot(0,0,0));
-					if(Inv != None)
+					StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(C.Pawn);
+					if (StatusManager != None)
 					{
-						Inv.LifeSpan = (damageScale * HeatLifeSpan);	
-						Inv.Modifier = (damageScale * HeatLifeSpan);	// *3 because the NullEntropyInv divides by 3
-						Inv.GiveTo(C.Pawn);
+						HeatModifier = damageScale * MaxHeatLifespan;
+						HeatLifespan = damageScale * MaxHeatLifespan;
+						StatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
 					}
 				}
 			}
@@ -183,9 +184,11 @@ simulated function Explode(vector HitLocation,vector HitNormal)
 
 defaultproperties
 {
+	 bDispellable=True
+	 bStackable=False
      ModifierOverlay=Texture'AW-2004Particles.Cubes.RedS1'
      BaseChance=25.000000
-     HeatLifespan=4.000000
+     MaxHeatLifespan=4.000000
      Speed=900.000000
      MaxSpeed=900.000000
      bSwitchToZeroCollision=True

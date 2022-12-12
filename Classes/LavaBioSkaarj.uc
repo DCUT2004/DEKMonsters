@@ -2,7 +2,7 @@ class LavaBioSkaarj extends DCSkaarj;
 
 var int HeatLifespan;
 var int HeatModifier;
-var RPGRules RPGRules;
+var config bool bDispellable, bStackable;
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -14,7 +14,6 @@ function bool SameSpeciesAs(Pawn P)
 
 function PostBeginPlay()
 {
-	Local GameRules G;
 	local FireInv Inv;
 	
 	super.PostBeginPlay();
@@ -28,44 +27,26 @@ function PostBeginPlay()
 			Inv.GiveTo(Instigator);
 		}
 	}
-	
-	for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
-	{
-		if(G.isA('RPGRules'))
-		{
-			RPGRules = RPGRules(G);
-			break;
-		}
-	}
 	MyAmmo.ProjectileClass = class'LavaBioSkaarjGlob';
 
 }
 
-function PoisonTarget(Actor Victim, class<DamageType> DamageType)
+function BurnTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local SuperHeatInv Inv;
 	local Pawn P;
+	local StatusEffectManager StatusManager;
 
 	if (DamageType == class'DamTypeSuperHeat' )
 		return;
 
 	P = Pawn(Victim);
-	if (P != None && !P.Controller.SameTeamAs(Instigator.Controller))
+	
+	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		Inv = SuperHeatInv(P.FindInventoryType(class'SuperHeatInv'));
-		if (Inv == None)
-		{
-			Inv = spawn(class'SuperHeatInv', P,,, rot(0,0,0));
-			Inv.Modifier = HeatModifier;
-			Inv.LifeSpan = HeatLifespan;
-			Inv.RPGRules = RPGRules;
-			Inv.GiveTo(P);
-		}
-		else
-		{
-			Inv.Modifier = max(HeatModifier,Inv.Modifier);
-			Inv.LifeSpan = max(HeatLifespan,Inv.LifeSpan);
-		}
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
+		if (StatusManager == None)
+			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Burn', HeatModifier, True, HeatLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -84,7 +65,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 			return false;
 
 		// hee hee  got a hit. Poison the dude
-		PoisonTarget(Controller.Target, class'MeleeDamage');
+		BurnTarget(Controller.Target, class'MeleeDamage');
 
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
@@ -93,6 +74,8 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      HeatLifespan=3
      HeatModifier=2
      AmmunitionClass=Class'DEKMonsters999X.LavaBioSkaarjAmmo'

@@ -1,10 +1,12 @@
 class PoisonQueenProjectile extends ONSRVWebProjectile;
 
+var config int NullLifespan;
+var config bool bDispellable, bStackable;
+
 simulated function ProcessTouch(actor Other, vector HitLocation)
 {
-	Local NullEntropyInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	//Don't hit the queen that fired me, or the queens shield
 	if (Owner != None && (Other == Owner || Other.Owner == Owner) )
@@ -36,28 +38,16 @@ simulated function ProcessTouch(actor Other, vector HitLocation)
 			P = Pawn(Other);
 			if (P != None && vehicle(P) == None && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 			{
-				MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-				if (MInv != None)
-					return;		// Don't affect those with Magic Shield ability
 				if (PoisonQueen(Owner) != None && PoisonQueen(Owner).SameSpeciesAs(P))
 					return;		// queens immune to their own null entropy
 				if (Leader != None && P.Controller != None && Leader.ProjTeam == P.Controller.GetTeamNum())
 					return;		// same team so dont null entropy
-				Inv = NullEntropyInv(P.FindInventoryType(class'NullEntropyInv'));
-				if (Inv == None && MInv == None)
-				{
-					Inv = spawn(class'NullEntropyInv', P,,, rot(0,0,0));
-					if (Inv != None)
-					{
-						Inv.Modifier = 4;
-						Inv.LifeSpan = 4.0;
-						Inv.GiveTo(P);
-					}
+				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+				if (StatusManager == None)
+					return;
+				if (StatusManager.AddStatusEffect(Class'StatusEffect_NullEntropy', -1, True, NullLifespan, bDispellable, bStackable))
 					if (PoisonQueen(Owner) != None)
-						PoisonQueen(Owner).NotifyStuckEnemy(P);
-				}
-				else
-					Inv.LifeSpan += 0.1;	// so target can be hit by more than 1 web projectile
+						PoisonQueen(Owner).NotifyStuckEnemy(P);		
 			}
 		}
 	}
@@ -65,6 +55,9 @@ simulated function ProcessTouch(actor Other, vector HitLocation)
 
 defaultproperties
 {
+	NullLifespan=3
+	bDispellable=True
+	bStackable=False
      Damage=15.000000
      MomentumTransfer=0.000000
 }

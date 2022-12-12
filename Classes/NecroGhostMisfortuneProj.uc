@@ -1,6 +1,8 @@
 class NecroGhostMisfortuneProj extends UntargetedSeekerProjectile;
 
 var Emitter OrbFX;
+var config int MisfortuneLifespan;
+var config bool bDispellable, bStackable;
 
 simulated function PostBeginPlay()
 {
@@ -26,7 +28,8 @@ simulated function Timer()
     local vector ForceDir;
     local float VelMag;
     local float SeekingDistance;
-	local NecroGhostMisfortuneInv Inv;
+	local StatusEffectManager StatusManager;
+	local int MisfortuneModifier;
 	local Pawn P;
 	
 	P = Pawn(Seeking);
@@ -58,11 +61,11 @@ simulated function Timer()
 		SeekingDistance = VSize(P.Location - Location);
 		if(SeekingDistance < 50)
 		{
-			Inv = NecroGhostMisfortuneInv(P.FindInventoryType(class'NecroGhostMisfortuneInv'));
-			if (Inv == None)
+			StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+			if (StatusManager != None)
 			{
-				Inv = spawn(class'NecroGhostMisfortuneInv', P,,, rot(0,0,0));
-				Inv.GiveTo(P);
+				MisfortuneModifier = Rand(3) + 1;
+				StatusManager.AddStatusEffect(Class'StatusEffect_Misfortune', -(abs(MisfortuneModifier)), True, MisfortuneLifespan, bDispellable, bStackable);
 			}
 			Destroy();
 		}
@@ -94,6 +97,9 @@ simulated function Destroyed()
 
 defaultproperties
 {
+	 MisfortuneLifespan=15
+	 bDispellable=True
+	 bStackable=False
      Speed=300.000000
      MaxSpeed=300.000000
      LightHue=45

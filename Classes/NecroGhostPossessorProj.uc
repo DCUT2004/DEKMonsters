@@ -2,8 +2,8 @@ class NecroGhostPossessorProj extends UntargetedSeekerProjectile
 	config(satoreMonsterPack);
 
 var Emitter OrbFX;
-var config float DefenseLifespan;
-var config float DefenseMultiplier;
+var config int DefenseModifier, DefenseLifespan;
+var config bool bDispellable, bStackable;
 
 simulated function PostBeginPlay()
 {
@@ -29,8 +29,8 @@ simulated function Timer()
     local vector ForceDir;
     local float VelMag;
     local float SeekingDistance;
-	local ComboDefenseInv Inv;
 	local Pawn P;
+	local StatusEffectManager StatusManager;
 	
 	P = Pawn(Seeking);
 
@@ -61,19 +61,9 @@ simulated function Timer()
 		SeekingDistance = VSize(P.Location - Location);
 		if(SeekingDistance < 50)
 		{
-		Inv = ComboDefenseInv(P.FindInventoryType(class'ComboDefenseInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'ComboDefenseInv', P,,, rot(0,0,0));
-				Inv.Lifespan = DefenseLifespan;
-				Inv.EffectMultiplier = DefenseMultiplier;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				if (Inv.EffectMultiplier < 1.0)
-					Inv.EffectMultiplier += (DefenseMultiplier-1.0);
-			}
+			StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+			if (StatusManager != None)
+				StatusManager.AddStatusEffect(Class'StatusEffect_DamageReduction', -(abs(DefenseModifier)), True, DefenseLifespan, bDispellable, bStackable);			
 			Destroy();
 		}
 	}
@@ -104,8 +94,10 @@ simulated function Destroyed()
 
 defaultproperties
 {
-	 DefenseLifespan=10.00000
-	 DefenseMultiplier=1.100000
+	bDispellable=False
+	bStackable=True
+	 DefenseLifespan=10
+	 DefenseModifier=3
      Speed=300.000000
      MaxSpeed=300.000000
      LightHue=90

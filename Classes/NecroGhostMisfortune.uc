@@ -54,15 +54,12 @@ function RangedAttack(Actor A)
 {
 	local float decision;
 	local Pawn P;
-	local NecroGhostMisfortuneInv Inv;
 	
 	Super.RangedAttack(A);
 
 	decision = FRand();
 	
 	P = Pawn(A);
-	if (P != None)
-		Inv = NecroGhostMisfortuneInv(P.FindInventoryType(class'NecroGhostMisfortuneInv'));
 
 	if ( Physics == PHYS_Swimming )
 	{
@@ -106,7 +103,7 @@ function MisfortuneCurse(Pawn P)
 	if (Curse != None)
 		Curse.Seeking = P;
 	
-	if (rand(99) <= 15)
+	if (rand(100) <= 15)
 	{
 		A = Instigator.spawn(class'NecroGhostMisfortuneLight', Instigator,, Instigator.Location, Instigator.Rotation);
 		if (A != None)

@@ -3,7 +3,7 @@ class IceRazorfly extends DCRazorfly;
 var int IceLifespan;
 var int IceModifier;
 var Sound FreezeSound;
-
+var config bool bDispellable, bStackable;
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -41,34 +41,18 @@ simulated function PostBeginPlay()
 	Super.PostBeginPlay();
 }
 
-function PoisonTarget(Actor Victim)
+function FreezeTarget(Actor Victim)
 {
-	local FreezeInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	P = Pawn(Victim);
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = FreezeInv(P.FindInventoryType(class'FreezeInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'FreezeInv', P,,, rot(0,0,0));
-				Inv.Modifier = IceModifier;
-				Inv.LifeSpan = IceLifespan;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(IceModifier,Inv.Modifier);
-				Inv.LifeSpan = max(IceLifespan,Inv.LifeSpan);
-			}
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -86,8 +70,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 				if ( HitActor != None )
 					return false;
 
-				// hee hee  got a hit. Poison the dude
-				PoisonTarget(Controller.Target);
+				FreezeTarget(Controller.Target);
 
 				return super.MeleeDamageTarget(hitdamage, pushdir);
 			}
@@ -111,6 +94,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      IceLifespan=3
      IceModifier=1
      FreezeSound=Sound'Slaughtersounds.Machinery.Heavy_End'

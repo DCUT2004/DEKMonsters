@@ -3,6 +3,7 @@ class FireTitan extends DCTitan
 
 var int HeatLifespan;
 var int HeatModifier;
+var config bool bDispellable, bStackable;
 
 function PostBeginPlay()
 {
@@ -39,11 +40,10 @@ function bool SameSpeciesAs(Pawn P)
 		return ( P.class == class'FireBrute' || P.Class == class'FireChildGasbag' || P.Class == class'FireGasbag' || P.Class == class'FireGiantGasbag' || P.Class == class'FireKrall' || P.Class == class'FireLord' || P.Class == class'FireManta' || P.Class == class'FireMercenary' || P.Class == class'FireNali' || P.Class == class'FireNaliFighter' || P.Class == class'FireRazorfly' || P.Class == class'FireSkaarjPupae' || P.Class == class'FireSkaarjSniper' || P.Class == class'FireSkaarjSuperHeat' || P.Class == class'FireSlith' || P.Class == class'FireSlug');
 }
 
-function PoisonTarget(Actor Victim, class<DamageType> DamageType)
+function BurnTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local SuperHeatInv Inv;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
 	if (DamageType == class'DamTypeSuperHeat' )
 		return;
@@ -52,27 +52,10 @@ function PoisonTarget(Actor Victim, class<DamageType> DamageType)
 	
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-		if (MInv == None)
-		{
-			Inv = SuperHeatInv(P.FindInventoryType(class'SuperHeatInv'));
-			if (Inv == None)
-			{
-				Inv = spawn(class'SuperHeatInv', P,,, rot(0,0,0));
-				Inv.Modifier = HeatModifier;
-				Inv.LifeSpan = HeatLifespan;
-				Inv.GiveTo(P);
-			}
-			else
-			{
-				Inv.Modifier = max(HeatModifier,Inv.Modifier);
-				Inv.LifeSpan = max(HeatLifespan,Inv.LifeSpan);
-			}
-			if (Inv == class'FreezeInv')
-				return;
-		}
-		else
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
+		if (StatusManager == None)
 			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -89,9 +72,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 		HitActor = Trace(HitLocation, HitNormal, Controller.Target.Location, Location, false);
 		if ( HitActor != None )
 			return false;
-
-		// hee hee  got a hit. Poison the dude
-		PoisonTarget(Controller.Target, class'MeleeDamage');
+		BurnTarget(Controller.Target, class'MeleeDamage');
 
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
@@ -176,6 +157,8 @@ function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector mo
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      HeatLifespan=4
      HeatModifier=4
      AmmunitionClass=Class'DEKMonsters999X.FireTitanAmmo'

@@ -4,6 +4,8 @@ class IceTitanBigCrystal extends SMPTitanBigRock;
 #exec OBJ LOAD FILE=DEKStaticsMaster209C.usx
 #exec OBJ LOAD FILE=AW-2004Crystals.usx
 
+var config int FreezeModifier, FreezeLifespan;
+var config bool bDispellable, bStackable;
 var config float BaseChance;
 
 simulated function PostBeginPlay()
@@ -23,48 +25,45 @@ simulated function PostBeginPlay()
 }
 
 
-function ProcessTouch (Actor Other, Vector HitLocation)
+simulated function ProcessTouch (Actor Other, vector HitLocation)
 {
-	local int hitdamage;
-	local FreezeInv Inv;
+	local Vector X, RefNormal, RefDir;
 	local Pawn P;
-	local MagicShieldInv MInv;
+	local StatusEffectManager StatusManager;
 
-	if (Other==none || Other == instigator )
+	if (Other == Instigator)
 		return;
-		
-	PlaySound(ImpactSound, SLOT_Interact, DrawScale);
-	if(Projectile(Other)!=none)
-		Other.Destroy();
-	else if ( !Other.IsA('IceTitanBigCrystal'))
+    if (Other == Owner)
+		return;
+	
+    if (Other.IsA('xPawn') && xPawn(Other).CheckReflect(HitLocation, RefNormal, Damage*0.25))
+    {
+        if (Role == ROLE_Authority)
+        {
+            X = Normal(Velocity);
+            RefDir = X - 2.0*RefNormal*(X dot RefNormal);
+            Spawn(Class, Other,, HitLocation+RefDir*20, Rotator(RefDir));
+        }
+        Destroy();
+    }
+	if ( Role == ROLE_Authority )
 	{
-		Hitdamage = Damage * 0.00002 * (DrawScale**3) * speed;
-		if ( (HitDamage > 3) && (speed > 150) && ( Role == ROLE_Authority ))
-			Other.TakeDamage(hitdamage, instigator,HitLocation,
-				(35000.0 * Normal(Velocity)*DrawScale), MyDamageType );
-		// now see if we can freeze em
+		Other.TakeDamage(Damage,Instigator,HitLocation,MomentumTransfer * Normal(Velocity),MyDamageType);
+
 		P = Pawn(Other);
 		if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		{
-			MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
-			if (MInv == None)
+			if(rand(100) < int(BaseChance))
 			{
-				if(rand(99) < int(BaseChance))
-				{
-					Inv = FreezeInv(P.FindInventoryType(class'FreezeInv'));
-					//dont add to the time a pawn is already frozen. It just wouldn't be fair.
-					if (Inv == None)
-					{
-						Inv = spawn(class'FreezeInv', P,,, rot(0,0,0));
-						Inv.Modifier = 2;
-						Inv.LifeSpan = 3.0;
-						Inv.GiveTo(P);
-					}
-				}
+				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+				if (StatusManager != None)
+					StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
 			}
+			Explode(Location, vect(0,0,1));				
 		}
-	}
+	}	
 }
+
 //Ajust to hear impactsound
 simulated function HitWall (vector HitNormal, actor Wall)
 {
@@ -164,6 +163,10 @@ function SpawnChunks(int num)
 
 defaultproperties
 {
+	 bDispellable=True
+	 bStackable=False
+	 FreezeModifier=4
+	 FreezeLifespan=4.00
      BaseChance=25.000000
      Speed=1350.000000
      MaxSpeed=1350.000000

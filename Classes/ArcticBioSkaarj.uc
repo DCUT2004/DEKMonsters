@@ -4,6 +4,7 @@ class ArcticBioSkaarj extends Monster;
 
 var int IceLifespan;
 var int IceModifier;
+var config bool bDispellable, bStackable;
 var bool SummonedMonster;
 var sound FootStep[2];
 var name DeathAnim[4];
@@ -139,27 +140,18 @@ simulated function PlayDying(class<DamageType> DamageType, vector HitLoc)
 	PlayAnim(DeathAnim[Rand(4)],1.2,0.05);		
 }
 
-function PoisonTarget(Actor Victim, class<DamageType> DamageType)
+function FreezeTarget(Actor Victim, class<DamageType> DamageType)
 {
-	local FreezeInv Inv;
 	local Pawn P;
+	local StatusEffectManager StatusManager;
 
 	P = Pawn(Victim);
-	if (P != None && !P.Controller.SameTeamAs(Instigator.Controller))
+	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		Inv = FreezeInv(P.FindInventoryType(class'FreezeInv'));
-		if (Inv == None)
-		{
-			Inv = spawn(class'FreezeInv', P,,, rot(0,0,0));
-			Inv.Modifier = IceModifier;
-			Inv.LifeSpan = IceLifespan;
-			Inv.GiveTo(P);
-		}
-		else
-		{
-			Inv.Modifier = max(IceModifier,Inv.Modifier);
-			Inv.LifeSpan = max(IceLifespan,Inv.LifeSpan);
-		}
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (StatusManager == None)
+			return;
+		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -178,7 +170,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 			return false;
 
 		// hee hee  got a hit. Poison the dude
-		PoisonTarget(Controller.Target, class'MeleeDamage');
+		FreezeTarget(Controller.Target, class'MeleeDamage');
 
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
@@ -250,6 +242,8 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
+	bDispellable=False
+	bStackable=True
      IceLifespan=3
      IceModifier=2
      Footstep(0)=Sound'SkaarjPack_rc.Cow.walkC'
