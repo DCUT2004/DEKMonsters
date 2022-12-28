@@ -1,6 +1,7 @@
 class NecroGhostPriestProj extends UntargetedSeekerProjectile
 	config(satoreMonsterPack);
 
+var NecroGhostPriest Priest;
 var Emitter OrbFX;
 var config int ParasiteModifier;
 
@@ -62,7 +63,7 @@ simulated function Timer()
 		{
 			StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
 			if (StatusManager != None)
-				StatusManager.AddStatusEffect(Class'StatusEffect_Parasite', -(abs(ParasiteModifier)));	
+				StatusManager.AddStatusEffect(Class'StatusEffect_Parasite', -(abs(ParasiteModifier)), False);	
 			Destroy();
 		}
 	}
@@ -87,6 +88,8 @@ simulated function Destroyed()
 		else
 			OrbFX.Kill();
 	}
+	if (Priest != None)
+		Priest.Curse = None;
 
 	Super.Destroyed();
 }
