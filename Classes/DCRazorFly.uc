@@ -4,6 +4,7 @@ var bool SummonedMonster;
 
 simulated function PostBeginPlay()
 {
+	PlayAnim('Fly');
 	Super(DEKMonster).PostBeginPlay();
 }
 
