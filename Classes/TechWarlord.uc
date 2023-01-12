@@ -20,21 +20,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 	local int OldHealth, HealthTaken, TakePercent;
 
 	// increase damage if a block or vehicle
-	If ( (Controller.target != None) && Pawn(Controller.target) != None  && Pawn(Controller.target).Health > 0)
-	{
-	    OldHealth = Pawn(Controller.target).Health;
-        TakePercent = 0;
-	    if (DruidBlock(Controller.target) != None)
-	    {
-            hitdamage *= 16;        // if invasion damage to block will get reduced to 40%
-            TakePercent = 30;
-		}
-		else if (vehicle(Controller.target) != None)
-		{
-            hitdamage *= 4;
-            TakePercent = 15;
-		}
-	}
+	class('TechMonsterController).static.AdjustTechMeleeDamage(Controller.target, hitdamage, TakePercent, OldHealth);
 
 	if (super.MeleeDamageTarget(hitdamage, pushdir))
 	{

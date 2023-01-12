@@ -353,6 +353,46 @@ function bool SetEnemy( Pawn NewEnemy, optional bool bHateMonster )
 	return false;
 }
 
+static function AdjustTechMeleeDamage(Actor Target, out int HitDamage, out int TakePercent, out int OldHealth)
+{
+    TargetPercent = 0;
+    if (Target == None || Pawn(Target) == None || Pawn(Target).Health <= 0)
+        return;
+
+	OldHealth = Pawn(Target).Health;
+        
+    if (DruidBlock(Target) != None)
+    {
+        hitdamage *= 12;        // if invasion damage to block will get reduced to 40%
+        TakePercent = 40;
+	}
+	else if (vehicle(Target) != None)
+	{
+        hitdamage *= 4;
+        TakePercent = 15;
+	}
+}
+
+static function AdjustTechRangedDamage(Actor Target, out int HitDamage, out int TakePercent, out int OldHealth)
+{
+    TargetPercent = 0;
+    if (Target == None || Pawn(Target) == None || Pawn(Target).Health <= 0)
+        return;
+
+	OldHealth = Pawn(Target).Health;
+        
+    if (DruidBlock(Target) != None)
+    {
+        hitdamage *= 8;        // if invasion damage to block will get reduced to 40%
+        TakePercent = 25;
+	}
+	else if (vehicle(Target) != None)
+	{
+        hitdamage *= 3;
+        TakePercent = 10;
+	}
+}
+
 //function bool EnemyVisible()
 //{
 //	local PhantomDeathGhostInv Inv;

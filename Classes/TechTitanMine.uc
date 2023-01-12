@@ -47,18 +47,7 @@ simulated function HurtRadius( float DamageAmount, float DamageRadius, class<Dam
             DamageVictimAdjust = 1;
 			if (Pawn(Victims) != None)
 			{
-			    OldHealth = Pawn(Victims).Health;
-		        TakePercent = 0;
-			    if (DruidBlock(Victims) != None && !Victims.IsA('TarydiumCrystal'))
-			    {
-		            DamageVictimAdjust = 10;
-		            TakePercent = 25;
-				}
-				else if (vehicle(Victims) != None)
-				{
-		            DamageVictimAdjust = 5;
-		            TakePercent = 10;
-				}
+                class('TechMonsterController).static.AdjustTechMeleeDamage(Victims, DamageVictimAdjust, TakePercent, OldHealth);
 			}
 
 			Victims.TakeDamage
@@ -78,8 +67,6 @@ simulated function HurtRadius( float DamageAmount, float DamageRadius, class<Dam
 			        HealthTaken = OldHealth;
 				else
 				    HealthTaken = OldHealth - Pawn(Victims).Health;
-				if (HealthTaken < 0)
-				    HealthTaken = 0;
 				// now take some health back
 				if (HealthTaken > 0 && Instigator != None)
 				{
