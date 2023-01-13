@@ -355,7 +355,7 @@ function bool SetEnemy( Pawn NewEnemy, optional bool bHateMonster )
 
 static function AdjustTechMeleeDamage(Actor Target, out int HitDamage, out int TakePercent, out int OldHealth)
 {
-    TargetPercent = 0;
+    TakePercent = 0;
     if (Target == None || Pawn(Target) == None || Pawn(Target).Health <= 0)
         return;
 
@@ -375,7 +375,7 @@ static function AdjustTechMeleeDamage(Actor Target, out int HitDamage, out int T
 
 static function AdjustTechRangedDamage(Actor Target, out int HitDamage, out int TakePercent, out int OldHealth)
 {
-    TargetPercent = 0;
+    TakePercent = 0;
     if (Target == None || Pawn(Target) == None || Pawn(Target).Health <= 0)
         return;
 

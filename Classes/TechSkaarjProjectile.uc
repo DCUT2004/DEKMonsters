@@ -91,7 +91,7 @@ simulated function HurtRadius( float DamageAmount, float DamageRadius, class<Dam
             DamageVictimAdjust = 1;
 			if (Pawn(Victims) != None)
 			{
-            	class('TechMonsterController).static.AdjustTechRangedDamage(Victims, DamageVictimAdjust, TakePercent, OldHealth);
+            	class'TechMonsterController'.static.AdjustTechRangedDamage(Victims, DamageVictimAdjust, TakePercent, OldHealth);
 			}
 
 			Victims.TakeDamage

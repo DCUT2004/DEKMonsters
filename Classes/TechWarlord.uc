@@ -20,7 +20,7 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 	local int OldHealth, HealthTaken, TakePercent;
 
 	// increase damage if a block or vehicle
-	class('TechMonsterController).static.AdjustTechMeleeDamage(Controller.target, hitdamage, TakePercent, OldHealth);
+	class'TechMonsterController'.static.AdjustTechMeleeDamage(Controller.target, hitdamage, TakePercent, OldHealth);
 
 	if (super.MeleeDamageTarget(hitdamage, pushdir))
 	{
