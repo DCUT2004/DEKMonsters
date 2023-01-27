@@ -1,11 +1,11 @@
 class CosmicWarlordPlasma extends PROJ_LinkTurret_Plasma;
 
-var FX_DEK_Plasma	Plasma;
+var FX_DEK_Plasma	CosmicPlasma;
 
 simulated function Destroyed()
 {
-    if ( Plasma != None )
-        Plasma.Destroy();
+    if ( CosmicPlasma != None )
+        CosmicPlasma.Destroy();
 
 	super.Destroyed();
 }
@@ -15,10 +15,10 @@ simulated function PostBeginPlay()
 	local vector dir;
 
 	if ( Level.NetMode != NM_DedicatedServer )
-		Plasma = Spawn(class'FX_DEK_Plasma', Self,, Location - 50*Dir, Rotation);
+		CosmicPlasma = Spawn(class'FX_DEK_Plasma', Self,, Location - 50*Dir, Rotation);
 
-	if ( Plasma != None )
-		Plasma.SetBase( Self );
+	if ( CosmicPlasma != None )
+		CosmicPlasma.SetBase( Self );
 
 	Velocity		 = Speed * Vector(Rotation);
 }
