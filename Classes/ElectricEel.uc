@@ -96,7 +96,7 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 
 defaultproperties
 {
-	ZapDamage=20
+	ZapDamage=13
 	ZapRange=300.0000
 	Health=120
 	AirSpeed=300.000000
