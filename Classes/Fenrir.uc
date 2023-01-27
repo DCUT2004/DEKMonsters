@@ -62,7 +62,7 @@ function FireProjectile()
 
 defaultproperties
 {
-	VampireMultiplier=1.500000
+	VampireMultiplier=0.500000
     bMeleeFighter=True
     MeleeDamage=40
     MeleeRange=290.000000
