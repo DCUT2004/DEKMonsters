@@ -18,7 +18,7 @@ simulated function PostBeginPlay()
 
 defaultproperties
 {
-    NewHealth=850
+    NewHealth=750
 	ScaleMultiplier=1.5000
     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
 }
