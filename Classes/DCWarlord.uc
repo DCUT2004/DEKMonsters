@@ -1,10 +1,12 @@
 class DCWarlord extends Warlord;
 
 var bool SummonedMonster;
+var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
+	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 }
 
 function bool SameSpeciesAs(Pawn P)
@@ -47,6 +49,12 @@ function FireProjectile()
         	S.Seeking = Controller.Enemy;
 		PlaySound(FireSound,SLOT_Interact);
 	}
+}
+
+function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
+{
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)

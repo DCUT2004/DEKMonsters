@@ -92,18 +92,18 @@ singular function Bump(actor Other)
 function GiantMantaKnockBack(Actor Victim, vector Momentum)
 {
 	local Pawn P;
-	local StatusEffectManager StatusManager;
+	local StatusEffectManager VictimStatusManager;
 	Local Vector newLocation;
 
 	P = Pawn(Victim);
 	if(P == None || !class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
 		return;
 
-	StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
-	if (StatusManager == None)
+	VictimStatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+	if (VictimStatusManager == None)
 		return;
 
-	StatusManager.AddStatusEffect(Class'StatusEffect_Momentum', -(abs(KnockbackModifier)), True, KnockbackLifespan, bDispellable, bStackable);
+	VictimStatusManager.AddStatusEffect(Class'StatusEffect_Momentum', -(abs(KnockbackModifier)), True, KnockbackLifespan, bDispellable, bStackable);
 	
 	// if they're not walking, falling, or hovering, 
 	// the momentum won't affect them correctly, so make them hover.

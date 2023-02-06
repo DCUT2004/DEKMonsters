@@ -1,6 +1,13 @@
 class DCChildGasbag extends SMPChildGasbag;
 
 var DCGiantGasBag ParentBagE;
+var StatusEffectInventory StatusManager;
+
+simulated function PostBeginPlay()
+{
+	Super.PostBeginPlay();
+	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
+}
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -16,9 +23,10 @@ simulated function PreBeginPlay()
 	Super.PreBeginPlay();
 }
 
-simulated function PostBeginPlay()
+function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	Super(DEKMonster).PostBeginPlay();
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 simulated function Destroyed()

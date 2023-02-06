@@ -1,4 +1,4 @@
-class NecroGhostPossessor extends Monster
+class NecroGhostPossessor extends DEKMonster
 	config(satoreMonsterPack);
 
 var ColorModifier FadeOutSkin;
@@ -20,7 +20,7 @@ simulated function PostBeginPlay()
 {
 	local MagicShieldInv Inv;
 	
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;

@@ -12,11 +12,11 @@ var Actor StuckEnemy;
 var RPGRules RPGRules;
 var bool SummonedMonster;
 var config bool bDispellable, bStackable;
+var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
 	Local GameRules G;
-	local StatusEffectInventory StatusInv;
 
 	Super(SMPMonster).PostBeginPlay();
 	
@@ -33,14 +33,7 @@ simulated function PostBeginPlay()
 	}
 	
 	if (Instigator != None)
-	{
-		StatusInv = StatusEffectInventory(Instigator.FindInventoryType(class'StatusEffectInventory'));
-		if (StatusInv == None)
-		{
-			StatusInv = Instigator.Spawn(class'StatusEffectInventory');
-			StatusInv.GiveTo(Instigator);
-		}
-	}
+		StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 	
 	QueenFadeOutSkin= new class'ColorModifier';
 	QueenFadeOutSkin.Material=Skins[0];
@@ -285,15 +278,15 @@ function SpawnShot()
 function PoisonTarget(Actor Victim)
 {
 	local Pawn P;
-	local StatusEffectManager StatusManager;
+	local StatusEffectManager VictimStatusManager;
 
 	P = Pawn(Victim);
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
-		if (StatusManager == None)
+		VictimStatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (VictimStatusManager == None)
 			return;
-		StatusManager.AddStatusEffect(Class'StatusEffect_Poison', -(abs(PoisonModifier)), True, PoisonLifespan, bDispellable, bStackable);
+		VictimStatusManager.AddStatusEffect(Class'StatusEffect_Poison', -(abs(PoisonModifier)), True, PoisonLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -344,6 +337,12 @@ function Scream()
 	}
 	if(EventNum==0 || (bStuckEnemy && (numChildren<MaxChildren)))
 		SpawnChildren();
+}
+
+function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
+{
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)

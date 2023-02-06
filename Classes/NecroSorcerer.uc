@@ -1,4 +1,4 @@
-class NecroSorcerer extends Monster;
+class NecroSorcerer extends DEKMonster;
 
 var int numChildren;
 var() config int MaxChildren;
@@ -16,7 +16,7 @@ var NecroInvFX FX;
 
 function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	
 	if (Instigator != None)
 	{

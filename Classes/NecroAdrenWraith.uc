@@ -1,4 +1,4 @@
-class NecroAdrenWraith extends Monster;
+class NecroAdrenWraith extends DEKMonster;
 
 var bool SummonedMonster;
 
@@ -21,12 +21,10 @@ replication
 function PostBeginPlay()
 {
 	
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	
 	if (Instigator != None)
-	{
 		CheckController();
-	}
 	
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
@@ -263,7 +261,6 @@ state Teleporting
 
 function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector momentum, class<DamageType> damageType)
 {
-	
 	if (DamageType == class'DamTypeAdrenWraithLightning' || DamageType == class'DamTypeAdrenWraithBlackHole')
 	{
 		return; //in case it sucks itself in.

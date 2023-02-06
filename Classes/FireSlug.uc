@@ -42,7 +42,7 @@ function PostBeginPlay()
 function BurnTarget(Actor Victim, class<DamageType> DamageType)
 {
 	local Pawn P;
-	local StatusEffectManager StatusManager;
+	local StatusEffectManager VictimStatusManager;
 
 	if (DamageType == class'DamTypeSuperHeat' )
 		return;
@@ -51,10 +51,10 @@ function BurnTarget(Actor Victim, class<DamageType> DamageType)
 	
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
-		if (StatusManager == None)
+		VictimStatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
+		if (VictimStatusManager == None)
 			return;
-		StatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
+		VictimStatusManager.AddStatusEffect(Class'StatusEffect_Burn', -(abs(HeatModifier)), True, HeatLifespan, bDispellable, bStackable);
 	}
 }
 

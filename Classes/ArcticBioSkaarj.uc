@@ -1,6 +1,6 @@
 //Code from WehtamInv3, based off of Lightmon. Author: Wehtam.
 
-class ArcticBioSkaarj extends Monster;
+class ArcticBioSkaarj extends DEKMonster;
 
 var int IceLifespan;
 var int IceModifier;
@@ -13,7 +13,7 @@ function PostBeginPlay()
 {
 	local IceInv Inv;
 	
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	
 	if (Instigator != None)
 	{
@@ -143,15 +143,15 @@ simulated function PlayDying(class<DamageType> DamageType, vector HitLoc)
 function FreezeTarget(Actor Victim, class<DamageType> DamageType)
 {
 	local Pawn P;
-	local StatusEffectManager StatusManager;
+	local StatusEffectManager VictimStatusManager;
 
 	P = Pawn(Victim);
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
-		if (StatusManager == None)
+		VictimStatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (VictimStatusManager == None)
 			return;
-		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
+		VictimStatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -230,7 +230,6 @@ function RangedAttack(Actor A)
 			SetAnimAction('JogFire');
 	}
 }
-
 
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)
 {

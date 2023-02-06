@@ -1,14 +1,16 @@
 class DCGiantRazorFly extends SMPGiantRazorFly;
 
 var bool SummonedMonster;
-
 #exec  AUDIO IMPORT NAME="BuzzingWings" FILE="Sounds\BuzzingWings.WAV" GROUP="MonsterSounds"
+var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
+	Super.PostBeginPlay();
+	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 	PlayAnim('Fly');
-	Super(DEKMonster).PostBeginPlay();
 }
+
 
 simulated function PostNetBeginPlay()
 {
@@ -41,6 +43,12 @@ function RangedAttack(Actor A)
 			Controller.GotoState('TacticalMove', 'DoMove');
 		}
 	}
+}
+
+function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
+{
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)

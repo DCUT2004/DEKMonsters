@@ -1,4 +1,4 @@
-class NecroMortalSkeleton extends Monster;
+class NecroMortalSkeleton extends DEKMonster;
 
 var name DeathAnims[4];
 var bool SummonedMonster;
@@ -6,7 +6,7 @@ var int ClawDamage;
 
 function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	
 	if (Instigator != None)
 	{

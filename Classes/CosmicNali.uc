@@ -1,4 +1,4 @@
-class CosmicNali extends SMPMonster config(satoreMonsterPack);
+class CosmicNali extends DEKMonster config(satoreMonsterPack);
 
 var config float CosmicNaliDeathDamage, CosmicNaliDeathRadius, CosmicShotIntervalTime;
 var bool SummonedMonster, bTeleporting;
@@ -17,7 +17,7 @@ function PostNetBeginPlay()
 
 simulated function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;

@@ -1,4 +1,4 @@
-class NecroGhostExp extends Monster
+class NecroGhostExp extends DEKMonster
 	config(satoreMonsterPack);
 
 var() config float MinXPDamage, MaxXPDamage;
@@ -30,7 +30,7 @@ simulated function PostBeginPlay()
 {
 	local MagicShieldInv Inv;
 	
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];

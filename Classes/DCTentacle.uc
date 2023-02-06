@@ -1,13 +1,8 @@
-class DCTentacle extends Monster;
+class DCTentacle extends DEKMonster;
 
 var bool SummonedMonster;
 var float LastShootTime;
 var() config float ShootIntervalTime;
-
-simulated function PostBeginPlay()
-{
-	Super(DEKMonster).PostBeginPlay();
-}
 
 function bool SetTentacleLocation()
 {

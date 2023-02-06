@@ -1,4 +1,4 @@
-class NecroPhantom extends Monster;
+class NecroPhantom extends DEKMonster;
 
 var vector TelepDest;
 var byte AChannel;
@@ -18,7 +18,7 @@ replication
 
 simulated function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;

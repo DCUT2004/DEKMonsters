@@ -26,6 +26,7 @@ function PostBeginPlay()
 			Inv = Instigator.Spawn(class'FireInv');
 			Inv.GiveTo(Instigator);
 		}
+		StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 	}
 	MyAmmo.ProjectileClass = class'LavaBioSkaarjGlob';
 
@@ -34,7 +35,7 @@ function PostBeginPlay()
 function BurnTarget(Actor Victim, class<DamageType> DamageType)
 {
 	local Pawn P;
-	local StatusEffectManager StatusManager;
+	local StatusEffectManager VictimStatusManager;
 
 	if (DamageType == class'DamTypeSuperHeat' )
 		return;
@@ -43,10 +44,10 @@ function BurnTarget(Actor Victim, class<DamageType> DamageType)
 	
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
-		if (StatusManager == None)
+		VictimStatusManager = Class'StatusEffectManager'.static.GetStatusEffectmanager(P);
+		if (VictimStatusManager == None)
 			return;
-		StatusManager.AddStatusEffect(Class'StatusEffect_Burn', HeatModifier, True, HeatLifespan, bDispellable, bStackable);
+		VictimStatusManager.AddStatusEffect(Class'StatusEffect_Burn', HeatModifier, True, HeatLifespan, bDispellable, bStackable);
 	}
 }
 
@@ -70,6 +71,12 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
 	return false;
+}
+
+function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
+{
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 defaultproperties

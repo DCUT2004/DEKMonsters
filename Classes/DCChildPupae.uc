@@ -1,10 +1,12 @@
 class DCChildPupae extends SMPChildPupae;
 
 var DCQueen ParentQueenE;
+var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
+	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 }
 
 function bool SameSpeciesAs(Pawn P)
@@ -29,9 +31,10 @@ singular function Bump(actor Other)
 
 function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
 	if(EventInstigator.IsA('DCQueen'))
 		Destroy();
-	super.TakeDamage( Damage,EventInstigator,HitLocation, Momentum, DamageType);		
+	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 simulated function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)

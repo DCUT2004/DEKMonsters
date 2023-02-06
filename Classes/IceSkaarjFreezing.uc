@@ -47,15 +47,15 @@ function PostBeginPlay()
 function FreezeTarget(Actor Victim, class<DamageType> DamageType)
 {
 	local Pawn P;
-	local StatusEffectManager StatusManager;
+	local StatusEffectManager VictimStatusManager;
 
 	P = Pawn(Victim);
 	if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(Instigator.Controller))
 	{
-		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
-		if (StatusManager == None)
+		VictimStatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
+		if (VictimStatusManager == None)
 			return;
-		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
+		VictimStatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(IceModifier)), True, IceLifespan, bDispellable, bStackable);
 	}
 }
 

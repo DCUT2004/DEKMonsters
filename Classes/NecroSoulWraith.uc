@@ -1,4 +1,4 @@
-class NecroSoulWraith extends Monster;
+class NecroSoulWraith extends DEKMonster;
 
 #exec obj load file=GeneralAmbience.uax
 
@@ -20,12 +20,10 @@ replication
 
 function PostBeginPlay()
 {
-	Super(DEKMonster).PostBeginPlay();
+	Super.PostBeginPlay();
 	
 	if (Instigator != None)
-	{
 		CheckController();
-	}
 	
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
