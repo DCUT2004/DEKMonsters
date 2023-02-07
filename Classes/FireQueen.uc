@@ -350,7 +350,7 @@ defaultproperties
      HeatModifier=2
      AmmunitionClass=Class'DEKMonsters999X.FireQueenAmmo'
      GibGroupClass=Class'DEKMonsters999X.FireGibGroup'
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireQueenFinalBlend'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.FireMonsters.FireQueenFinalBlend'
 }

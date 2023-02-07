@@ -1,4 +1,4 @@
-class TechMonsterController extends MonsterController;
+class TechMonsterController extends DCMonsterController;
 
 // this type of monster targets blocks.
 // if attacked by something else it will defend itself, unless a block is closer

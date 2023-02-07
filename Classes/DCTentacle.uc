@@ -189,7 +189,7 @@ defaultproperties
      MeleeRange=70.000000
      AirSpeed=330.000000
      Health=50
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(0)="Waver"
      MovementAnims(1)="Waver"
      MovementAnims(2)="Waver"

@@ -43,7 +43,7 @@ defaultproperties
      GroundSpeed=425.000000
      AccelRate=400.000000
      Health=480
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.GhostMonsters.shadeFB'
      Mass=75.000000
 }

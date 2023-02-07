@@ -12,7 +12,6 @@ var Actor StuckEnemy;
 var RPGRules RPGRules;
 var bool SummonedMonster;
 var config bool bDispellable, bStackable;
-var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
@@ -31,9 +30,6 @@ simulated function PostBeginPlay()
 			break;
 		}
 	}
-	
-	if (Instigator != None)
-		StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 	
 	QueenFadeOutSkin= new class'ColorModifier';
 	QueenFadeOutSkin.Material=Skins[0];
@@ -341,7 +337,7 @@ function Scream()
 
 function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, HitLocation, Momentum, DamageType);
 	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
@@ -369,7 +365,7 @@ defaultproperties
      AmmunitionClass=None
      ScoringValue=15
      GroundSpeed=700.000000
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      Skins(0)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.PoisonQueen'
      Skins(1)=Texture'DEKMonstersTexturesMaster208.GenericMonsters.PoisonQueen'
 }

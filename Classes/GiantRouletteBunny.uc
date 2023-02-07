@@ -258,7 +258,7 @@ defaultproperties
      JumpZ=200.000000
      AirControl=0.100000
      Health=2500
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(0)="Jump"
      MovementAnims(1)="Jump"
      MovementAnims(2)="Jump"

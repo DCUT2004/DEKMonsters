@@ -302,7 +302,7 @@ defaultproperties
      MeleeRange=10.000000
      AirSpeed=800.000000
      AccelRate=800.000000
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(0)="Swim_Tread"
      MovementAnims(1)="Swim_Tread"
      MovementAnims(2)="Swim_Tread"

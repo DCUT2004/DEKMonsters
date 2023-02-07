@@ -5,12 +5,6 @@ var config float ZapRange;
 var class<xEmitter> ZapEmitterClass;
 var config int ZapDamage;
 
-simulated function PostBeginPlay()
-{
-	Super.PostBeginPlay();
-	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
-}
-
 function bool SameSpeciesAs(Pawn P)
 {
 	if (SummonedMonster)
@@ -87,12 +81,6 @@ function ZapTarget(Pawn Victim)
 	Victim.TakeDamage(ZapDamage, Self, Victim.Location, Vect(5, 5, 5), Class'DamTypeElectricEel');
 }
 
-function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
-{
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
-	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
-}
-
 function Died(Controller Killer, class<DamageType> damageType, vector HitLocation)
 {
 	if (SummonedMonster)
@@ -108,7 +96,7 @@ defaultproperties
 	Health=120
 	AirSpeed=300.000000
 	ScoringValue=4
-	ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+	ControllerClass=Class'DEKRPG999X.DCMonsterController'
 	bCheckWater=False
 	bCanFly=True
     ZapEmitterClass=Class'XEffects.LightningBolt'

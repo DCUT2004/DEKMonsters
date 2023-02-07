@@ -1,13 +1,6 @@
 class DCWarlord extends Warlord;
 
 var bool SummonedMonster;
-var StatusEffectInventory StatusManager;
-
-simulated function PostBeginPlay()
-{
-	Super.PostBeginPlay();
-	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
-}
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -53,7 +46,7 @@ function FireProjectile()
 
 function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, HitLocation, Momentum, DamageType);
 	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
@@ -68,5 +61,5 @@ function Died(Controller Killer, class<DamageType> damageType, vector HitLocatio
 defaultproperties
 {
      AmmunitionClass=Class'DEKMonsters999X.DCWarlordAmmo'
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
 }

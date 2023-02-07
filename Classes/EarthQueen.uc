@@ -298,7 +298,7 @@ defaultproperties
      EggChance=10
      MaxEggs=5
      GibGroupClass=Class'DEKMonsters999X.EarthGibGroup'
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      Skins(0)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Queen_Earth-Shader'
      Skins(1)=Shader'DEKMonstersTexturesMaster208.EarthMonsters.Queen_Earth-Shader'
 }

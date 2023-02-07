@@ -1,21 +1,10 @@
 class DCQueen extends SMPQueen;
 
 var bool SummonedMonster;
-var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
 	Super(SMPMonster).PostBeginPlay();
-	
-	if (Instigator != None)
-	{
-		StatusManager = StatusEffectInventory(Instigator.FindInventoryType(class'StatusEffectInventory'));
-		if (StatusManager == None)
-		{
-			StatusManager = Instigator.Spawn(class'StatusEffectInventory');
-			StatusManager.GiveTo(Instigator);
-		}
-	}
 	
 	if (Controller != None)
 		GroundSpeed = GroundSpeed * (1 + 0.1 * MonsterController(Controller).Skill);
@@ -57,7 +46,7 @@ function SpawnChildren()
 
 function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, HitLocation, Momentum, DamageType);
 	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 

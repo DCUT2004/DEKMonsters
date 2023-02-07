@@ -171,7 +171,7 @@ defaultproperties
      IceModifier=3
      AmmunitionClass=Class'DEKMonsters999X.IceQueenAmmo'
      GibGroupClass=Class'DEKMonsters999X.IceGibGroup'
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      Skins(0)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceQueenFinalBlend'
      Skins(1)=FinalBlend'DEKMonstersTexturesMaster208.IceMonsters.IceQueenFinalBlend'
 }

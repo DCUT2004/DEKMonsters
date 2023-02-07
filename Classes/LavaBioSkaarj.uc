@@ -26,7 +26,6 @@ function PostBeginPlay()
 			Inv = Instigator.Spawn(class'FireInv');
 			Inv.GiveTo(Instigator);
 		}
-		StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 	}
 	MyAmmo.ProjectileClass = class'LavaBioSkaarjGlob';
 
@@ -71,12 +70,6 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 		return super.MeleeDamageTarget(hitdamage, pushdir);
 	}
 	return false;
-}
-
-function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
-{
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
-	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
 defaultproperties

@@ -536,7 +536,7 @@ defaultproperties
      AccelRate=1600.000000
      JumpZ=800.000000
      Health=2000
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(0)="Run"
      MovementAnims(1)="Run"
      MovementAnims(2)="Run"

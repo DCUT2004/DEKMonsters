@@ -3,7 +3,6 @@ class Fenrir extends Regulus
 
 var config float ScaleMultiplier;
 var config float VampireMultiplier;
-var StatusEffectInventory StatusManager;
 
 simulated function PostBeginPlay()
 {
@@ -15,7 +14,6 @@ simulated function PostBeginPlay()
 		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*ScaleMultiplier/2));
 		SetDrawScale(Drawscale*ScaleMultiplier);
 		SetCollisionSize(CollisionRadius*ScaleMultiplier, CollisionHeight*ScaleMultiplier);
-		StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
 	}
 }
 
@@ -64,7 +62,7 @@ function FireProjectile()
 
 function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, HitLocation, Momentum, DamageType);
 	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
@@ -77,5 +75,5 @@ defaultproperties
 	ScaleMultiplier=1.5000
 	NewHealth=450
     GroundSpeed=980.000000
-    ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+    ControllerClass=Class'DEKRPG999X.DCMonsterController'
 }

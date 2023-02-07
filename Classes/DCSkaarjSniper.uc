@@ -1,13 +1,6 @@
 class DCSkaarjSniper extends SMPSkaarjSniper;
 
 var bool SummonedMonster;
-var StatusEffectInventory StatusManager;
-
-simulated function PostBeginPlay()
-{
-	Super.PostBeginPlay();
-	StatusManager = class'DEKMonsterUtility'.static.SpawnStatusEffectInventory(Instigator);
-}
 
 function bool SameSpeciesAs(Pawn P)
 {
@@ -19,7 +12,7 @@ function bool SameSpeciesAs(Pawn P)
 
 function TakeDamage(int Damage, Pawn EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType)
 {
-	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, StatusManager, HitLocation, Momentum, DamageType);
+	Damage = class'DEKMonsterUtility'.static.AdjustDamage(Damage, EventInstigator, Self, HitLocation, Momentum, DamageType);
 	Super.TakeDamage(Damage, EventInstigator, HitLocation, Momentum, DamageType);
 }
 
@@ -35,5 +28,5 @@ defaultproperties
 {
      DamageType=Class'DEKMonsters999X.DamTypeDCSniperShot'
      DamageTypeHeadShot=Class'DEKMonsters999X.DamTypeDCSniperHeadShot'
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
 }

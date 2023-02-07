@@ -268,7 +268,7 @@ defaultproperties
      GroundSpeed=640.000000
      JumpZ=850.000000
      Health=150
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(1)="RunR"
      MovementAnims(2)="RunR"
      MovementAnims(3)="RunL"

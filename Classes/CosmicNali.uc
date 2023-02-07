@@ -376,7 +376,7 @@ defaultproperties
      AirSpeed=1000.000000
      AccelRate=1700.000000
      Health=15
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(0)="levitate"
      MovementAnims(1)="levitate"
      MovementAnims(2)="levitate"

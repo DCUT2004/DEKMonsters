@@ -132,7 +132,7 @@ defaultproperties
      WaterSpeed=120.000000
      AirSpeed=340.000000
      JumpZ=140.000000
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      TurnLeftAnim="TurnL"
      TurnRightAnim="TurnR"
      CrouchAnims(0)="CrouchF"

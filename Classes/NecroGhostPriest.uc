@@ -367,7 +367,7 @@ defaultproperties
      AirSpeed=800.000000
      AccelRate=800.000000
      Health=200
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      MovementAnims(0)="Swim_Tread"
      MovementAnims(1)="Swim_Tread"
      MovementAnims(2)="Swim_Tread"

@@ -145,7 +145,7 @@ defaultproperties
      GroundSpeed=150.000000
      AccelRate=562.500000
      JumpZ=75.000000
-     ControllerClass=Class'DEKMonsters999X.DCMonsterController'
+     ControllerClass=Class'DEKRPG999X.DCMonsterController'
      DrawScale=6.000000
      CollisionRadius=50.000000
      CollisionHeight=93.500000
