@@ -1,4 +1,4 @@
-class NecroGhostPriestHealingOrb extends Projectile
+class NecroGhostPriestHealingOrb extends Actor
 	config(satoreMonsterPack);
 
 var class<Emitter> OrbEffectClass;
@@ -18,7 +18,7 @@ simulated function PostBeginPlay()
 		OrbEffect = Spawn(OrbEffectClass, Self);
 		OrbEffect.SetBase(Self);
 	}
-	Velocity = Vector(Rotation) * Speed;
+    SetCollision(False, False, False);
 	SetTimer(HealInterval, true);
 }
 
@@ -57,38 +57,12 @@ simulated function Heal()
 		}
 		C = C.NextController;
 	}
-	
-	/*if (C != None && C.Pawn != None && C.Pawn.Health > 0 && VSize(C.Pawn.Location - Location) < OrbHealRadius)
-	{
-		HealMarker = Spawn(class'NecroGhostPriestHealingMarker',C.Pawn,,C.Pawn.Location,C.Pawn.Rotation);
-		if (HealMarker != None)
-		{
-			HealMarker.SetBase(C.Pawn);
-			HealMarker.RemoteRole = ROLE_SimulatedProxy;
-		}
-	}*/
-}
-
-simulated function ProcessTouch(Actor Other, Vector HitLocation)
-{
-	return;	//do nothing
-}
-
-simulated function DestroyTrails()
-{
-	if (OrbEffect != None)
-		OrbEffect.Destroy();
 }
 
 simulated function Destroyed()
 {
 	if (OrbEffect != None)
-	{
-		if (bNoFX)
-			OrbEffect.Destroy();
-		else
-			OrbEffect.Kill();
-	}
+		OrbEffect.Destroy();
 	Super.Destroyed();
 }
 
@@ -98,9 +72,8 @@ defaultproperties
      HealInterval=1.000000
      OrbHealRadius=900.000000
      HealAmount=10
-     MaxSpeed=0.000000
      DrawType=DT_None
-     Physics=PHYS_Flying
+     Physics=PHYS_None
      AmbientSound=Sound'GeneralAmbience.texture32'
      LifeSpan=15.000000
      bFullVolume=True

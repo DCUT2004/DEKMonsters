@@ -1,7 +1,5 @@
-class NecroGhostPossessorInvasionOrb extends Projectile
+class NecroGhostPossessorInvasionOrb extends Actor
 	config(satoreMonsterPack);
-
-#exec obj load file=GeneralAmbience.uax
 
 var class<Emitter> OrbEffectClass;
 var Emitter OrbEffect;
@@ -20,6 +18,7 @@ simulated function PostBeginPlay()
 		OrbEffect = Spawn(OrbEffectClass, Self);
 		OrbEffect.SetBase(Self);
 	}
+    SetCollision(False, False, False);
 	SetTimer(SpawnInterval, true);
 	AmbientSound.BaseRadius = 5000.000;
 }
@@ -35,89 +34,35 @@ simulated function SpawnMonster()
 	local Monster M;
 	local NecroGhostPossessorMonsterInv Inv;
 	
-	if (!Invasion(Level.Game).bWaveInProgress && Invasion(Level.Game).WaveCountDown > 1)
-		return;
-	
 	if (Invasion(Level.Game) != None)
 	{
+        if (!Invasion(Level.Game).bWaveInProgress && Invasion(Level.Game).WaveCountDown > 1)
+            return;
 		if (Invasion(Level.Game).WaveNum <= LowWave)
-		{
 			MClass = LowLevelMonsterClass[Rand(LowLevelMonsterClass.Length)];
-			M = Spawn(MClass,,,Location);
-			if (M != None)
-			{
-				Invasion(Level.Game).NumMonsters++;
-				Spawn(class'NecroGhostPossessorDeres',M,,M.Location);
-				Spawn(class'NecroGhostPossessorDeresEffect',M,,M.Location);
-				Inv = M.Spawn(class'NecroGhostPossessorMonsterInv');
-				Inv.GiveTo(M);				
-			}
-		}
 		else if (Invasion(Level.Game).WaveNum <= MediumWave)
-		{
 			MClass = MediumLevelMonsterClass[Rand(MediumLevelMonsterClass.Length)];
-			M = Spawn(MClass,,,Location);
-			if (M != None)
-			{
-				Invasion(Level.Game).NumMonsters++;
-				Spawn(class'NecroGhostPossessorDeres',M,,M.Location);
-				Spawn(class'NecroGhostPossessorDeresEffect',M,,M.Location);
-				Inv = M.Spawn(class'NecroGhostPossessorMonsterInv');
-				Inv.GiveTo(M);				
-			}
-		}
 		else
-		{
 			MClass = HighLevelMonsterClass[Rand(HighLevelMonsterClass.Length)];
-			M = Spawn(MClass,,,Location);
-			if (M != None)
-			{
-				Invasion(Level.Game).NumMonsters++;
-				Spawn(class'NecroGhostPossessorDeres',M,,M.Location);
-				Spawn(class'NecroGhostPossessorDeresEffect',M,,M.Location);
-				Inv = M.Spawn(class'NecroGhostPossessorMonsterInv');
-				Inv.GiveTo(M);				
-			}
-		}
 	}
-	else
-		return;
-}
-
-simulated function ProcessTouch(Actor Other, Vector HitLocation)
-{
-	return;
-	//do nothing.
-}
-
-simulated function SpawnEffects( vector HitLocation, vector HitNormal )
-{
-	local PlayerController PC;
-
-	PlaySound (Sound'ONSVehicleSounds-S.Explosions.VehicleExplosion02',,3*TransientSoundVolume);
-	if ( EffectIsRelevant(Location,false) )
-	{
-		PC = Level.GetLocalPlayerController();
-		if ( (PC.ViewTarget != None) && VSize(PC.ViewTarget.Location - Location) < 3000 )
-		spawn(class'FlashExplosion',,,HitLocation + HitNormal*16 );
-	}
-}
-
-simulated function DestroyTrails()
-{
-	if (OrbEffect != None)
-		OrbEffect.Destroy();
+    else
+        MClass = HighLevelMonsterClass[Rand(HighLevelMonsterClass.Length)];
+	M = Spawn(MClass,,,Location);
+    if (M != None)
+    {
+        if (Invasion(Level.Game) != None)
+            Invasion(Level.Game).NumMonsters++;
+        Spawn(class'NecroGhostPossessorDeres',M,,M.Location);
+        Spawn(class'NecroGhostPossessorDeresEffect',M,,M.Location);
+        Inv = M.Spawn(class'NecroGhostPossessorMonsterInv');
+        Inv.GiveTo(M);
+    }
 }
 
 simulated function Destroyed()
 {
 	if (OrbEffect != None)
-	{
-		if (bNoFX)
-			OrbEffect.Destroy();
-		else
-			OrbEffect.Kill();
-	}
+	    OrbEffect.Destroy();
 	Super.Destroyed();
 }
 
@@ -210,8 +155,6 @@ defaultproperties
      HighLevelMonsterClass(21)=Class'DEKMonsters999X.DCWarlord'
      HighLevelMonsterClass(22)=Class'DEKMonsters999X.NullWarLord'
      HighLevelMonsterClass(23)=Class'DEKMonsters999X.BeamWarLord'
-     MaxSpeed=0.000000
-     TossZ=0.000000
      LightType=LT_Steady
      LightEffect=LE_QuadraticNonIncidence
      LightHue=90
@@ -219,7 +162,7 @@ defaultproperties
      LightRadius=10.000000
      DrawType=DT_None
      bDynamicLight=True
-     Physics=PHYS_Flying
+     Physics=PHYS_None
      AmbientSound=Sound'GeneralAmbience.aliendrone2'
      LifeSpan=30.000000
      bFullVolume=True
