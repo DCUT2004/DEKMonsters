@@ -109,10 +109,7 @@ function MisfortuneCurse(Pawn P)
 {
 	Curse = Spawn(class'NecroGhostPriestProj',,, Self.Location, Self.Rotation);
 	if (Curse != None)
-	{
 		Curse.Seeking = P;
-		Curse.Priest = Self;
-	}
 }
 
 function SpawnHealingOrb()

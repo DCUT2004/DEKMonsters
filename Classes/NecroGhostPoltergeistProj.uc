@@ -1,113 +1,15 @@
-class NecroGhostPoltergeistProj extends SeekingRocketProj
+class NecroGhostPoltergeistProj extends NecroGhostSeekingProj
 	config(satoreMonsterPack);
-
-var Emitter OrbFX;
-var config int DamageReductionModifer, DamageReductionLifespan;
-var config bool bDispellable, bStackable;
-
-simulated function PostBeginPlay()
-{
-	Super.PostBeginPlay();
-	
-	if (SmokeTrail != None)
-		SmokeTrail.Destroy();
-	
-	if (Corona != None)
-		Corona.Destroy();
-		
-	OrbFX = Spawn(class'NecroGhostPoltergeistProjEffect',self);
-	if (OrbFX != None)
-		OrbFX.SetBase(self);
-	Dir = vector(Rotation);
-	Velocity = speed * Dir;
-	SetCollision(False,False,False);
-    SetTimer(0.1, true);
-}
-
-simulated function Timer()
-{
-    local vector ForceDir;
-    local float VelMag;
-    local float SeekingDistance;
-	local Pawn P;
-	local StatusEffectManager StatusManager;
-	
-	P = Pawn(Seeking);
-
-    if ( InitialDir == vect(0,0,0) )
-        InitialDir = Normal(Velocity);
-
-	Acceleration = vect(0,0,0);
-	// Do normal guidance to target.
-	
-	if (P == None || P.Health <= 0)
-	{
-		return;
-		Destroy();
-	}
-	ForceDir = Normal(P.Location - Location);
-	
-	VelMag = VSize(Velocity);
-
-	ForceDir = Normal(ForceDir * 0.5 * VelMag + Velocity);
-	Velocity =  VelMag * ForceDir;
-	Acceleration += 5 * ForceDir;
-
-	// Update rocket so it faces in the direction its going.
-	SetRotation(rotator(Velocity));
-
-	if (P != None)
-	{
-		SeekingDistance = VSize(P.Location - Location);
-		if(SeekingDistance < 50)
-		{
-			StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
-			if (StatusManager != None)
-				StatusManager.AddStatusEffect(Class'StatusEffect_DamageBonus', -(abs(DamageReductionModifer)), True, DamageReductionLifespan, bDispellable, bStackable);
-			Destroy();
-		}
-	}
-}
-
-simulated function ProcessTouch (Actor Other, Vector HitLocation)
-{
-	return;
-}
-
-simulated function Explode(vector HitLocation, vector HitNormal)
-{
-	Destroy();
-}
-
-simulated function Destroyed()
-{
-	if (OrbFX != None)
-	{
-		if (bNoFX)
-			OrbFX.Destroy();
-		else
-			OrbFX.Kill();
-	}
-
-	Super.Destroyed();
-}
 
 defaultproperties
 {
+	OrbFXClass=Class'DEKMonsters999X.NecroGhostPoltergeistProjEffect'
+	StatusEffectClass=Class'DEKRPG999X.StatusEffect_DamageBonus'
 	bDispellable=False
 	bStackable=True
-	 DamageReductionLifespan=10
-	 DamageReductionModifer=3
-     Speed=300.000000
-     MaxSpeed=300.000000
-     LightHue=90
-     //LightSaturation=60
-     LightBrightness=10.000000
-     DrawType=DT_Sprite
-     AmbientSound=Sound'GeneralAmbience.firefx11'
-     LifeSpan=7.000000
-     DrawScale=0.080000
-     CollisionRadius=5.000000
-     CollisionHeight=5.000000
-     bCollideWorld=False
+	StatusLifespan=10
+	StatusModifier=3
+	LightHue=90
+	//LightSaturation=60
+	LightBrightness=10.000000
 }
