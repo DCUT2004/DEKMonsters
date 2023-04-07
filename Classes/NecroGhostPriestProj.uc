@@ -1,4 +1,4 @@
-class NecroGhostPriestProj extends UntargetedSeekerProjectile
+class NecroGhostPriestProj extends SeekingRocketProj
 	config(satoreMonsterPack);
 
 var NecroGhostPriest Priest;

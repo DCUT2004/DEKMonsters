@@ -1,4 +1,4 @@
-class EarthQueenEgg extends UntargetedProjectile
+class EarthQueenEgg extends Projectile
 	config(satoreMonsterPack);
 
 var config float HatchInterval;

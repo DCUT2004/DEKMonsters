@@ -1,4 +1,4 @@
-class NecroGhostPriestHealingOrb extends UntargetedProjectile
+class NecroGhostPriestHealingOrb extends Projectile
 	config(satoreMonsterPack);
 
 var class<Emitter> OrbEffectClass;

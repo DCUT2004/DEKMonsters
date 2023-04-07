@@ -1,4 +1,4 @@
-class NecroGhostPossessorInvasionOrb extends UntargetedProjectile
+class NecroGhostPossessorInvasionOrb extends Projectile
 	config(satoreMonsterPack);
 
 #exec obj load file=GeneralAmbience.uax

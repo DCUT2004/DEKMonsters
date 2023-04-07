@@ -93,8 +93,7 @@ function RangedAttack(Actor A)
 simulated function SuckSoul(float SuckDamage, vector pushdir)
 {
 	local Pawn P;
-	local NecroSoulParticle FX;
-	local NecroSoulParticle FX2;
+	local SoulParticle FX, FX2;
 	local vector FX2Radius;
 	local float Damage;
 	local Vehicle V;
@@ -117,7 +116,7 @@ simulated function SuckSoul(float SuckDamage, vector pushdir)
 	if (P != None)
 		P.TakeDamage(Damage, self,vect(0, 0, 0), pushdir, SuckDamageType);
 		
-	FMC = DEKFriendlyMonsterController(Self.Controller);
+	FMC = DEKFriendlyMonsterController(Controller);
 	if (FMC != None)
 		Master = FMC.Master;
 	if (FMC != None && Master != None)
@@ -126,20 +125,20 @@ simulated function SuckSoul(float SuckDamage, vector pushdir)
 			Master.Pawn.GiveHealth(Damage, Master.Pawn.HealthMax);
 		Self.GiveHealth(Damage*2, Self.HealthMax);
 		if (P != None)
-			FX = Spawn(class'NecroSoulParticle',,,P.Location,Rotation);
+			FX = Spawn(class'DEKRPG999X.SoulParticle',,,P.Location,Rotation);
 		if (FX != None)
 			FX.Seeking = Master.Pawn;
-		FX2 = Spawn(class'NecroSoulParticle',,,FX2Radius,Rotation);
+		FX2 = Spawn(class'DEKRPG999X.SoulParticle',,,FX2Radius,Rotation);
 		if (FX2 != None)
 			FX2.Seeking = self;
 	}
 	else
 	{
-		Self.GiveHealth(Damage*2, Self.HealthMax);
-		FX = Spawn(class'NecroSoulParticle',,,P.Location,Rotation);
+		GiveHealth(Damage*2, HealthMax);
+		FX = Spawn(class'DEKRPG999X.SoulParticle',,,P.Location,Rotation);
 		if (FX != None)
 			FX.Seeking = self;
-		FX2 = Spawn(class'NecroSoulParticle',,,FX2Radius,Rotation);
+		FX2 = Spawn(class'DEKRPG999X.SoulParticle',,,FX2Radius,Rotation);
 		if (FX2 != None)
 			FX2.Seeking = self;
 	}

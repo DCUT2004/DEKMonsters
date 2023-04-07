@@ -1,4 +1,4 @@
-class NecroGhostMisfortuneProj extends UntargetedSeekerProjectile;
+class NecroGhostMisfortuneProj extends SeekingRocketProj;
 
 var Emitter OrbFX;
 var config int MisfortuneLifespan;

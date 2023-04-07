@@ -1,4 +1,4 @@
-class NecroGhostPoltergeistDamageSphere extends UntargetedProjectile
+class NecroGhostPoltergeistDamageSphere extends Projectile
 	config(satoreMonsterPack);
 
 var class<Emitter> SphereEffectClass;

@@ -10,7 +10,7 @@ simulated function PostBeginPlay()
 function SuckAdrenaline(float SuckDamage, vector pushdir)
 {
 	local Pawn P;
-	local NecroEnergyParticle FX;
+	local AdrenParticle FX;
 	local float Damage;
 	local DEKFriendlyMonsterController FMC;
 
@@ -50,7 +50,7 @@ function SuckAdrenaline(float SuckDamage, vector pushdir)
 			Instigator.Controller.Adrenaline = 0;
 		}
 	}
-	FX = Spawn(class'NecroEnergyParticle',,,P.Location,Rotation);
+	FX = Spawn(class'DEKRPG999X.AdrenParticle',,,P.Location,Rotation);
 	FX.Seeking = self;
 }
 

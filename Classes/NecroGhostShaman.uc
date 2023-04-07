@@ -174,52 +174,6 @@ function ChooseDestination()
 	TelepDest = Best;
 }
 
-simulated function Tick(float DeltaTime)
-{
-	local Projectile P;
-	local Monster M;
-	local FriendlyMonsterInv Inv;
-	
-	if(bTeleporting)
-	{
-		AChannel-=300 *DeltaTime;
-	}
-	else
-		AChannel=255;
-	FadeOutSkin.Color.A=AChannel;
-
-	if(MonsterController(Controller)!=none && Controller.Enemy==none)
-	{
-		if(MonsterController(Controller).FindNewEnemy())
-		{
-			SetAnimAction('Swim_Tread');
-			GotoState('Teleporting');
-	    }
-	}
-	
-	M = Monster(P.InstigatorController.Pawn);
-	Inv = FriendlyMonsterInv(M.FindInventoryType(class'FriendlyMonsterInv'));
-	
-	ForEach DynamicActors(class'Projectile',P)
-	{
-		if (P != None && VSize(Location - P.Location) <= default.NerfRadius)
-		{
-			if (P.InstigatorController == None || (P.InstigatorController != None && !P.InstigatorController.Pawn.IsA('Monster')) || (M != None && Inv != None))	//belongs to anything not a monster or pet.
-			{
-				if (TranslocatorBeacon(P) == None && BombTrapProjectile(P) == None && AerialTrapProjectile(P) == None && ShockTrapProjectile(P) == None && FrostTrapProjectile(P) == None && WildfireTrapProjectile(P) == None && DEKLaserGrenadeProjectile(P) == None && ONSMineProjectile(P) == None && ONSGrenadeProjectile(P) == None && TechTitanMine(P) == None && TechSlugMine(P) == None && TechSlithMine(P) == None && LifeDrainSoulParticle(P) == None && NecroSoulParticle(P) == None && NecroEnergyParticle(P) == None && NecroGhostPossessorInvasionOrb(P) == None && NecroGhostPriestHealingOrb(P) == None && NecroGhostMisfortuneProj(P) == None)
-				{
-					if (P.Damage > ((1 - default.MaxDamageNerf) * P.default.Damage))
-					{
-						P.Damage *= (1 - default.MaxDamageNerf);
-						P.Spawn(class'NecroGhostShamanTrail', P,, P.Location, P.Rotation).SetBase(P);
-					}
-				}
-			}
-		}
-	}
-	super.Tick(DeltaTime);
-}
-
 state Teleporting
 {
 	function Tick(float DeltaTime)

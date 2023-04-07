@@ -94,7 +94,7 @@ function RangedAttack(Actor A)
 simulated function SuckAdrenaline(float SuckDamage, vector pushdir)
 {
 	local Pawn P;
-	local NecroEnergyParticle FX;
+	local AdrenParticle FX;
 	local float Damage;
 	local DEKFriendlyMonsterController FMC;
 
@@ -120,7 +120,7 @@ simulated function SuckAdrenaline(float SuckDamage, vector pushdir)
 		{
 			Master.Adrenaline += SuckDamage;
 			if (P != None)
-				FX = Spawn(class'NecroEnergyParticle',,,P.Location,Rotation);
+				FX = Spawn(class'DEKRPG999X.AdrenParticle',,,P.Location,Rotation);
 			if (FX != None)
 				FX.Seeking = Master.Pawn;
 		}
@@ -142,7 +142,7 @@ simulated function SuckAdrenaline(float SuckDamage, vector pushdir)
 			Instigator.Controller.Adrenaline = 0;
 		}
 	}
-		FX = Spawn(class'NecroEnergyParticle',,,P.Location,Rotation);
+		FX = Spawn(class'DEKRPG999X.AdrenParticle',,,P.Location,Rotation);
 		if (FX != None)
 			FX.Seeking = Self;
 }

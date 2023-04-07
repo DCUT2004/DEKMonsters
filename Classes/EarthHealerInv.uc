@@ -33,13 +33,10 @@ function Timer()
 	local Controller C;
 	local FriendlyMonsterInv Inv;
 	local EarthHealFX FX;
-	local Projectile P;
 	local xEmitter HitEmitter;
-	local Projectile ClosestP;
-	local Projectile BestGuidedP;
-	local Projectile BestP;
-	local int ClosestPdist;
-	local int BestGuidedPdist;
+	local Projectile P, ClosestP, BestGuidedP, BestP;
+	local int ClosestPdist, BestGuidedPdist, x;
+	local bool bIgnoreProjectile;
 	
 	if (Instigator == None || Instigator.Health <= 0 || Instigator.Controller == None)
 	{
@@ -87,8 +84,19 @@ function Timer()
 		BestGuidedPdist = DefenseRadius+1;
 		ForEach DynamicActors(class'Projectile',P)
 		{
-			if (P != None && FastTrace(P.Location, Instigator.Location) && TranslocatorBeacon(P) == None && UntargetedProjectile(P) == None && UntargetedSeekerProjectile(P) == None && VSize(Instigator.Location - P.Location) <= DefenseRadius)
+			bIgnoreProjectile = False;
+			if (P != None && FastTrace(P.Location, Instigator.Location) && VSize(Instigator.Location - P.Location) <= DefenseRadius)
 			{
+				for (x = 0; x < Class'Utility_RPG'.default.IgnoredProjectiles.Length; x++)
+				{
+					if (ClassIsChildOf(P.Class, Class'Utility_RPG'.default.IgnoredProjectiles[x]))
+					{
+						bIgnoreProjectile = True;
+						break;
+					}
+				}
+				if (bIgnoreProjectile)
+					continue;
 				if (P.InstigatorController != None && P.Instigator != None && (!P.Instigator.IsA('Monster') || FriendlyMonsterInv(P.Instigator.FindInventoryType(class'FriendlyMonsterInv')) != None) )
 				{
 					if ( BestGuidedPdist > VSize(Instigator.Location - P.Location) && P.bNetTemporary == false && !P.bDeleteMe)

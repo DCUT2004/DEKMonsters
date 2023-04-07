@@ -1,4 +1,4 @@
-class NecroGhostPoltergeistProj extends UntargetedSeekerProjectile
+class NecroGhostPoltergeistProj extends SeekingRocketProj
 	config(satoreMonsterPack);
 
 var Emitter OrbFX;
