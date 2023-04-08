@@ -1,9 +1,9 @@
-class TitaniumTitanBoulder extends SMPTitanBoulder;
+class TitaniumTitanBoulder extends DCTitanBoulder;
 
 function SpawnChunks(int num)
 {
 	local int    NumChunks,i;
-	local TitaniumTitanBigRock   TempRock;
+	local TitaniumTitanSmallRock   TempRock;
 	local float pscale;
 
 	if ( DrawScale < 2 + FRand()*2 )
@@ -22,7 +22,7 @@ function SpawnChunks(int num)
 	speed = VSize(Velocity);
 	for (i=0; i<NumChunks; i++)
 	{
-		TempRock = Spawn(class'TitaniumTitanBigRock');
+		TempRock = Spawn(class'TitaniumTitanSmallRock');
 		if (TempRock != None )
 			TempRock.InitFrag(self, pscale);
 	}
