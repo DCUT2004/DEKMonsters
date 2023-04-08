@@ -1,4 +1,4 @@
-class TitanBigRock extends SMPTitanBigRock;
+class DCTitanBigRock extends SMPTitanBigRock;
 
 function ProcessTouch (Actor Other, Vector HitLocation)
 {
@@ -59,7 +59,7 @@ function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation,
 function SpawnChunks(int num)
 {
 	local int    NumChunks,i;
-	local TitanBigRock   TempRock;
+	local DCTitanBigRock   TempRock;
 	local float pscale;
 
 	if ( DrawScale < 2 + FRand()*2 )
@@ -78,7 +78,7 @@ function SpawnChunks(int num)
 	speed = VSize(Velocity);
 	for (i=0; i<NumChunks; i++)
 	{
-		TempRock = Spawn(class'TitanBigRock');
+		TempRock = Spawn(class'DCTitanBigRock');
 		if (TempRock != None )
 			TempRock.InitFrag(self, pscale);
 	}

@@ -42,7 +42,7 @@ function SpawnRock()
 	FireRotation = Controller.AdjustAim(SavedFireProperties,FireStart,600);
 	if (FRand() < 0.4)
 	{
-		Proj=Spawn(class'TitanBoulder',,,FireStart,FireRotation);
+		Proj=Spawn(class'DCTitanBoulder',,,FireStart,FireRotation);
 		if(Proj!=none)
 		{
 			Proj.SetPhysics(PHYS_Projectile);
@@ -99,6 +99,6 @@ defaultproperties
      DoubleJumpAnims(1)="TBrea001"
      DoubleJumpAnims(2)="TBrea001"
      DoubleJumpAnims(3)="TBrea001"
-     AmmunitionClass=Class'DEKMonsters999X.TitanAmmo'
+     AmmunitionClass=Class'DEKMonsters999X.DCTitanAmmo'
      ControllerClass=Class'DEKRPG999X.DCMonsterController'
 }

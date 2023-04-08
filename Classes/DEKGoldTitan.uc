@@ -47,7 +47,7 @@ function SpawnRock()
 	FireRotation = Controller.AdjustAim(SavedFireProperties,FireStart,600);
 	if (FRand() < 0.4)
 	{
-		Proj=Spawn(class'TitanBoulder',,,FireStart,FireRotation);
+		Proj=Spawn(class'DCTitanBoulder',,,FireStart,FireRotation);
 		if(Proj!=none)
 		{
 			Proj.SetPhysics(PHYS_Projectile);

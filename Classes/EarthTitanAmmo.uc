@@ -1,4 +1,4 @@
-class EarthTitanAmmo extends TitanAmmo;
+class EarthTitanAmmo extends DCTitanAmmo;
 
 defaultproperties
 {

@@ -1,4 +1,4 @@
-class TitanSmallRock extends TitanBigRock;
+class DCTitanSmallRock extends DCTitanBigRock;
 
 function ProcessTouch (Actor Other, Vector HitLocation)
 {}

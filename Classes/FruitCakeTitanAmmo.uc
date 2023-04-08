@@ -1,4 +1,4 @@
-class FruitCakeTitanAmmo extends TitanAmmo;
+class FruitCakeTitanAmmo extends DCTitanAmmo;
 
 defaultproperties
 {

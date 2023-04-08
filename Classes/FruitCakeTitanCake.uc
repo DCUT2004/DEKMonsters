@@ -1,4 +1,4 @@
-class FruitCakeTitanCake extends TitanBigRock;
+class FruitCakeTitanCake extends DCTitanBigRock;
 
 simulated function PostBeginPlay()
 {

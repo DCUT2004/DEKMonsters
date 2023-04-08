@@ -1,4 +1,4 @@
-class HalloweenTitanAmmo extends TitanAmmo;
+class HalloweenTitanAmmo extends DCTitanAmmo;
 
 defaultproperties
 {
