@@ -18,12 +18,12 @@ replication
 simulated function PostBeginPlay()
 {
 	local MagicShieldInv Inv;
-	
+
 	Super.PostBeginPlay();
 	FadeOutSkin= new class'ColorModifier';
 	FadeOutSkin.Material=Skins[0];
 	Skins[0]=FadeOutSkin;
-	
+
 	if (Instigator != None)
 	{
 		Inv = MagicShieldInv(Instigator.FindInventoryType(class'MagicShieldInv'));
@@ -43,7 +43,7 @@ simulated function Destroyed()
 
 function SetMovementPhysics()
 {
-	SetPhysics(PHYS_Flying); 
+	SetPhysics(PHYS_Flying);
 }
 
 function bool SameSpeciesAs(Pawn P)
@@ -55,11 +55,11 @@ function RangedAttack(Actor A)
 {
 	local float decision;
 	local Pawn P;
-	
+
 	Super.RangedAttack(A);
 
 	decision = FRand();
-	
+
 	P = Pawn(A);
 
 	if ( bShotAnim )
@@ -74,7 +74,7 @@ function RangedAttack(Actor A)
 	{
 		SetAnimAction('gesture_point');
 		if ( MeleeDamageTarget(45, (45000.0 * Normal(Controller.Target.Location - Location))) )
-			PlaySound(sound'mn_hit10', SLOT_Talk); 
+			PlaySound(sound'mn_hit10', SLOT_Talk);
 	}
 	else if(VSize(A.Location-Location)>7000 && (decision < 0.70))
 	{
@@ -97,7 +97,7 @@ function SpawnClone()
 	local NavigationPoint N;
 	local NecroGhostIllusionClone P;
 	local Actor A;
-	
+
 	if (rand(99) <= 15)
 	{
 		A = Instigator.spawn(class'NecroGhostIllusionLight', Instigator,, Instigator.Location, Instigator.Rotation);
@@ -238,32 +238,32 @@ state Teleporting
 simulated function PlayDying(class<DamageType> DamageType, vector HitLoc)
 {
 	local Actor A;
-	
+
 	AmbientSound = None;
-    bCanTeleport = false; 
+    bCanTeleport = false;
     bReplicateMovement = false;
     bTearOff = true;
     bPlayedDeath = true;
-		
+
 	HitDamageType = DamageType;
     TakeHitLocation = HitLoc;
 	LifeSpan = 0.1000;
 
     GotoState('Dying');
-		
+
 	Velocity += TearOffMomentum;
     BaseEyeHeight = Default.BaseEyeHeight;
-    SetPhysics(PHYS_Falling);	
-	
+    SetPhysics(PHYS_Falling);
+
 	A = spawn(class'NecroGhostIllusionVanishFX', Self,, Self.Location, Self.Rotation);
 	if (A != None)
 		A.RemoteRole = ROLE_SimulatedProxy;
-		
+
 }
 
 function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector momentum, class<DamageType> damageType)
 {
-	if (ClassIsChildOf(damageType, class'VehicleDamageType') || DamageType == class'DamTypeLightningRod' || DamageType == class'DamTypeEnhLightningRod' || DamageType == class'DamTypeLightningBolt'  || DamageType == class'DamTypeMassDrain'  || DamageType == class'DamTypeAerialTrap' || DamageType == class'DamTypeBombTrap' || DamageType == class'DamTypeFrostTrap' || DamageType == class'DamTypeLaserGrenadeLaser' || DamageType == class'DamTypeShockTrap' || DamageType == class'DamTypeShockTrapShock' || DamageType == class'DamTypeWildfireTrap' || DamageType == class'DamTypeDronePlasma')
+	if (ClassIsChildOf(damageType, class'VehicleDamageType') || DamageType == class'DamTypeLightningRod' || DamageType == class'DamTypeEnhLightningRod' || DamageType == class'DamTypeLightningBolt'  || DamageType == class'DamTypeMassDrain'  || DamageType == class'DamTypeAerialTrap' || DamageType == class'DamTypeBombTrap' || DamageType == class'DamTypeFrostTrap' || DamageType == class'DamTypeLaserGrenadeLaser' || DamageType == class'DamTypeShockTrap' || DamageType == class'DamTypeShockTrapShock' || DamageType == class'DamTypeWildfireTrap')
 	{
 		return; //These things are out of our control.
 	}

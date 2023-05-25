@@ -1,8 +1,8 @@
 //Code from SpecialSkaarjPackv4, based on the Crystalis. Author: Ace08.
 class IceTitanBigCrystal extends SMPTitanBigRock;
 
-#exec OBJ LOAD FILE=DEKStaticsMaster209C.usx
-#exec OBJ LOAD FILE=AW-2004Crystals.usx
+#exec OBJ LOAD FILE=..\StaticMeshes\DEKStaticsMaster209C.usx
+#exec OBJ LOAD FILE=..\StaticMeshes\AW-2004Crystals.usx
 
 var config int FreezeModifier, FreezeLifespan;
 var config bool bDispellable, bStackable;
@@ -35,7 +35,7 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 		return;
     if (Other == Owner)
 		return;
-	
+
     if (Other.IsA('xPawn') && xPawn(Other).CheckReflect(HitLocation, RefNormal, Damage*0.25))
     {
         if (Role == ROLE_Authority)
@@ -59,9 +59,9 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 				if (StatusManager != None)
 					StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
 			}
-			Explode(Location, vect(0,0,1));				
+			Explode(Location, vect(0,0,1));
 		}
-	}	
+	}
 }
 
 //Ajust to hear impactsound
