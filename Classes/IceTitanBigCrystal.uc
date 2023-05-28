@@ -24,44 +24,22 @@ simulated function PostBeginPlay()
 		RotationRate.Roll = Max(0, 50000 + Rand(200000) - RotationRate.Pitch);
 }
 
-
-simulated function ProcessTouch (Actor Other, vector HitLocation)
+function ProcessTouch (Actor Other, Vector HitLocation)
 {
-	local Vector X, RefNormal, RefDir;
-	local Pawn P;
+	local Pawn Victim;
 	local StatusEffectManager StatusManager;
 
-	if (Other == Instigator)
-		return;
-    if (Other == Owner)
+	Super.ProcessTouch(Other, HitLocation);
+
+	if (Pawn(Other) != None && ClassIsChildOf(Pawn(Other).Class, Class'DEKMonsters999x.IceTitan'))
 		return;
 
-    if (Other.IsA('xPawn') && xPawn(Other).CheckReflect(HitLocation, RefNormal, Damage*0.25))
-    {
-        if (Role == ROLE_Authority)
-        {
-            X = Normal(Velocity);
-            RefDir = X - 2.0*RefNormal*(X dot RefNormal);
-            Spawn(Class, Other,, HitLocation+RefDir*20, Rotator(RefDir));
-        }
-        Destroy();
-    }
-	if ( Role == ROLE_Authority )
-	{
-		Other.TakeDamage(Damage,Instigator,HitLocation,MomentumTransfer * Normal(Velocity),MyDamageType);
+	if (Other != None && Pawn(Other) != None && Pawn(Other).Health > 0)
+		Victim = Pawn(Other);
 
-		P = Pawn(Other);
-		if (P != None && P.Controller != None && P.Health > 0 && !P.Controller.SameTeamAs(InstigatorController) && class'DEKRPGWeapon'.static.NullCanTriggerPhysics(P))
-		{
-			if(rand(100) < int(BaseChance))
-			{
-				StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(P);
-				if (StatusManager != None)
-					StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
-			}
-			Explode(Location, vect(0,0,1));
-		}
-	}
+	StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(Victim);
+	if (StatusManager != None)
+		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
 }
 
 //Ajust to hear impactsound
@@ -158,7 +136,7 @@ function SpawnChunks(int num)
         if (TempRock != None )
 			TempRock.InitFrag(self, pscale);
 	}
-	InitFrag(self, 0.5);
+	Destroy();
 }
 
 defaultproperties
