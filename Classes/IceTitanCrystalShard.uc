@@ -22,11 +22,11 @@ simulated function PostBeginPlay()
 
 	decision = FRand();
 
-	if (decision < 0.34)
+	if (decision < 0.33)
 		SetStaticMesh(staticmesh'AW-2004Crystals.Crops.BrokenSpireTop');
-	else if (decision < 0.33)
+	else if (decision < 0.66)
 		SetStaticMesh(staticmesh'AW-2004Crystals.Crops.CrystalShard');
-	else if (decision < 0.33)
+	else
 		SetStaticMesh(staticmesh'DEKStaticsMaster209C.Meshes.CrystalA');
 }
 
@@ -36,21 +36,9 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 	local Pawn P;
 	local StatusEffectManager StatusManager;
 
-	if (Other == Instigator)
+	if (Other == Instigator || Other == Owner)
 		return;
-    if (Other == Owner)
-		return;
-	
-    if (Other.IsA('xPawn') && xPawn(Other).CheckReflect(HitLocation, RefNormal, Damage*0.25))
-    {
-        if (Role == ROLE_Authority)
-        {
-            X = Normal(Velocity);
-            RefDir = X - 2.0*RefNormal*(X dot RefNormal);
-            Spawn(Class, Other,, HitLocation+RefDir*20, Rotator(RefDir));
-        }
-        Destroy();
-    }
+
 	if ( Role == ROLE_Authority )
 	{
 		Other.TakeDamage(Damage,Instigator,HitLocation,MomentumTransfer * Normal(Velocity),MyDamageType);
@@ -64,9 +52,9 @@ simulated function ProcessTouch (Actor Other, vector HitLocation)
 				if (StatusManager != None)
 					StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
 			}
-			Explode(Location, vect(0,0,1));				
+			Explode(Location, vect(0,0,1));
 		}
-	}	
+	}
 }
 
 //Ajust to hear impactsound
@@ -175,7 +163,7 @@ defaultproperties
      BaseChance=25.000000
      Speed=1350.000000
      MaxSpeed=1350.000000
-     Damage=20.000000
+     Damage=5.000000
      MyDamageType=Class'DEKMonsters999X.DamTypeIceTitan'
      ImpactSound=ProceduralSound'WeaponSounds.PGrenFloor1.P1GrenFloor1'
      StaticMesh=StaticMesh'DEKStaticsMaster209C.Meshes.CrystalA'

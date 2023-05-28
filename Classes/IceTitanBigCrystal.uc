@@ -28,6 +28,7 @@ function ProcessTouch (Actor Other, Vector HitLocation)
 {
 	local Pawn Victim;
 	local StatusEffectManager StatusManager;
+	local int Chance;
 
 	Super.ProcessTouch(Other, HitLocation);
 
@@ -36,10 +37,13 @@ function ProcessTouch (Actor Other, Vector HitLocation)
 
 	if (Other != None && Pawn(Other) != None && Pawn(Other).Health > 0)
 		Victim = Pawn(Other);
-
-	StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(Victim);
-	if (StatusManager != None)
-		StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
+	Chance = Rand(100);
+	if (Chance <= BaseChance)
+	{
+		StatusManager = Class'StatusEffectManager'.static.GetStatusEffectManager(Victim);
+		if (StatusManager != None)
+			StatusManager.AddStatusEffect(Class'StatusEffect_Speed', -(abs(FreezeModifier)), True, FreezeLifespan, bDispellable, bStackable);
+	}
 }
 
 //Ajust to hear impactsound
