@@ -10,7 +10,7 @@ var config bool bDispellable, bStackable;
 function PostBeginPlay()
 {
 	local IceInv Inv;
-	
+
 	if (Instigator != None)
 	{
 		Health *= class'ElementalConfigure'.default.IceBossHealthMultiplier;
@@ -23,7 +23,7 @@ function PostBeginPlay()
 		SetLocation(Instigator.Location+vect(0,0,1)*(Instigator.CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier/2));
 		SetDrawScale(Drawscale*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
 		SetCollisionSize(CollisionRadius*class'ElementalConfigure'.default.IceDrawscaleMultiplier, CollisionHeight*class'ElementalConfigure'.default.IceDrawscaleMultiplier);
-		
+
 		Inv = IceInv(Instigator.FindInventoryType(class'IceInv'));
 		if (Inv == None)
 		{
@@ -31,7 +31,7 @@ function PostBeginPlay()
 			Inv.GiveTo(Instigator);
 		}
 	}
-	
+
 	Super.PostBeginPlay();
 }
 
@@ -62,12 +62,12 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 {
 	local vector HitLocation, HitNormal;
 	local actor HitActor;
-	
+
 	// check if still in melee range
 	if ( (Controller.Target != None) && (VSize(Controller.Target.Location - Location) <= MeleeRange * 1.4 + Controller.Target.CollisionRadius + CollisionRadius)
-		&& ((Physics == PHYS_Flying) || (Physics == PHYS_Swimming) || (Abs(Location.Z - Controller.Target.Location.Z) 
+		&& ((Physics == PHYS_Flying) || (Physics == PHYS_Swimming) || (Abs(Location.Z - Controller.Target.Location.Z)
 			<= FMax(CollisionHeight, Controller.Target.CollisionHeight) + 0.5 * FMin(CollisionHeight, Controller.Target.CollisionHeight))) )
-	{	
+	{
 		HitActor = Trace(HitLocation, HitNormal, Controller.Target.Location, Location, false);
 		if ( HitActor != None )
 			return false;
@@ -101,30 +101,15 @@ function SpawnRock()
 		SavedFireProperties.bInitialized = true;
 	}
 
-	FireRotation = Controller.AdjustAim(SavedFireProperties,FireStart,600);
-	if (FRand() < 0.250)
+	Proj = Spawn(MyAmmo.ProjectileClass,,,FireStart,FireRotation);
+	if(Proj != None)
 	{
-		Proj=Spawn(class'IceTitanBigCrystalA',,,FireStart,FireRotation);
-		if(Proj!=none)
-		{
-			Proj.SetPhysics(PHYS_Projectile);
-			Proj.setDrawScale(Proj.DrawScale*DrawScale/default.DrawScale);
-			Proj.SetCollisionSize(Proj.CollisionRadius*DrawScale/default.DrawScale,Proj.CollisionHeight*DrawScale/default.DrawScale);
-			Proj.Velocity = (ProjectileSpeed+Rand(ProjectileMaxSpeed-ProjectileSpeed)) *vector(Proj.Rotation)*DrawScale/default.DrawScale;
-		}
-		return;
+		Proj.SetPhysics(PHYS_Projectile);
+		Proj.setDrawScale(Proj.DrawScale*DrawScale/default.DrawScale);
+		Proj.SetCollisionSize(Proj.CollisionRadius*DrawScale/default.DrawScale,Proj.CollisionHeight*DrawScale/default.DrawScale);
+		Proj.Velocity = (ProjectileSpeed+Rand(ProjectileMaxSpeed-ProjectileSpeed)) *vector(Proj.Rotation)*DrawScale/default.DrawScale;
 	}
-    else if (FRand() < 1.000)
-    {
-    	Proj=Spawn(MyAmmo.ProjectileClass,,,FireStart,FireRotation);
-    	if(Proj!=none)
-    	{
-    		Proj.SetPhysics(PHYS_Projectile);
-    		Proj.setDrawScale(Proj.DrawScale*DrawScale/default.DrawScale);
-    		Proj.SetCollisionSize(Proj.CollisionRadius*DrawScale/default.DrawScale,Proj.CollisionHeight*DrawScale/default.DrawScale);
-    		Proj.Velocity = (ProjectileSpeed+Rand(ProjectileMaxSpeed-ProjectileSpeed)) *vector(Proj.Rotation)*DrawScale/default.DrawScale;
-    	}
-	}
+
     FireStart=Location + 1.2*CollisionRadius * X -40*Y+ 0.4 * CollisionHeight * Z;
 	bStomped=false;
 }
@@ -132,7 +117,7 @@ function SpawnRock()
 function TakeDamage(int Damage, Pawn instigatedBy, Vector hitlocation, Vector momentum, class<DamageType> damageType)
 {
 	local FireInv Inv;
-	
+
 	if (Damage > 0 && instigatedBy != None && instigatedBy.IsA('Monster') && instigatedBy.Controller != None && !instigatedBy.Controller.SameTeamAs(Self.Controller))
 	{
 		Inv = FireInv(instigatedBy.FindInventoryType(class'FireInv'));

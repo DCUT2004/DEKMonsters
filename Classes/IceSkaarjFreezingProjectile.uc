@@ -1,6 +1,6 @@
 class IceSkaarjFreezingProjectile extends Projectile;
 
-var IceBall IceBallEffect;
+var Emitter IceBallEffect;
 //var	xEmitter SmokeTrail;
 var config float BaseChance;
 var float MaxFreezeLifespan;
@@ -26,18 +26,18 @@ simulated function PostBeginPlay()
        //SmokeTrail = Spawn(class'IceKrallTrailSmoke',self);
 	}
 
-	Velocity = Speed * Vector(Rotation); 
+	Velocity = Speed * Vector(Rotation);
 }
 
 simulated function PostNetBeginPlay()
 {
 	local PlayerController PC;
-	
+
 	Super.PostNetBeginPlay();
-	
+
 	if ( Level.NetMode == NM_DedicatedServer )
 		return;
-		
+
 	PC = Level.GetLocalPlayerController();
 	if ( (Instigator != None) && (PC == Instigator.Controller) )
 		return;
