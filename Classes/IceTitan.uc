@@ -100,7 +100,7 @@ function SpawnRock()
 		SavedFireProperties.bInstantHit = MyAmmo.bInstantHit;
 		SavedFireProperties.bInitialized = true;
 	}
-
+	FireRotation = Controller.AdjustAim(SavedFireProperties,FireStart,600);
 	Proj = Spawn(MyAmmo.ProjectileClass,,,FireStart,FireRotation);
 	if(Proj != None)
 	{
